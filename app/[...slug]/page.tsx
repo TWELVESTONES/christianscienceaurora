@@ -1,0 +1,34 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { pageDefinitions } from "@/content/pages";
+import { GenericPage } from "@/components/GenericPage";
+import { site } from "@/content/site";
+import { isPublicPagePath } from "@/lib/public-page";
+import { resolvePublicPage } from "@/lib/resolve-page";
+
+export function generateStaticParams() {
+  return pageDefinitions
+    .filter((page) => isPublicPagePath(page.path))
+    .map((page) => ({ slug: page.path.split("/").filter(Boolean) }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const path = `/${slug.join("/")}`;
+  const page = await resolvePublicPage(path);
+  if (!page) return {};
+  return {
+    title: page.seoTitle ?? page.title,
+    description: page.description,
+    alternates: { canonical: page.path },
+    openGraph: { title: page.title, description: page.description, url: `${site.domain}${page.path}` }
+  };
+}
+
+export default async function CatchAllPage({ params }: { params: Promise<{ slug: string[] }> }) {
+  const { slug } = await params;
+  const path = `/${slug.join("/")}`;
+  const page = await resolvePublicPage(path);
+  if (!page) notFound();
+  return <GenericPage page={page} />;
+}
