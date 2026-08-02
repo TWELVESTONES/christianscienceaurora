@@ -40,7 +40,12 @@ export async function SpecialContent({ page }: { page: PageDefinition }) {
     }
     case "children-library": {
       const resources = filterPublicSundaySchoolResources(await cmsAdapter.listSundaySchoolResources());
-      return <ChildrenLibrary resources={resources} />;
+      const scoped = page.path === "/sunday-school/coloring-pages"
+        ? resources.filter((resource) => resource.type === "Coloring page")
+        : page.path === "/sunday-school/stories"
+        ? resources.filter((resource) => resource.type.includes("Story"))
+        : resources;
+      return <ChildrenLibrary resources={scoped} />;
     }
     case "resource-library": {
       const resources = filterPublicExternalResources(await cmsAdapter.listExternalResources());

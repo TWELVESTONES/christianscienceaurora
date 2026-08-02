@@ -201,6 +201,72 @@ export const sundaySchoolResources: SundaySchoolResource[] = [
     delivery: "Printable",
     adultAssistance: "Recommended",
     summary: "Choose a story card and talk about how love can guide the next step."
+  },
+  {
+    slug: "coloring-mbe-carriage",
+    title: "Mary Baker Eddy in Her Carriage",
+    type: "Coloring page",
+    ageGroup: "Ages 5–10",
+    topic: "Mary Baker Eddy",
+    estimatedTime: "15 minutes",
+    delivery: "Printable",
+    adultAssistance: "None",
+    summary: "Color a scene of Mary Baker Eddy riding through town in her carriage."
+  },
+  {
+    slug: "coloring-israel-wrestling-angel",
+    title: "Israel Wrestling with the Angel",
+    type: "Coloring page",
+    ageGroup: "Ages 8–13",
+    topic: "Courage",
+    estimatedTime: "15 minutes",
+    delivery: "Printable",
+    adultAssistance: "None",
+    summary: "Color the story of Jacob wrestling with the angel until daybreak, from Genesis 32:26."
+  },
+  {
+    slug: "coloring-joseph-coat-of-many-colors",
+    title: "Joseph and His Coat of Many Colors",
+    type: "Coloring page",
+    ageGroup: "Ages 5–10",
+    topic: "Kindness",
+    estimatedTime: "15 minutes",
+    delivery: "Printable",
+    adultAssistance: "None",
+    summary: "Color Joseph in his coat of many colors, standing before his brothers."
+  },
+  {
+    slug: "coloring-jesus-walking-on-water",
+    title: "Jesus Walking on Water",
+    type: "Coloring page",
+    ageGroup: "Ages 5–10",
+    topic: "Faith",
+    estimatedTime: "15 minutes",
+    delivery: "Printable",
+    adultAssistance: "None",
+    summary: "Color Jesus walking on the water toward His disciples in their boat."
+  },
+  {
+    slug: "coloring-jesus-calls-lazarus",
+    title: "Jesus Calls Lazarus from the Tomb",
+    type: "Coloring page",
+    ageGroup: "Ages 8–13",
+    topic: "Healing",
+    estimatedTime: "15 minutes",
+    delivery: "Printable",
+    adultAssistance: "None",
+    summary: "Color the moment Jesus calls Lazarus out of the tomb, healed and alive."
+  },
+  {
+    slug: "coloring-moses-ten-commandments",
+    title: "Moses and the Ten Commandments",
+    type: "Coloring page",
+    ageGroup: "Ages 8–13",
+    topic: "Ten Commandments",
+    estimatedTime: "15 minutes",
+    delivery: "Printable",
+    adultAssistance: "None",
+    summary: "Color Moses holding the tablets of the Ten Commandments before the people."
   }
 ];
 

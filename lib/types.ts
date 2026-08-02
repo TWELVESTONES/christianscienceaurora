@@ -14,7 +14,7 @@ export type ImagePlaceholder = {
   label: string;
   productionNote: string;
   altText: string;
-  aspectRatio?: "16:9" | "4:3" | "3:2" | "1:1" | "2:3";
+  aspectRatio?: "16:9" | "4:3" | "3:2" | "1:1" | "2:3" | "3:4" | "1200:340";
   youthReleaseRequired?: boolean;
   /** Public path to an approved, on-site photograph (e.g. "/images/photography/sanctuary-wide.webp"). When set, PhotoPlaceholder renders this real photo instead of the gradient placeholder. */
   src?: string;

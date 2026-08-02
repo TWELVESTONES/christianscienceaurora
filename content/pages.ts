@@ -280,9 +280,7 @@ export const pageDefinitions: PageDefinition[] = [
     title: "Color, notice, and think.",
     description: "Original printable coloring pages for Bible stories, gratitude, kindness, courage, peace, and reflection.",
     pageType: "children-library",
-    sections: [
-      { id: "coloring-note", title: "Original artwork only", body: ["All coloring pages must be original or properly licensed, accessible as tagged PDFs, and reviewed for theological clarity and age appropriateness."], style: "gold-accent" }
-    ]
+    sections: []
   },
   {
     path: "/sunday-school/stories",
@@ -351,6 +349,84 @@ export const pageDefinitions: PageDefinition[] = [
         { question: "How does being kind to others reflect God's love?", answer: "Think about how every kind thought and action is a way of expressing God's love to those around us." }
       ] },
       { id: "privacy", title: "Download note", body: ["The printable is a single black-and-white PDF page with eight story cards to cut apart — no form, comments, child profile, or tracking field. Ask a grown-up before downloading or printing."] }
+    ]
+  },
+  {
+    path: "/sunday-school/resources/coloring-mbe-carriage",
+    eyebrow: "COLORING PAGE · AGES 5–10",
+    title: "Mary Baker Eddy in Her Carriage",
+    description: "Color a scene of Mary Baker Eddy riding through town in her carriage.",
+    pageType: "children-detail",
+    heroImage: photo("coloring-mbe-carriage", "Mary Baker Eddy in Her Carriage coloring page", "Original line-art coloring page.", "A line-art coloring page showing Mary Baker Eddy riding in a horse-drawn carriage through town.", "3:4", false, "/images/photography/sunday-school/coloring-mbe-carriage.webp"),
+    actions: [{ label: "Download Printable", href: "/downloads/coloring-mbe-carriage.pdf", variant: "primary" }],
+    sections: [
+      { id: "about", title: "About this scene", body: ["Mary Baker Eddy discovered and founded Christian Science. This scene imagines her riding through town, greeted by neighbors along the way."] },
+      { id: "privacy", title: "Download note", body: ["The printable is a single black-and-white PDF coloring page — no form, comments, child profile, or tracking field. Ask a grown-up before downloading or printing."] }
+    ]
+  },
+  {
+    path: "/sunday-school/resources/coloring-israel-wrestling-angel",
+    eyebrow: "COLORING PAGE · AGES 8–13",
+    title: "Israel Wrestling with the Angel",
+    description: "Color the story of Jacob wrestling with the angel until daybreak, from Genesis 32:26.",
+    pageType: "children-detail",
+    heroImage: photo("coloring-israel-wrestling-angel", "Israel Wrestling with the Angel coloring page", "Original line-art coloring page.", "A line-art coloring page showing Jacob wrestling with an angel by a river at night.", "3:4", false, "/images/photography/sunday-school/coloring-israel-wrestling-angel.webp"),
+    actions: [{ label: "Download Printable", href: "/downloads/coloring-israel-wrestling-angel.pdf", variant: "primary" }],
+    sections: [
+      { id: "about", title: "About this scene", body: ["“The man said, ‘Let me go, for it is daybreak.’ But Jacob said, ‘I will not let you go unless you bless me.’” — Genesis 32:26"] },
+      { id: "privacy", title: "Download note", body: ["The printable is a single black-and-white PDF coloring page — no form, comments, child profile, or tracking field. Ask a grown-up before downloading or printing."] }
+    ]
+  },
+  {
+    path: "/sunday-school/resources/coloring-joseph-coat-of-many-colors",
+    eyebrow: "COLORING PAGE · AGES 5–10",
+    title: "Joseph and His Coat of Many Colors",
+    description: "Color Joseph in his coat of many colors, standing before his brothers.",
+    pageType: "children-detail",
+    heroImage: photo("coloring-joseph-coat-of-many-colors", "Joseph and His Coat of Many Colors coloring page", "Original line-art coloring page.", "A line-art coloring page showing Joseph wearing his coat of many colors while his brothers look on.", "3:4", false, "/images/photography/sunday-school/coloring-joseph-coat-of-many-colors.webp"),
+    actions: [{ label: "Download Printable", href: "/downloads/coloring-joseph-coat-of-many-colors.pdf", variant: "primary" }],
+    sections: [
+      { id: "about", title: "About this scene", body: ["Joseph's story of forgiveness and trust in God begins in Genesis 37, when his father gave him a special coat."] },
+      { id: "privacy", title: "Download note", body: ["The printable is a single black-and-white PDF coloring page — no form, comments, child profile, or tracking field. Ask a grown-up before downloading or printing."] }
+    ]
+  },
+  {
+    path: "/sunday-school/resources/coloring-jesus-walking-on-water",
+    eyebrow: "COLORING PAGE · AGES 5–10",
+    title: "Jesus Walking on Water",
+    description: "Color Jesus walking on the water toward His disciples in their boat.",
+    pageType: "children-detail",
+    heroImage: photo("coloring-jesus-walking-on-water", "Jesus Walking on Water coloring page", "Original line-art coloring page.", "A line-art coloring page showing Jesus walking on the water toward His disciples in a boat during a storm.", "3:4", false, "/images/photography/sunday-school/coloring-jesus-walking-on-water.webp"),
+    actions: [{ label: "Download Printable", href: "/downloads/coloring-jesus-walking-on-water.pdf", variant: "primary" }],
+    sections: [
+      { id: "about", title: "About this scene", body: ["This scene tells of Jesus walking on the water to reach His disciples during a storm, found in Matthew 14:22–33."] },
+      { id: "privacy", title: "Download note", body: ["The printable is a single black-and-white PDF coloring page — no form, comments, child profile, or tracking field. Ask a grown-up before downloading or printing."] }
+    ]
+  },
+  {
+    path: "/sunday-school/resources/coloring-jesus-calls-lazarus",
+    eyebrow: "COLORING PAGE · AGES 8–13",
+    title: "Jesus Calls Lazarus from the Tomb",
+    description: "Color the moment Jesus calls Lazarus out of the tomb, healed and alive.",
+    pageType: "children-detail",
+    heroImage: photo("coloring-jesus-calls-lazarus", "Jesus Calls Lazarus from the Tomb coloring page", "Original line-art coloring page.", "A line-art coloring page showing Jesus calling Lazarus out of the tomb while others look on.", "3:4", false, "/images/photography/sunday-school/coloring-jesus-calls-lazarus.webp"),
+    actions: [{ label: "Download Printable", href: "/downloads/coloring-jesus-calls-lazarus.pdf", variant: "primary" }],
+    sections: [
+      { id: "about", title: "About this scene", body: ["This scene tells of Jesus calling Lazarus out of the tomb, found in John 11:38–44."] },
+      { id: "privacy", title: "Download note", body: ["The printable is a single black-and-white PDF coloring page — no form, comments, child profile, or tracking field. Ask a grown-up before downloading or printing."] }
+    ]
+  },
+  {
+    path: "/sunday-school/resources/coloring-moses-ten-commandments",
+    eyebrow: "COLORING PAGE · AGES 8–13",
+    title: "Moses and the Ten Commandments",
+    description: "Color Moses holding the tablets of the Ten Commandments before the people.",
+    pageType: "children-detail",
+    heroImage: photo("coloring-moses-ten-commandments", "Moses and the Ten Commandments coloring page", "Original line-art coloring page.", "A line-art coloring page showing Moses holding the tablets of the Ten Commandments before the people.", "3:4", false, "/images/photography/sunday-school/coloring-moses-ten-commandments.webp"),
+    actions: [{ label: "Download Printable", href: "/downloads/coloring-moses-ten-commandments.pdf", variant: "primary" }],
+    sections: [
+      { id: "about", title: "About this scene", body: ["This scene tells of Moses receiving and sharing the Ten Commandments, found in Exodus 20 and Exodus 34."] },
+      { id: "privacy", title: "Download note", body: ["The printable is a single black-and-white PDF coloring page — no form, comments, child profile, or tracking field. Ask a grown-up before downloading or printing."] }
     ]
   },
   {

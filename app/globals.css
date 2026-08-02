@@ -136,6 +136,8 @@ main { flex: 1; }
 .photo-placeholder.ratio-3-2 { aspect-ratio: 3 / 2; min-height: 0; }
 .photo-placeholder.ratio-2-3 { aspect-ratio: 2 / 3; min-height: 0; }
 .photo-placeholder.ratio-16-9 { aspect-ratio: 16 / 9; min-height: 0; }
+.photo-placeholder.ratio-1200-340 { aspect-ratio: 1200 / 340; min-height: 0; }
+.photo-placeholder.ratio-3-4 { aspect-ratio: 3 / 4; min-height: 0; }
 .photo-placeholder::before {
   content: ""; position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(13,85,89,.86), transparent 58%);

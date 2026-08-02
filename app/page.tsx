@@ -94,7 +94,7 @@ export default async function HomePage() {
         <div className="container">
           <div className="eyebrow special-event-title">SPECIAL EVENT</div>
           <div className="special-event-banner">
-            <PhotoPlaceholder image={{ id: "special-events-banner", label: "Special events promotional banner", productionNote: "Administrator-controlled banner image for a current special event, guest lecture, or seasonal program. Swap out as needed; remove text overlays from the image itself so alt text stays accurate.", altText: "Banner promoting a current special event at Christian Science Aurora.", aspectRatio: "16:9" }} />
+            <PhotoPlaceholder image={{ id: "special-events-banner", label: "Special events promotional banner", productionNote: "Administrator-controlled banner image for a current special event, guest lecture, or seasonal program. Swap out as needed; remove text overlays from the image itself so alt text stays accurate.", altText: "Banner promoting a current special event at Christian Science Aurora.", aspectRatio: "1200:340" }} />
             <Link href="/events" className="btn btn-primary special-event-banner-cta">More Info</Link>
           </div>
         </div>
