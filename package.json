@@ -1,5 +1,5 @@
 {
-  "name": "christian-science-aurora",
+  "name": "christianscienceaurora",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -13,18 +13,25 @@
     "test:e2e": "playwright test",
     "test:a11y": "playwright test tests/e2e/accessibility.spec.ts",
     "qa": "npm run lint && npm run typecheck && npm run test && npm run build",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "mockups": "node scripts/generate-mockups.mjs",
     "mockups:review": "node scripts/generate-review-mockups.mjs"
   },
   "dependencies": {
-    "next": "16.2.10",
+    "next": "16.2.12",
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "zod": "4.1.12"
   },
+  "overrides": {
+    "playwright-core": "1.61.1"
+  },
   "devDependencies": {
     "@axe-core/playwright": "4.10.2",
     "@eslint/eslintrc": "3.3.1",
+    "@opennextjs/cloudflare": "1.20.2",
     "@playwright/test": "1.61.1",
     "@testing-library/jest-dom": "6.9.1",
     "@testing-library/react": "16.3.0",
@@ -35,6 +42,7 @@
     "eslint-config-next": "16.2.10",
     "jsdom": "27.2.0",
     "typescript": "5.9.3",
-    "vitest": "4.0.8"
+    "vitest": "4.0.8",
+    "wrangler": "4.118.0"
   }
 }
