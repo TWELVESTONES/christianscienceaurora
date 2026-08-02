@@ -21,7 +21,7 @@ export const events: EventItem[] = [
     status: "scheduled",
     featured: true,
     cost: "Free",
-    accessibility: "CMS / Church Confirmation: publish verified accommodations.",
+    accessibility: "Fully Accessible",
     parking: "CMS / Church Confirmation: publish verified parking and entrance details.",
     familySuitable: true
   },
@@ -38,7 +38,7 @@ export const events: EventItem[] = [
     status: "scheduled",
     featured: true,
     cost: "Free",
-    accessibility: "CMS / Church Confirmation: publish verified accommodations.",
+    accessibility: "Fully Accessible",
     parking: "CMS / Church Confirmation: publish verified parking and entrance details.",
     familySuitable: true
   },

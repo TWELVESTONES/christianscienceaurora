@@ -55,8 +55,7 @@ export const pageDefinitions: PageDefinition[] = [
           { question: "What should I wear?", answer: "Wear what helps you feel comfortable and respectful. You will see a range from casual to dressier clothing." },
           { question: "May I bring children?", answer: "Yes. Sunday School meets at 10:00 a.m. and welcomes children and young adults under the age of 20. Students are checked in and placed in age-appropriate classes, and childcare is available for infants and toddlers." },
           { question: "Will I be expected to give?", answer: "No. Any collection is voluntary, and visitors are never expected to contribute." }
-        ],
-        confirmationNote: "CMS / Church Confirmation: service duration, parking, entrance, accessibility, childcare or Children’s Room, and remote attendance."
+        ]
       }
     ],
     churchConfirmation: ["Service duration", "Remote attendance"]
@@ -141,7 +140,7 @@ export const pageDefinitions: PageDefinition[] = [
     sections: [
       { id: "service-cards", cards: [
         { eyebrow: "SUNDAYS · 10:00 A.M.", title: "Sunday Service", text: "A Bible-centered service with hymns, prayer, and a weekly Bible Lesson sermon.", href: "/services/sunday", action: "Explore Sunday Service" },
-        { eyebrow: "WEDNESDAYS · 7:30 P.M.", title: "Testimony Meeting", text: "A midweek pause with readings, prayer, gratitude, and voluntary sharing.", href: "/services/wednesday", action: "Attend Wednesday Meetings" },
+        { eyebrow: "WEDNESDAYS · 7:30 P.M.", title: "Testimony Meeting", text: "A midweek pause with readings, prayer, gratitude, and voluntary sharing.", href: "/services/wednesday", action: "Wednesday Meetings" },
         { eyebrow: "OFFICIAL RESOURCE", title: "Weekly Bible Lesson", text: "Find official information and access options for the lesson studied during the week.", href: "/services/weekly-bible-lesson", action: "Find Lesson Information" },
         { eyebrow: "REMOTE ATTENDANCE", title: "Attend Online", text: "Remote attendance is not currently available. See this page for updates.", href: "/services/attend-online", action: "View Attendance Status" }
       ] }
@@ -492,7 +491,7 @@ export const pageDefinitions: PageDefinition[] = [
         { title: "Where", text: "[VENUE, ADDRESS, OR ONLINE]" },
         { title: "Cost", text: "[FREE OR CONFIRMED COST]" },
         { title: "Who is welcome", text: "[AUDIENCE AND FAMILY SUITABILITY]" },
-        { title: "Accessibility", text: "[CONFIRMED DETAILS]" },
+        { title: "Accessibility", text: "Fully Accessible" },
         { title: "Parking", text: "[CONFIRMED DETAILS]" }
       ], confirmationNote: "Event is not publishable until all required fields and rights review are complete." }
     ]
@@ -572,8 +571,7 @@ export const pageDefinitions: PageDefinition[] = [
     description: "Christian Science is based on the Bible and emphasizes prayer, spiritual understanding, and the practical power of God’s goodness and love.",
     actions: [{ label: "Official Christian Science Introduction", href: "https://www.christianscience.com/what-is-christian-science", external: true, variant: "primary" }, { label: "Explore Local Services", href: "/services", variant: "secondary" }],
     sections: [
-      { id: "intro", title: "A local introduction", body: ["Mary Baker Eddy discovered and founded Christian Science and wrote Science and Health with Key to the Scriptures, the Christian Science textbook.", "For a complete official introduction to beliefs, teachings, healing, and church resources, visit ChristianScience.com."], style: "teal-mist" },
-      { id: "health", title: "A note about health information", body: ["This local introduction is not a substitute for medical advice and does not promise a particular outcome. People are free to make their own health-care decisions."] }
+      { id: "intro", title: "A local introduction", body: ["Mary Baker Eddy discovered and founded Christian Science and wrote Science and Health with Key to the Scriptures, the Christian Science textbook.", "For a complete official introduction to beliefs, teachings, healing, and church resources, visit ChristianScience.com."], style: "teal-mist" }
     ]
   },
   {
@@ -605,7 +603,7 @@ export const pageDefinitions: PageDefinition[] = [
     description: "Mary Baker Eddy was a religious leader, author, teacher, and founder of the Church of Christ, Scientist.",
     actions: [{ label: "Visit the Mary Baker Eddy Library", href: "https://www.marybakereddylibrary.org/", external: true, variant: "primary" }, { label: "Official Biography and Resources", href: "https://www.christianscience.com/what-is-christian-science/mary-baker-eddy", external: true, variant: "secondary" }],
     sections: [
-      { id: "overview", title: "Official sources for fuller information", body: ["Her principal work, Science and Health with Key to the Scriptures, explains the theology and practice of Christian Science.", "Images, quotations, and source material should be published only within applicable permission guidelines."], style: "teal-mist" }
+      { id: "overview", title: "Official sources for fuller information", body: ["Mrs. Eddy's principal work, Science and Health with Key to the Scriptures, explains the theology and practice of Christian Science."], style: "teal-mist" }
     ]
   },
   {
@@ -650,7 +648,8 @@ export const pageDefinitions: PageDefinition[] = [
       { id: "choices", title: "Ways to give", cards: [
         { title: "One-time gift", text: "Make a single contribution in the amount you choose." },
         { title: "Recurring gift", text: "Set up an ongoing contribution and change or cancel it any time through PayPal or your bank's Zelle feature." },
-        { title: "Other ways", text: "Checks and in-person gifts are always welcome. For bequests, gifts of goods-in-kind, real estate, vehicles, stock, or donor-advised funds, our treasurer would be glad to help." }
+        { title: "By check", text: "Make checks payable to \"First Church of Christ, Scientist, Aurora\" and mail or bring them to 15700 E. Quincy Avenue, Aurora, Colorado 80015." },
+        { title: "Other ways", text: "In-person gifts are always welcome. For bequests, gifts of goods-in-kind, real estate, vehicles, stock, or donor-advised funds, our treasurer would be glad to help." }
       ] },
       { id: "planned-giving", title: "Planned and special gifts", body: ["Thinking about remembering the church in your will, or giving something other than cash — goods-in-kind, real estate, a vehicle, or another asset? We would be honored, and we know these decisions deserve care and a real conversation.", "Please reach out to our treasurer at treasurer@christianscienceaurora.com. We're happy to answer questions, walk through the options together, or simply talk — with no obligation. Whatever you're able to give, we're deeply grateful for your generosity and support."], style: "teal-mist" },
       { id: "privacy", title: "Your privacy and receipt", body: ["Payments are processed directly through PayPal or Zelle. The church receives only the information needed to record the gift and provide a receipt.", "Do not send payment-card, bank, or Zelle information by email or through the general contact form."] }
@@ -711,7 +710,6 @@ export const pageDefinitions: PageDefinition[] = [
     pageType: "legal",
     sections: [
       { id: "use", title: "Lawful and responsible use", body: ["By using this website, you agree to use it lawfully and respectfully. Content is provided for general informational and spiritual purposes and may be changed, updated, or removed at any time without notice."] },
-      { id: "outcomes", title: "No guarantee of outcomes", body: ["This website does not promise or guarantee medical, financial, legal, or other outcomes. It is not a substitute for professional medical, legal, or financial advice, and visitors are free to make their own informed decisions, including about health care."], style: "teal-mist" },
       { id: "giving", title: "Giving", body: ["Contributions made through this site are voluntary and processed by PayPal or Zelle. We do our best to record and acknowledge gifts accurately; contact our treasurer at treasurer@christianscienceaurora.com with any questions or to request a correction."] },
       { id: "content", title: "Content and permissions", body: ["Local text, photography, and design on this site belong to or are used with permission by Christian Science Aurora. The Bible, Science and Health with Key to the Scriptures, other Christian Science publications, trademarks, quotations, and recordings belong to their respective owners and may require separate permission to reuse. See our Content Permissions page for details."] },
       { id: "external", title: "External links", body: ["This site links to official Christian Science resources and other third-party sites for convenience. We do not control those sites and are not responsible for their content, security, availability, or privacy practices."] },
@@ -734,7 +732,8 @@ export const pageDefinitions: PageDefinition[] = [
         { title: "Articles", text: "Categories and article details.", href: "/articles", action: "Open Articles" },
         { title: "About", text: "Local church, Christian Science, history, Pastor, Mary Baker Eddy.", href: "/about", action: "Open About" },
         { title: "Resources", text: "Trusted external Christian Science resources.", href: "/resources", action: "Open Resources" },
-        { title: "Give", text: "Voluntary giving information and disabled integration boundary.", href: "/give", action: "Open Give" },
+        { title: "Lectures", text: "Christian Science lectures hosted in the Aurora area.", href: "/lectures", action: "Open Lectures" },
+        { title: "Give", text: "Ways to give online, by check, or in other ways.", href: "/give", action: "Open Give" },
         { title: "Contact", text: "Address, phone, and inquiry form.", href: "/contact", action: "Open Contact" }
       ] }
     ]
@@ -746,13 +745,7 @@ export const pageDefinitions: PageDefinition[] = [
     description: "Christian Science publications, Bible Lesson material, trademarks, recordings, testimony content, quotations, product images, and third-party materials may be protected.",
     pageType: "legal",
     sections: [
-      { id: "notice", title: "Appearance does not grant reuse rights", body: ["Contact Christian Science Aurora concerning locally owned material. For official Christian Science content, contact the applicable rights holder.", "Link to official resources unless reuse is expressly authorized."], style: "teal-mist" },
-      { id: "review", title: "Content requiring review", cards: [
-        { title: "Bible Lesson content", text: "Do not automatically republish full copyrighted lessons." },
-        { title: "Testimonies", text: "Prefer links to verified official publications and review any local submission carefully." },
-        { title: "Youth content", text: "Use guardian releases, no profiles or surnames, metadata stripping, and editorial approval." },
-        { title: "Covers and trademarks", text: "Use only within authorized contexts. Do not use the Cross and Crown as a favicon or decoration." }
-      ] }
+      { id: "notice", title: "Appearance does not grant reuse rights", body: ["Contact Christian Science Aurora concerning locally owned material. For official Christian Science content, contact the applicable rights holder.", "Link to official resources unless reuse is expressly authorized."], style: "teal-mist" }
     ]
   },
   {

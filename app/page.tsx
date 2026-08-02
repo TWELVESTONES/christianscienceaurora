@@ -91,13 +91,11 @@ export default async function HomePage() {
       </section>
 
       <section className="section section-gold-accent">
-        <div className="container section-split">
-          <PhotoPlaceholder image={{ id: "special-events-banner", label: "Special events promotional banner", productionNote: "Administrator-controlled banner image for a current special event, guest lecture, or seasonal program. Swap out as needed; remove text overlays from the image itself so alt text stays accurate.", altText: "Banner promoting a current special event at Christian Science Aurora.", aspectRatio: "16:9" }} />
-          <div>
-            <div className="eyebrow">SPECIAL EVENTS</div>
-            <h2>Watch for special events in Aurora.</h2>
-            <p>From guest speakers to seasonal gatherings, keep an eye on this space for what&rsquo;s coming up next.</p>
-            <ButtonRow actions={[{ label: "View Full Calendar", href: "/events", variant: "secondary" }]} />
+        <div className="container">
+          <div className="eyebrow special-event-title">SPECIAL EVENT</div>
+          <div className="special-event-banner">
+            <PhotoPlaceholder image={{ id: "special-events-banner", label: "Special events promotional banner", productionNote: "Administrator-controlled banner image for a current special event, guest lecture, or seasonal program. Swap out as needed; remove text overlays from the image itself so alt text stays accurate.", altText: "Banner promoting a current special event at Christian Science Aurora.", aspectRatio: "16:9" }} />
+            <Link href="/events" className="btn btn-primary special-event-banner-cta">More Info</Link>
           </div>
         </div>
       </section>
@@ -171,7 +169,14 @@ export default async function HomePage() {
       <section className="section section-stone">
         <div className="container section-split">
           <div><div className="eyebrow">VISIT US IN AURORA</div><h2>First Church of Christ, Scientist, Aurora</h2><p>15700 E. Quincy Avenue<br />Aurora, Colorado 80015<br />(303) 766-0620</p><ButtonRow actions={[{ label: "Get Directions", href: "/visit/directions-parking", variant: "primary" }, { label: "Contact Us", href: "/contact", variant: "secondary" }]} /></div>
-          <div className="map-placeholder" role="img" aria-label="Map centered on 15700 E. Quincy Avenue, Aurora, Colorado"><div><strong>15700 E. Quincy Avenue</strong><br />Aurora, Colorado 80015<br /><Link href="/visit/directions-parking">Open directions and parking information →</Link></div></div>
+          <div className="map-embed">
+            <iframe
+              src="https://www.google.com/maps?q=15700+E.+Quincy+Avenue,+Aurora,+CO+80015&output=embed"
+              title="Map showing First Church of Christ, Scientist, Aurora at 15700 E. Quincy Avenue, Aurora, Colorado 80015"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </section>
 
