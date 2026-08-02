@@ -29,20 +29,13 @@ export function PhotoPlaceholder({ image, className = "" }: { image: ImagePlaceh
           <span className="photo-architectural-line" />
         </div>
       )}
-      <figcaption className="photo-caption">
-        {isContentReviewMode ? (
-          <>
-            <span className="photo-note-badge">Photo production placeholder{image.youthReleaseRequired ? " · youth release required" : ""}</span>
-            <strong>{image.label}</strong>
-            <span>{image.productionNote}</span>
-          </>
-        ) : (
-          <>
-            <span className="photo-note-badge">{hasRealPhoto ? "Photographed on site" : "Local photography"}</span>
-            <strong>{image.label}</strong>
-          </>
-        )}
-      </figcaption>
+      {isContentReviewMode ? (
+        <figcaption className="photo-caption">
+          <span className="photo-note-badge">Photo production placeholder{image.youthReleaseRequired ? " · youth release required" : ""}</span>
+          <strong>{image.label}</strong>
+          <span>{image.productionNote}</span>
+        </figcaption>
+      ) : null}
     </figure>
   );
 }

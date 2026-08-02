@@ -198,7 +198,7 @@ export const sundaySchoolResources: SundaySchoolResource[] = [
     ageGroup: "Ages 5–10",
     topic: "Kindness",
     estimatedTime: "20 minutes",
-    delivery: "Online",
+    delivery: "Printable",
     adultAssistance: "Recommended",
     summary: "Choose a story card and talk about how love can guide the next step."
   }

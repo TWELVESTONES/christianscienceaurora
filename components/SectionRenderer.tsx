@@ -3,6 +3,7 @@ import { ButtonRow } from "@/components/Buttons";
 import { CardGrid } from "@/components/Cards";
 import { PhotoPlaceholder } from "@/components/PhotoPlaceholder";
 import { isContentReviewMode } from "@/lib/review-mode";
+import { linkifyText } from "@/lib/linkify";
 
 export function SectionRenderer({ section }: { section: PageSection }) {
   const style = section.style ?? "default";
@@ -18,14 +19,14 @@ export function SectionRenderer({ section }: { section: PageSection }) {
                 {section.intro ? <p>{section.intro}</p> : null}
               </header>
             ) : null}
-            {section.body?.length ? <div className="section-body">{section.body.map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div> : null}
+            {section.body?.length ? <div className="section-body">{section.body.map((paragraph, index) => <p key={index}>{linkifyText(paragraph)}</p>)}</div> : null}
             {section.cards?.length ? <CardGrid cards={section.cards} /> : null}
             {section.faq?.length ? (
               <div className="faq-list">
                 {section.faq.map((item) => (
                   <details key={item.question}>
                     <summary>{item.question}</summary>
-                    <p>{item.answer}</p>
+                    <p>{linkifyText(item.answer)}</p>
                   </details>
                 ))}
               </div>

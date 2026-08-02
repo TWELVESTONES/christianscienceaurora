@@ -23,7 +23,7 @@ export const pageDefinitions: PageDefinition[] = [
     title: "Your first visit, made simple.",
     description: "Everything you need to know before joining a Sunday service, Sunday School, or Wednesday testimony meeting.",
     directAnswer: "Sunday Service and Sunday School meet at 10:00 a.m. Wednesday testimony meetings begin at 7:30 p.m. The church is at 15700 E. Quincy Avenue in Aurora.",
-    heroImage: photo("visit-entrance", "Church entrance and arrival", "Photograph the main visitor approach in soft morning light. Show the door, walkway, sign, and a clear sense of arrival without staged posing.", "Main entrance and walkway at First Church of Christ, Scientist, Aurora."),
+    heroImage: photo("visit-entrance", "Church entrance and arrival", "Photograph the main visitor approach in soft morning light. Show the door, walkway, sign, and a clear sense of arrival without staged posing.", "Main entrance and walkway at First Church of Christ, Scientist, Aurora.", "4:3", false, "/images/photography/visit-entrance.webp"),
     actions: [actions.directions, actions.contact],
     sections: [
       {
@@ -34,7 +34,7 @@ export const pageDefinitions: PageDefinition[] = [
           { title: "Sunday", text: "Service and Sunday School at 10:00 a.m.", meta: "Weekly" },
           { title: "Wednesday", text: "Testimony meeting at 7:30 p.m.", meta: "Weekly" },
           { title: "Address", text: "15700 E. Quincy Avenue, Aurora, Colorado 80015", meta: "Aurora" },
-          { title: "Phone", text: "(303) 766-0620", meta: "Call before your visit" }
+          { title: "Phone", text: "(303) 766-0620", meta: "Call with any questions" }
         ]
       },
       {
@@ -53,13 +53,13 @@ export const pageDefinitions: PageDefinition[] = [
         title: "Practical details",
         faq: [
           { question: "What should I wear?", answer: "Wear what helps you feel comfortable and respectful. You will see a range from casual to dressier clothing." },
-          { question: "May I bring children?", answer: "Yes. Sunday School meets at 10:00 a.m. Confirmed check-in and age-group details will be published before launch." },
+          { question: "May I bring children?", answer: "Yes. Sunday School meets at 10:00 a.m. and welcomes children and young adults under the age of 20. Students are checked in and placed in age-appropriate classes, and childcare is available for infants and toddlers." },
           { question: "Will I be expected to give?", answer: "No. Any collection is voluntary, and visitors are never expected to contribute." }
         ],
         confirmationNote: "CMS / Church Confirmation: service duration, parking, entrance, accessibility, childcare or Children’s Room, and remote attendance."
       }
     ],
-    churchConfirmation: ["Parking and entrance", "Accessibility accommodations", "Service duration", "Children’s Room", "Remote attendance"]
+    churchConfirmation: ["Service duration", "Remote attendance"]
   },
   {
     path: "/visit/directions-parking",
@@ -67,11 +67,11 @@ export const pageDefinitions: PageDefinition[] = [
     title: "Find the church and arrive with confidence.",
     description: "Driving directions, parking, entrance, and arrival information for the Aurora church.",
     directAnswer: "The church is located at 15700 E. Quincy Avenue, Aurora, Colorado 80015.",
-    heroImage: photo("directions-exterior", "Wide exterior and parking approach", "Create a wide street-to-building view in clear natural light. Include visible driveway, parking approach, walkway, and church architecture. Avoid dramatic skies.", "Wide view of the Aurora church, driveway, parking approach, and main entrance."),
+    heroImage: photo("directions-exterior", "Wide exterior and parking approach", "Create a wide street-to-building view in clear natural light. Include visible driveway, parking approach, walkway, and church architecture. Avoid dramatic skies.", "Wide view of the Aurora church, driveway, parking approach, and main entrance.", "16:9", false, "/images/photography/directions-exterior.webp"),
     actions: [{ label: "Open in Maps", href: "https://www.google.com/maps/search/?api=1&query=15700+E+Quincy+Avenue+Aurora+CO+80015", external: true, variant: "primary" }, actions.contact],
     sections: [
-      { id: "map", title: "15700 E. Quincy Avenue", intro: "Aurora, Colorado 80015", body: ["Use the interactive map or your preferred navigation app.", "Allow a few extra minutes on your first visit so you can identify the correct entrance."], image: photo("parking-diagram", "Parking and entrance guide", "Photograph or diagram the actual parking areas and accessible route after church confirmation. Clearly identify visitor entrance without exposing private vehicle information.", "Parking areas, accessible route, and visitor entrance at the Aurora church.", "4:3"), style: "stone" },
-      { id: "parking", title: "Parking and entrance", body: ["Parking and entrance details are intentionally held as a CMS confirmation field until church leadership verifies the public instructions."], confirmationNote: "CMS / Church Confirmation: designated visitor parking, accessible spaces, snow-route guidance, and preferred entrance." }
+      { id: "map", title: "15700 E. Quincy Avenue", intro: "Aurora, Colorado 80015", body: ["Use the interactive map or your preferred navigation app.", "Allow a few extra minutes on your first visit so you can identify the correct entrance."], image: photo("parking-diagram", "Parking and entrance guide", "Photograph or diagram the actual parking areas and accessible route after church confirmation. Clearly identify visitor entrance without exposing private vehicle information.", "Parking areas, accessible route, and visitor entrance at the Aurora church.", "4:3", false, "/images/photography/parking-diagram.webp"), style: "stone" },
+      { id: "parking", title: "Parking and entrance", body: ["Free parking is available on-site. The entrance to the parking lot is on Jasper Street, at the corner of Jasper Street and Quincy Avenue.", "Follow the walkway from the parking lot to the main entrance."] }
     ]
   },
   {
@@ -79,7 +79,7 @@ export const pageDefinitions: PageDefinition[] = [
     eyebrow: "WHAT TO EXPECT",
     title: "Come as you are. Participate at your own comfort level.",
     description: "A plain-language guide to Sunday worship, Wednesday testimony meetings, and visiting for the first time.",
-    heroImage: photo("greeter-program", "Natural visitor welcome", "Document a natural moment of an adult greeter offering a program near the entrance. Use real participants with releases, candid body language, and natural light.", "A visitor receiving a service program near the church entrance.", "16:9", false, "/images/photography/foyer-welcome-table.webp"),
+    heroImage: photo("greeter-program", "Natural visitor welcome", "Document a natural moment of an adult greeter offering a program near the entrance. Use real participants with releases, candid body language, and natural light.", "A visitor receiving a service program near the church entrance.", "2:3", false, "/images/photography/greeter-program.webp"),
     actions: [actions.visit, actions.directions],
     sections: [
       { id: "sunday", title: "Sunday service", body: ["The service includes hymns, silent and spoken prayer, a Scriptural selection, the Lord’s Prayer, and a Bible Lesson sermon read from the Bible and Science and Health with Key to the Scriptures.", "Printed materials help visitors follow along."], style: "teal-mist" },
@@ -102,7 +102,7 @@ export const pageDefinitions: PageDefinition[] = [
         { question: "Do I need to be a Christian Scientist?", answer: "No. Everyone is welcome, including people who are simply curious or visiting for the first time." },
         { question: "Will I be asked to introduce myself?", answer: "No. You may attend quietly and participate at your own comfort level." },
         { question: "Is there a collection?", answer: "A voluntary collection may be taken. Visitors are never expected to give." },
-        { question: "May I bring my children?", answer: "Yes. Sunday School meets at 10:00 a.m. Confirmed check-in details will be published before launch." },
+        { question: "May I bring my children?", answer: "Yes. Sunday School meets at 10:00 a.m. and welcomes children and young adults under the age of 20. Students are checked in and placed in age-appropriate classes, and childcare is available for infants and toddlers." },
         { question: "Can I attend online?", answer: "Remote attendance has not yet been confirmed. When available, verified access details will appear on the Attend Online page." },
         { question: "Who can answer a question?", answer: "Call (303) 766-0620 or use the contact form." }
       ] }
@@ -113,7 +113,7 @@ export const pageDefinitions: PageDefinition[] = [
     eyebrow: "ACCESSIBILITY",
     title: "We want everyone to be able to participate.",
     description: "Accessibility information for the building, services, website, documents, and online media.",
-    directAnswer: "The website is designed toward WCAG 2.2 AA. Building-specific accommodation details must be verified before launch.",
+    directAnswer: "The building has a step-free entrance, accessible parking, and accessible restrooms. The website is designed toward WCAG 2.2 AA.",
     actions: [actions.contact, actions.directions],
     sections: [
       { id: "website", title: "Accessible website experience", cards: [
@@ -121,7 +121,14 @@ export const pageDefinitions: PageDefinition[] = [
         { title: "Readable content", text: "Body text is 17–18 pixels or larger with clear headings and strong contrast." },
         { title: "Media access", text: "Published video requires captions, and audio or video content includes transcripts when available." }
       ] },
-      { id: "building", title: "Building access", body: ["Accessible parking, entrance, seating, restrooms, hearing support, and other accommodation details will be published after church verification."], confirmationNote: "CMS / Church Confirmation: accessible route, seating, restroom, hearing assistance, service animal guidance, and contact process." }
+      { id: "building", title: "Building access", cards: [
+        { title: "Entrance", text: "There are no steps to enter the building or move through it. There is a curb between the parking lot and the walkway, with an accessibility ramp near the handicap parking spaces on the south-east side of the parking lot." },
+        { title: "Parking", text: "Handicap parking spaces are available on the south-east side of the parking lot, next to the accessibility ramp." },
+        { title: "Restrooms", text: "Accessible restrooms are available inside the building." },
+        { title: "Assistive listening", text: "Assistive listening devices are available — just ask an usher." },
+        { title: "Large print and braille", text: "Braille materials are not kept on hand, but a Bible and Science and Health with Key to the Scriptures in braille can be ordered through the Reading Room upon request." },
+        { title: "Requesting an accommodation", text: "If you're at the church, ask any usher. Otherwise, call (303) 766-0620 to reach the church clerk." }
+      ] }
     ]
   },
   {
@@ -134,9 +141,9 @@ export const pageDefinitions: PageDefinition[] = [
     sections: [
       { id: "service-cards", cards: [
         { eyebrow: "SUNDAYS · 10:00 A.M.", title: "Sunday Service", text: "A Bible-centered service with hymns, prayer, and a weekly Bible Lesson sermon.", href: "/services/sunday", action: "Explore Sunday Service" },
-        { eyebrow: "WEDNESDAYS · 7:30 P.M.", title: "Testimony Meeting", text: "A midweek pause with readings, prayer, gratitude, and voluntary sharing.", href: "/services/wednesday", action: "Explore Wednesday Meetings" },
+        { eyebrow: "WEDNESDAYS · 7:30 P.M.", title: "Testimony Meeting", text: "A midweek pause with readings, prayer, gratitude, and voluntary sharing.", href: "/services/wednesday", action: "Attend Wednesday Meetings" },
         { eyebrow: "OFFICIAL RESOURCE", title: "Weekly Bible Lesson", text: "Find official information and access options for the lesson studied during the week.", href: "/services/weekly-bible-lesson", action: "Find Lesson Information" },
-        { eyebrow: "CHURCH CONFIRMATION", title: "Attend Online", text: "Remote access details will appear only after the church confirms the service and publication policy.", href: "/services/attend-online", action: "View Attendance Status" }
+        { eyebrow: "REMOTE ATTENDANCE", title: "Attend Online", text: "Remote attendance is not currently available. See this page for updates.", href: "/services/attend-online", action: "View Attendance Status" }
       ] }
     ]
   },
@@ -145,12 +152,12 @@ export const pageDefinitions: PageDefinition[] = [
     eyebrow: "SUNDAYS AT 10:00 A.M.",
     title: "A thoughtful hour of worship, prayer, and spiritual discovery.",
     description: "Join a service centered on the Bible and the teachings of Christian Science. Visitors are always welcome.",
-    heroImage: photo("sunday-sanctuary-detail", "Sunday worship environment", "Photograph the sanctuary before service with warm daylight, orderly seating, hymnals, and architectural detail. No identifiable attendees unless released.", "Quiet sanctuary prepared for Sunday worship."),
+    heroImage: photo("sunday-sanctuary-detail", "Sunday worship environment", "Photograph the sanctuary before service with warm daylight, orderly seating, hymnals, and architectural detail. No identifiable attendees unless released.", "Quiet sanctuary prepared for Sunday worship.", "4:3", false, "/images/photography/sunday-sanctuary-detail.webp"),
     actions: [actions.visit, actions.directions],
     sections: [
       { id: "what-happens", title: "What happens during the service?", body: ["The service includes music, hymns, silent and spoken prayer, a Scriptural selection, the Lord’s Prayer, and a Bible Lesson sermon.", "Two Readers conduct the service: one reads from the Bible and the other reads correlative passages from Science and Health with Key to the Scriptures."] },
       { id: "lesson", title: "What is a Bible Lesson sermon?", body: ["A Bible Lesson sermon is a collection of passages organized around a weekly subject. Christian Science churches around the world hear the same lesson while each congregation worships in its own community."], style: "teal-mist" },
-      { id: "first-time", title: "For first-time visitors", body: ["No prior knowledge is needed. Printed materials help you follow the service, and you may participate in hymns and prayers as you feel comfortable.", "Sunday School meets at the same time for children and young people."], confirmationNote: "CMS / Church Confirmation: typical duration, Communion Sunday language, childcare or Children’s Room, and remote access." }
+      { id: "first-time", title: "For first-time visitors", body: ["No prior knowledge is needed. Printed materials help you follow the service, and you may participate in hymns and prayers as you feel comfortable.", "Sunday School meets at the same time and welcomes children and young adults under the age of 20. Students are checked in and placed in age-appropriate classes, and childcare is available for infants and toddlers."] }
     ]
   },
   {
@@ -158,7 +165,7 @@ export const pageDefinitions: PageDefinition[] = [
     eyebrow: "WEDNESDAYS AT 7:30 P.M.",
     title: "A midweek pause for prayer, gratitude, and healing.",
     description: "Step away from the week’s demands and join music, prayer, readings, and first-person expressions of gratitude.",
-    heroImage: photo("wednesday-evening", "Church entrance at early evening", "Photograph the illuminated entrance during blue hour with realistic ambient light and a calm, safe arrival feeling. No artificial glow or dramatic sky replacement.", "Church entrance in the early evening before the Wednesday testimony meeting."),
+    heroImage: photo("wednesday-evening", "Church entrance at early evening", "Photograph the illuminated entrance during blue hour with realistic ambient light and a calm, safe arrival feeling. No artificial glow or dramatic sky replacement.", "Church entrance in the early evening before the Wednesday testimony meeting.", "4:3", false, "/images/photography/wednesday-evening.webp"),
     actions: [actions.visit, actions.directions],
     sections: [
       { id: "meeting", title: "What happens at a testimony meeting?", body: ["The meeting begins with hymns and readings from the Bible and Science and Health with Key to the Scriptures.", "The second part is open for attendees to share gratitude and experiences that show how prayer and a growing understanding of God have brought help or healing."] },
@@ -176,11 +183,7 @@ export const pageDefinitions: PageDefinition[] = [
     directAnswer: "No local remote-attendance method has been confirmed for publication.",
     actions: [{ label: "Official Mother Church Services", href: "https://www.christianscience.com/the-mother-church-in-boston/the-mother-church-services", external: true, variant: "primary" }, actions.contact],
     sections: [
-      { id: "status", title: "What will appear here when confirmed?", cards: [
-        { title: "Attendance method", text: "Verified Zoom, livestream, telephone, or other access option." },
-        { title: "Schedule and access", text: "Current time, link, dial-in instructions, privacy guidance, and service status." },
-        { title: "Accessibility", text: "Captioning, transcript, telephone, or other available accommodations." }
-      ], confirmationNote: "CMS / Church Confirmation: remote availability, public-link policy, passcode handling, host ownership, privacy, captions, and backup plan." }
+      { id: "status", title: "Not currently available", body: ["Remote attendance is not currently offered. Please check back here for updates, or contact us with questions."] }
     ]
   },
   {
@@ -201,9 +204,11 @@ export const pageDefinitions: PageDefinition[] = [
     title: "Listen, watch, or read.",
     description: "Explore approved sermons, readings, recordings, and summaries from Christian Science Aurora.",
     pageType: "sermon-library",
-    heroImage: photo("sermon-reader-view", "Readers’ platform and open books", "Create a respectful, permission-aware detail of the Readers’ platform or approved open study materials. Avoid readable copyrighted pages and restricted trademark emphasis.", "Readers’ platform prepared for a Christian Science service."),
+    heroImage: photo("sermon-reader-view", "Readers’ platform and open books", "Create a respectful, permission-aware detail of the Readers’ platform or approved open study materials. Avoid readable copyrighted pages and restricted trademark emphasis.", "Readers’ platform prepared for a Christian Science service.", "4:3", false, "/images/photography/sermon-reader-view.webp"),
     actions: [{ label: "View Latest Sermon", href: "/sermons/peace-through-prayer-placeholder", variant: "primary" }],
-    sections: []
+    sections: [
+      { id: "pastor", body: ["Sermons are given by our Pastor, the Bible and Science and Health with Key to the Scriptures by Mary Baker Eddy. The Readers are elected by our membership."], style: "teal-mist" }
+    ]
   },
   {
     path: "/sermons/peace-through-prayer-placeholder",
@@ -223,10 +228,11 @@ export const pageDefinitions: PageDefinition[] = [
     eyebrow: "SUNDAYS AT 10:00 A.M.",
     title: "A joyful place to ask, learn, and grow.",
     description: "Children can explore the Bible, talk about ideas, make things, and learn how prayer can help every day.",
-    heroImage: photo("sunday-school-hands", "Children creating at a table", "Show hands and materials rather than identifiable faces: children coloring or arranging activity cards with a teacher nearby. Strip metadata and require guardian releases for any recognizable child.", "Children’s hands working on a Sunday School activity with a teacher nearby.", "16:9", true),
+    heroImage: photo("sunday-school-hands", "Children creating at a table", "Show hands and materials rather than identifiable faces: children coloring or arranging activity cards with a teacher nearby. Strip metadata and require guardian releases for any recognizable child.", "Children’s hands working on a Sunday School activity with a teacher nearby.", "3:2", true, "/images/photography/sunday-school-hands.webp"),
     actions: [{ label: "Plan Your First Sunday", href: "/sunday-school/parents", variant: "primary" }, { label: "Explore Activities", href: "/sunday-school/activities", variant: "secondary" }],
     sections: [
       { id: "curious", title: "You can be curious here.", body: ["There is no such thing as a silly question. You can listen, talk, read, draw, solve a puzzle, or share an idea. We learn together."], style: "gold-accent" },
+      { id: "what-they-learn", title: "What students learn", body: ["Children are taught the Scriptures and instructed according to their own understanding and ability to grasp the simpler meanings taught.", "The first lessons are the Ten Commandments (Exodus 20:3–17), the Lord's Prayer (Matthew 6:9–13), and the Sermon on the Mount (Matthew 5:3–12)."] },
       { id: "sunday-flow", title: "What happens on Sunday?", cards: [
         { eyebrow: "01", title: "Welcome", text: "Meet your teacher and take a little time to get comfortable." },
         { eyebrow: "02", title: "Explore the Bible", text: "Hear stories about courage, kindness, trust, and helping others." },
@@ -246,17 +252,17 @@ export const pageDefinitions: PageDefinition[] = [
     eyebrow: "PARENT INFORMATION",
     title: "A caring place for children to explore spiritual ideas.",
     description: "Sunday School meets at 10:00 a.m., at the same time as the Sunday service.",
-    heroImage: photo("family-arrival", "Family arriving for Sunday School", "Show a parent and child approaching the entrance from behind or at a non-identifying angle. Natural morning light, relaxed movement, no staged smiles. Releases required.", "A family walking toward the church entrance for Sunday School.", "16:9", true),
+    heroImage: photo("family-arrival", "Family arriving for Sunday School", "Show a parent and child approaching the entrance from behind or at a non-identifying angle. Natural morning light, relaxed movement, no staged smiles. Releases required.", "A family walking toward the church entrance for Sunday School.", "4:3", true, "/images/photography/family-arrival.webp"),
     actions: [{ label: "Plan Your First Sunday", href: "/visit", variant: "primary" }, { label: "Contact Sunday School", href: "/contact", variant: "secondary" }],
     sections: [
       { id: "learn", title: "What students learn", body: ["Age-appropriate lessons may include Bible stories, the Ten Commandments, the Sermon on the Mount, the Lord’s Prayer, and ideas about God’s love, identity, courage, kindness, healing, and wise choices."] },
       { id: "typical", title: "A typical Sunday", body: ["Students are welcomed by a teacher, explore a Bible-based idea, ask questions, discuss how it applies to life, and may complete a related activity.", "The goal is thoughtful participation—not memorizing a set of answers."], style: "teal-mist" },
-      { id: "safety", title: "Safety and privacy", body: ["Children’s full names, profiles, public comments, and recognizable images are not published without documented authorization.", "Image metadata is stripped and youth content requires editorial and compliance approval."], confirmationNote: "CMS / Church Confirmation: ages served, class groupings, check-in/out, guardian presence, safety procedures, accessibility, and contact." },
+      { id: "safety", title: "Safety and privacy", body: ["Sunday School welcomes children and young adults under the age of 20. Students are checked in and placed in age-appropriate classes, and childcare is available for infants and toddlers.", "Children’s full names, profiles, public comments, and recognizable images are not published without documented authorization."] },
       { id: "parent-faq", faq: [
         { question: "Does my child need Bible knowledge?", answer: "No. Teachers explain ideas in age-appropriate language and welcome questions." },
         { question: "Must our family be church members?", answer: "No. Families and visitors are welcome." },
         { question: "What should my child bring?", answer: "Nothing special is required unless an activity says otherwise." },
-        { question: "May I visit the class?", answer: "The classroom visitor policy must be confirmed. Contact the Sunday School team before your first visit." }
+        { question: "May I visit the class?", answer: "Contact the Sunday School team before your first visit to arrange a classroom visit." }
       ] }
     ]
   },
@@ -273,7 +279,7 @@ export const pageDefinitions: PageDefinition[] = [
     path: "/sunday-school/coloring-pages",
     eyebrow: "COLORING PAGES",
     title: "Color, notice, and think.",
-    description: "Original printable placeholders for Bible stories, gratitude, kindness, courage, peace, and reflection.",
+    description: "Original printable coloring pages for Bible stories, gratitude, kindness, courage, peace, and reflection.",
     pageType: "children-library",
     sections: [
       { id: "coloring-note", title: "Original artwork only", body: ["All coloring pages must be original or properly licensed, accessible as tagged PDFs, and reviewed for theological clarity and age appropriateness."], style: "gold-accent" }
@@ -283,9 +289,9 @@ export const pageDefinitions: PageDefinition[] = [
     path: "/sunday-school/stories",
     eyebrow: "CHILDREN’S STORIES",
     title: "Meet brave choices and helpful ideas.",
-    description: "Short, original story placeholders that connect Bible ideas with school, friendships, family, and everyday decisions.",
+    description: "Short, original stories that connect Bible ideas with school, friendships, family, and everyday decisions.",
     pageType: "children-library",
-    heroImage: photo("story-illustration", "Original children’s story illustration", "Commission an original, contemporary editorial illustration with simple shapes, warm white space, teal/periwinkle palette, and restrained gold. No separate Sunday School logo.", "Original illustration of children reading and discussing a Bible story together.", "4:3", false),
+    heroImage: photo("story-illustration", "Original children’s story illustration", "Commission an original, contemporary editorial illustration with simple shapes, warm white space, teal/periwinkle palette, and restrained gold. No separate Sunday School logo.", "Original illustration of children reading and discussing a Bible story together.", "4:3", false, "/images/photography/story-illustration.webp"),
     sections: []
   },
   {
@@ -302,15 +308,50 @@ export const pageDefinitions: PageDefinition[] = [
     title: "Grow a Gratitude Garden",
     description: "Write one good thing on each paper leaf and build a garden of gratitude together.",
     pageType: "children-detail",
-    actions: [{ label: "Start Activity", href: "#instructions", variant: "primary" }, { label: "Download Printable", href: "#download", variant: "secondary" }],
+    actions: [{ label: "Start Activity", href: "#instructions", variant: "primary" }, { label: "Download Printable", href: "/downloads/gratitude-garden-leaf-template.pdf", variant: "secondary" }],
     sections: [
-      { id: "materials", title: "You will need", body: ["Paper, crayons or markers, scissors with grown-up help, and a place to display your leaves."], style: "gold-accent" },
-      { id: "instructions", title: "Let’s begin", body: ["1. Draw or cut out five paper leaves.", "2. On each leaf, write or draw one good thing you noticed today.", "3. Arrange the leaves into a garden, tree, or wreath.", "4. Share one way gratitude changed how you felt or what you noticed."] },
+      { id: "materials", title: "You will need", body: ["The printable leaf template (or your own paper leaves), crayons or markers, scissors with grown-up help, and a place to display your leaves."], style: "gold-accent" },
+      { id: "instructions", title: "Let’s begin", body: ["1. Print the leaf template, or draw and cut out four or five paper leaves of your own.", "2. On each leaf, write or draw one good thing you noticed today.", "3. Arrange the leaves into a garden, tree, or wreath.", "4. Share one way gratitude changed how you felt or what you noticed."] },
       { id: "think", title: "Think about it", faq: [
         { question: "What good thing was easy to notice?", answer: "There is no single right answer. Notice what feels true and meaningful to you." },
-        { question: "What good thing did you almost miss?", answer: "Think about a quiet kindness, helpful idea, or moment of peace." }
+        { question: "What good thing did you almost miss?", answer: "Think about a quiet kindness, helpful idea, or moment of peace." },
+        { question: "How do these good things make you think about God?", answer: "Think about how all the good around us reflects God." }
       ] },
-      { id: "privacy", title: "Download note", body: ["Ask a grown-up before downloading or printing. This resource contains no form, comments, child profile, or tracking field."] }
+      { id: "privacy", title: "Download note", body: ["The printable is a single black-and-white PDF page with four leaf shapes to cut out — no form, comments, child profile, or tracking field. Ask a grown-up before downloading or printing."] }
+    ]
+  },
+  {
+    path: "/sunday-school/resources/courage-maze",
+    eyebrow: "PUZZLE · AGES 7–12 · 10 MINUTES",
+    title: "The Courage Maze",
+    description: "Find the path while thinking about one brave, kind choice you can make today.",
+    pageType: "children-detail",
+    actions: [{ label: "Start Activity", href: "#instructions", variant: "primary" }, { label: "Download Printable", href: "/downloads/courage-maze.pdf", variant: "secondary" }],
+    sections: [
+      { id: "materials", title: "You will need", body: ["The printable maze, and a pencil or crayon."], style: "gold-accent" },
+      { id: "instructions", title: "Let’s begin", body: ["1. Print the maze, or view it on a screen.", "2. Start at START and trace a path with your finger or a pencil.", "3. When you reach FINISH, take a breath and remember: “Be strong and of a good courage.” (Joshua 1:9)", "4. Talk about a time you felt afraid, and how you found your way through."] },
+      { id: "think", title: "Think about it", faq: [
+        { question: "What helped you find your way through the maze?", answer: "Think about trying different paths, backing up when needed, and not giving up." },
+        { question: "What is one brave, kind choice you could make today?", answer: "It could be trying something new, telling the truth, or standing up for a friend." }
+      ] },
+      { id: "privacy", title: "Download note", body: ["The printable is a single black-and-white PDF maze puzzle — no form, comments, child profile, or tracking field. Ask a grown-up before downloading or printing."] }
+    ]
+  },
+  {
+    path: "/sunday-school/resources/kindness-story-cards",
+    eyebrow: "STORY AND DISCUSSION · AGES 5–10 · 20 MINUTES",
+    title: "Kindness Story Cards",
+    description: "Choose a story card and talk about how love can guide the next step.",
+    pageType: "children-detail",
+    actions: [{ label: "Start Activity", href: "#instructions", variant: "primary" }, { label: "Download Printable", href: "/downloads/kindness-story-cards.pdf", variant: "secondary" }],
+    sections: [
+      { id: "materials", title: "You will need", body: ["The printable story cards, and scissors with grown-up help to cut them apart."], style: "gold-accent" },
+      { id: "instructions", title: "Let’s begin", body: ["1. Print and cut out the eight story cards.", "2. Take turns picking a card and reading the situation out loud.", "3. Talk about what a kind next step could look like, and why.", "4. If you like, act out your idea together."] },
+      { id: "think", title: "Think about it", faq: [
+        { question: "Why can kindness feel hard sometimes?", answer: "Talk about feeling shy, unsure what to say, or worried about what others think — and how a small act of courage can help." },
+        { question: "How does being kind to others reflect God's love?", answer: "Think about how every kind thought and action is a way of expressing God's love to those around us." }
+      ] },
+      { id: "privacy", title: "Download note", body: ["The printable is a single black-and-white PDF page with eight story cards to cut apart — no form, comments, child profile, or tracking field. Ask a grown-up before downloading or printing."] }
     ]
   },
   {
@@ -318,10 +359,9 @@ export const pageDefinitions: PageDefinition[] = [
     eyebrow: "CHRISTIAN SCIENCE READING ROOM",
     title: "A place to read, ask questions, and explore.",
     description: "Browse books and periodicals, study quietly, find helpful resources, or talk with someone about Christian Science.",
-    heroImage: photo("reading-room-interior", "Reading Room interior", "Photograph a welcoming wide interior with shelves, a clear reading table, natural light, and uncluttered surfaces. Show publication covers only if authorized.", "Wide interior view of the Christian Science Reading Room with shelves and a quiet reading table.", "16:9", false, "/images/photography/reading-room-lounge.webp"),
+    heroImage: photo("reading-room-interior", "Reading Room interior", "Photograph a welcoming wide interior with shelves, a clear reading table, natural light, and uncluttered surfaces. Show publication covers only if authorized.", "Wide interior view of the Christian Science Reading Room with shelves and a quiet reading table.", "2:3", false, "/images/photography/reading-room-interior.webp"),
     actions: [{ label: "Plan Your Visit", href: "/reading-room/visit", variant: "primary" }, { label: "Shop Books", href: "/reading-room/shop", variant: "secondary" }],
     sections: [
-      { id: "confirmation", title: "Reading Room public details", body: ["The website structure is complete, but the current location, hours, phone, parking, accessibility, appointment policy, and relationship to the church building must be confirmed before publication."], confirmationNote: "CMS / Church Confirmation: all Reading Room operating details." },
       { id: "find", title: "What you will find", cards: [
         { title: "Books and study resources", text: "The Bible, writings by Mary Baker Eddy, Christian Science publications, study tools, and approved family resources." },
         { title: "A quiet place to read", text: "Spend time reading, studying, or praying in a calm environment." },
@@ -329,7 +369,7 @@ export const pageDefinitions: PageDefinition[] = [
         { title: "Digital resources", text: "Explore approved articles, audio, verified testimonies, and official resource links." }
       ], style: "teal-mist" },
       { id: "more", title: "Explore the Reading Room", cards: [
-        { title: "Shop", text: "Browse permission-aware products and inventory placeholders.", href: "/reading-room/shop", action: "Shop Books" },
+        { title: "Shop", text: "Browse books, periodicals, and study resources.", href: "/reading-room/shop", action: "Shop Books" },
         { title: "Articles", text: "Read local introductions and approved resource summaries.", href: "/reading-room/articles", action: "Read Articles" },
         { title: "Events", text: "Find talks, study opportunities, and community activities.", href: "/reading-room/events", action: "View Events" },
         { title: "Visit", text: "Find confirmed hours, parking, accessibility, and contact details.", href: "/reading-room/visit", action: "Plan a Visit" }
@@ -351,7 +391,7 @@ export const pageDefinitions: PageDefinition[] = [
     title: "Science and Health with Key to the Scriptures",
     description: "A product-detail template with permission-aware cover handling, variants, inventory, pickup, shipping, tax, and secure checkout boundaries.",
     pageType: "product-detail",
-    heroImage: photo("product-cover-placeholder", "Authorized product cover placeholder", "Use the complete official cover only in an approved product-promotional context and within permitted sizing. Otherwise show a neutral typographic placeholder.", "Product image for Science and Health with Key to the Scriptures, pending authorized cover use.", "2:3"),
+    heroImage: photo("product-cover-placeholder", "Authorized product cover placeholder", "Use the complete official cover only in an approved product-promotional context and within permitted sizing. Otherwise show a neutral typographic placeholder.", "Product image for Science and Health with Key to the Scriptures, pending authorized cover use.", "2:3", false, "/images/photography/product-cover-placeholder.webp"),
     actions: [{ label: "Add to Cart", href: "/reading-room/cart", variant: "primary" }, { label: "Ask About This Item", href: "/contact", variant: "secondary" }],
     sections: [
       { id: "details", title: "Product details", cards: [
@@ -373,7 +413,7 @@ export const pageDefinitions: PageDefinition[] = [
       { id: "cart", title: "Cart preview", cards: [
         { title: "Science and Health with Key to the Scriptures", text: "Quantity 1 · Price pending confirmed inventory", meta: "Local pickup selected" }
       ] },
-      { id: "next", title: "Fulfillment", body: ["Pickup: We will contact you when your order is ready.", "Shipping: Available methods and costs appear before payment when configured."], confirmationNote: "CMS / Church Confirmation: inventory, pricing, pickup location/hours, shipping zones, tax, return/refund policy, and payment provider." }
+      { id: "next", title: "Fulfillment", body: ["Pickup: We will contact you when your order is ready.", "Shipping: Available methods and costs appear before payment when configured.", "Contact the Reading Room with questions about inventory, pricing, or pickup."] }
     ]
   },
   {
@@ -401,23 +441,23 @@ export const pageDefinitions: PageDefinition[] = [
     description: "Talks, study opportunities, family activities, and community programs associated with the Reading Room.",
     pageType: "calendar",
     sections: [
-      { id: "confirmation", title: "Event status", body: ["No Reading Room events are confirmed in the seed content. The calendar can publish verified recurring or one-time events when details are approved."], confirmationNote: "CMS / Church Confirmation: current Reading Room programs and event ownership." }
+      { id: "status", title: "Check back soon", body: ["No Reading Room events are scheduled right now. Please check back, or see the main events calendar for church-wide gatherings."], actions: [{ label: "View Events Calendar", href: "/events", variant: "secondary" }] }
     ]
   },
   {
     path: "/reading-room/visit",
     eyebrow: "VISIT THE READING ROOM",
     title: "Find a quiet place to read and ask questions.",
-    description: "Location, hours, phone, parking, accessibility, appointment, and map fields are ready for church confirmation.",
-    heroImage: photo("reading-room-exterior", "Reading Room exterior or entrance", "Photograph the actual public entrance with visible accessibility and wayfinding after the location is confirmed. Avoid unauthorized publication signage or personal vehicle details.", "Public entrance to the Christian Science Reading Room."),
+    description: "Address, hours, phone, and parking for the Christian Science Reading Room in Aurora, Colorado.",
+    heroImage: photo("reading-room-exterior", "Reading Room exterior or entrance", "Public entrance to the Christian Science Reading Room, same building as the church.", "Public entrance to the Christian Science Reading Room.", "2:3", false, "/images/photography/reading-room-exterior.webp"),
     actions: [actions.contact],
     sections: [
-      { id: "details", title: "Public information pending confirmation", cards: [
-        { title: "Address", text: "[READING ROOM ADDRESS]" },
-        { title: "Hours", text: "[CURRENT PUBLIC HOURS]" },
-        { title: "Phone", text: "[READING ROOM PHONE]" },
-        { title: "Access", text: "[PARKING AND ACCESSIBILITY]" }
-      ], confirmationNote: "Do not publish until all fields are verified by the Reading Room Manager." }
+      { id: "details", title: "Visit the Reading Room", cards: [
+        { title: "Address", text: "15700 E. Quincy Avenue, Aurora, Colorado 80015 — same building as the church." },
+        { title: "Hours", text: "Monday–Friday, 10:00 a.m.–2:00 p.m. We recommend calling to confirm before dropping by." },
+        { title: "Phone", text: "(303) 766-0620 — same number as the church." },
+        { title: "Parking", text: "Free parking, shared with the church. The parking lot entrance is on Jasper Street, at the corner of Jasper Street and Quincy Avenue." }
+      ] }
     ]
   },
   {
@@ -490,11 +530,11 @@ export const pageDefinitions: PageDefinition[] = [
     title: "What can I expect at my first Christian Science service?",
     description: "A practical guide to arrival, worship, participation, and what happens after the service.",
     pageType: "article-detail",
-    heroImage: photo("article-arrival", "Visitor entering the church", "Create a candid arrival image with one adult visitor walking toward an open entrance. Avoid identifiable faces unless released; use realistic morning light.", "A visitor approaching the open entrance of the Aurora church."),
+    heroImage: photo("article-arrival", "Visitor entering the church", "Create a candid arrival image with one adult visitor walking toward an open entrance. Avoid identifiable faces unless released; use realistic morning light.", "A visitor approaching the open entrance of the Aurora church.", "2:3", false, "/images/photography/article-arrival.webp"),
     sections: [
       { id: "arrival", title: "What happens when I arrive?", body: ["Come a few minutes early if you would like time to find a seat or ask a question. You may sit anywhere, and no one will ask you to sign in or introduce yourself publicly."] },
       { id: "worship", title: "How does the service work?", body: ["The service includes hymns, prayer, and readings from the Bible and Science and Health with Key to the Scriptures.", "Printed materials help you follow along. Participate as much or as little as you wish."], style: "teal-mist" },
-      { id: "after", title: "What happens after the service?", body: ["You are welcome to leave quietly or stay to meet people and ask questions. There is no pressure to join or make a contribution."] },
+      { id: "after", title: "What happens after the service?", body: ["You are welcome to leave quietly or stay to meet people and ask questions. There is no pressure to join or make a contribution.", "Once a month we hold a fellowship luncheon at a local restaurant. We would love to have you join us. See the events calendar for dates."], actions: [{ label: "View the Events Calendar", href: "/events", variant: "secondary" }] },
       { id: "sources", title: "Explore further", actions: [{ label: "Plan Your Visit", href: "/visit", variant: "primary" }, { label: "About Sunday Service", href: "/services/sunday", variant: "secondary" }] }
     ]
   },
@@ -503,11 +543,19 @@ export const pageDefinitions: PageDefinition[] = [
     eyebrow: "ABOUT",
     title: "A welcoming Christian Science church in Aurora.",
     description: "First Church of Christ, Scientist, Aurora serves Aurora and surrounding communities through worship, Sunday School, a Reading Room, public events, and spiritual study.",
-    heroImage: photo("about-exterior-community", "Church exterior with local context", "Photograph the church exterior with recognizable Aurora landscaping and natural human activity, without making people the primary identifiable subject.", "First Church of Christ, Scientist, Aurora in its local neighborhood setting."),
+    heroImage: photo("about-exterior-community", "Church exterior with local context", "Photograph the church exterior with recognizable Aurora landscaping and natural human activity, without making people the primary identifiable subject.", "First Church of Christ, Scientist, Aurora in its local neighborhood setting.", "16:9", false, "/images/photography/about-exterior-community.webp"),
     actions: [actions.visit, { label: "Contact Us", href: "/contact", variant: "secondary" }],
     sections: [
-      { id: "local", title: "Our local church", body: ["The congregation has served the community for more than 70 years. People from every background are welcome to attend services, ask questions, study, and explore the practical meaning of God’s love."] },
+      { id: "local", title: "Our local church", body: ["The congregation has served the community for more than 70 years. People from every background are welcome to attend services, ask questions, study, and explore the practical meaning of God’s love.", "While we are located in Aurora, Colorado, we are the easternmost Christian Science church in Colorado, and we serve the cities of Parker, Centennial, Bennett, Elizabeth, Byers, and all the towns of the eastern Colorado plains."] },
       { id: "relationship", title: "Our relationship to The Mother Church", body: ["We are a local branch of The First Church of Christ, Scientist, in Boston, Massachusetts.", "The Aurora church is independently administered by its local membership. ChristianScienceAurora.com is maintained by the Aurora branch and is not operated by The Mother Church."], style: "teal-mist" },
+      { id: "tenets", title: "The Tenets of Christian Science", intro: "The Christian Science Church does not have a formal creed, but its core beliefs are summarized in six tenets found in Science and Health with Key to the Scriptures by Mary Baker Eddy (pages 496–497). These tenets are considered the foundation of Christian Science.", cards: [
+        { title: "1. The Bible as our guide", text: "As adherents of Truth, we take the inspired Word of the Bible as our sufficient guide to eternal Life." },
+        { title: "2. One supreme and infinite God", text: "We acknowledge and adore one supreme and infinite God. We acknowledge His Son, one Christ; the Holy Ghost or divine Comforter; and man in God’s image and likeness." },
+        { title: "3. The forgiveness of sin", text: "We acknowledge God’s forgiveness of sin in the destruction of sin and the spiritual understanding that casts out evil as unreal. But the belief in sin is punished so long as the belief lasts." },
+        { title: "4. Jesus’ atonement and love", text: "We acknowledge Jesus’ atonement as the evidence of divine, efficacious Love, unfolding man’s unity with God through Christ Jesus the Way-shower; and we acknowledge that man is saved through Christ, through Truth, Life, and Love as demonstrated by the Galilean Prophet in healing the sick and overcoming sin and death." },
+        { title: "5. The crucifixion and resurrection", text: "We acknowledge that the crucifixion of Jesus and his resurrection served to uplift faith to understand eternal Life, even the allness of Soul, Spirit, and the nothingness of matter." },
+        { title: "6. Our moral and spiritual commitment", text: "And we solemnly promise to watch, and pray for that Mind to be in us which was also in Christ Jesus; to do unto others as we would have them do unto us; and to be merciful, just, and pure." }
+      ] },
       { id: "explore", title: "Explore", cards: [
         { title: "What is Christian Science?", text: "A local introduction with links to official sources.", href: "/about/christian-science", action: "Explore Christian Science" },
         { title: "Our history", text: "More than 70 years of worship and community in Aurora.", href: "/about/history", action: "View History" },
@@ -533,10 +581,10 @@ export const pageDefinitions: PageDefinition[] = [
     eyebrow: "OUR HISTORY",
     title: "More than 70 years of worship and community in Aurora.",
     description: "A holding page for verified milestones, photographs, programs, and stories from the congregation’s history.",
-    heroImage: photo("history-archive", "Approved historical materials", "Digitize verified photographs, programs, or building records with high resolution and neutral lighting. Record date, source, rights owner, caption, and approval status.", "Selected archival materials from the history of First Church of Christ, Scientist, Aurora.", "4:3"),
+    heroImage: photo("history-archive", "Approved historical materials", "Digitize verified photographs, programs, or building records with high resolution and neutral lighting. Record date, source, rights owner, caption, and approval status.", "Selected archival materials from the history of First Church of Christ, Scientist, Aurora.", "2:3", false, "/images/photography/history-archive.webp"),
     actions: [{ label: "Contact Us About Church History", href: "/contact", variant: "primary" }],
     sections: [
-      { id: "timeline", title: "Verified timeline coming after church review", body: ["Replace this holding copy with the confirmed founding date, building history, milestones, and approved archival materials."], confirmationNote: "CMS / Church Confirmation: founding date, major milestones, building history, captions, sources, and permissions." }
+      { id: "timeline", title: "Our history in Aurora", body: ["First Church of Christ, Scientist, Aurora has served the community for more than 70 years. A full illustrated timeline is in progress — check back soon, or contact us if you have historical photographs or records to share."] }
     ]
   },
   {
@@ -544,7 +592,7 @@ export const pageDefinitions: PageDefinition[] = [
     eyebrow: "THE CHRISTIAN SCIENCE PASTOR",
     title: "The Bible and Science and Health serve as the Pastor.",
     description: "Christian Science churches do not have personal clergy. Their Pastor consists of the Bible and Science and Health with Key to the Scriptures by Mary Baker Eddy.",
-    heroImage: photo("pastor-books", "Bible and Science and Health", "Photograph approved editions resting naturally on a simple reading surface. Keep text pages unreadable and ensure any cover use is permitted for this informational context.", "The Bible and Science and Health with Key to the Scriptures displayed together."),
+    heroImage: photo("pastor-books", "Bible and Science and Health", "Photograph approved editions resting naturally on a simple reading surface. Keep text pages unreadable and ensure any cover use is permitted for this informational context.", "The Bible and Science and Health with Key to the Scriptures displayed together.", "3:2", false, "/images/photography/pastor-books.webp"),
     actions: [{ label: "Learn About Sunday Services", href: "/services/sunday", variant: "primary" }, { label: "Explore Weekly Bible Lesson", href: "/services/weekly-bible-lesson", variant: "secondary" }],
     sections: [
       { id: "role", title: "How the Pastor serves", body: ["Readings from the Bible and Science and Health form the sermon at Sunday services and provide a foundation for study and prayer."] }
@@ -579,20 +627,33 @@ export const pageDefinitions: PageDefinition[] = [
     sections: []
   },
   {
+    path: "/lectures",
+    eyebrow: "CHRISTIAN SCIENCE LECTURES",
+    title: "Coming soon.",
+    description: "Information about Christian Science lectures hosted in the Aurora area.",
+    sections: [
+      { id: "status", title: "This page is coming soon", body: ["We're working on this page. Please check back soon, or contact us if you have a question about upcoming lectures in the meantime."], actions: [actions.contact], style: "teal-mist" }
+    ]
+  },
+  {
     path: "/give",
     eyebrow: "GIVE",
     title: "Support the work of Christian Science Aurora.",
     description: "Giving is voluntary. Contributions can support worship, Sunday School, the Reading Room, public events, outreach, and care of the church property.",
     pageType: "giving",
-    actions: [{ label: "Give Online", href: "#giving-module", variant: "primary" }],
+    actions: [{ label: "Give Now", href: "#giving-module", variant: "primary" }],
     sections: [
-      { id: "choices", title: "Choose how to give", cards: [
-        { title: "One-time gift", text: "Make a single contribution in the amount you choose." },
-        { title: "Recurring gift", text: "Schedule an ongoing contribution and change or cancel it through the giving provider." },
-        { title: "Other ways", text: "Checks, in-person gifts, memorial gifts, stock, donor-advised funds, or other methods require church confirmation." }
+      { id: "giving-module", title: "Give online", intro: "Scan a QR code with your phone's camera, or use the link on each card.", cards: [
+        { title: "Give via PayPal", text: "Scan the code or tap through to give securely with PayPal.", href: "https://www.paypal.com/qrcodes/managed/5f176883-4027-426d-b859-07f541087fee?utm_source=hawk_quick_link", action: "Give via PayPal", image: { id: "giving-paypal-qr", label: "PayPal giving QR code", productionNote: "Church-issued PayPal quick-link QR code.", altText: "QR code to give to First Church of Christ, Scientist, Aurora via PayPal.", aspectRatio: "1:1", src: "/images/photography/giving/paypal-qr.webp" } },
+        { title: "Give via Zelle", text: "Send from your bank's Zelle feature to cschurchaurora@outlook.com, or scan the code to enroll and confirm the recipient name before sending.", href: "https://enroll.zellepay.com/qr-codes/?data=eyJuYW1lIjoiRklSU1QgQ0hVUkNIIE9GIENIUklTVCwgU0NJRU5USVNULCIsInRva2VuIjoiY3NjaHVyY2hhdXJvcmFAb3V0bG9vay5jb20iLCJhY3Rpb24iOiJwYXltZW50In0=", action: "Give via Zelle", image: { id: "giving-zelle-qr", label: "Zelle giving QR code", productionNote: "Church-issued Zelle enrollment QR code, registered to cschurchaurora@outlook.com.", altText: "QR code to give to First Church of Christ, Scientist, Aurora via Zelle.", aspectRatio: "1:1", src: "/images/photography/giving/zelle-qr.webp" } }
       ] },
-      { id: "privacy", title: "Your privacy and receipt", body: ["Payments must be processed through a secure third-party provider. The church receives only the information needed to record the gift and provide a receipt.", "Do not send payment-card information by email or through the general contact form."], style: "teal-mist" },
-      { id: "confirmation", title: "Giving module disabled in seed mode", body: ["The interface and adapter boundary are included, but online giving remains disabled until the church confirms the provider, tax language, funds, receipts, refunds, contact, and alternative methods."], confirmationNote: "CMS / Church Confirmation: giving provider, designations, tax language, receipt process, refunds, assistance contact, and privacy terms." }
+      { id: "choices", title: "Ways to give", cards: [
+        { title: "One-time gift", text: "Make a single contribution in the amount you choose." },
+        { title: "Recurring gift", text: "Set up an ongoing contribution and change or cancel it any time through PayPal or your bank's Zelle feature." },
+        { title: "Other ways", text: "Checks and in-person gifts are always welcome. For bequests, gifts of goods-in-kind, real estate, vehicles, stock, or donor-advised funds, our treasurer would be glad to help." }
+      ] },
+      { id: "planned-giving", title: "Planned and special gifts", body: ["Thinking about remembering the church in your will, or giving something other than cash — goods-in-kind, real estate, a vehicle, or another asset? We would be honored, and we know these decisions deserve care and a real conversation.", "Please reach out to our treasurer at treasurer@christianscienceaurora.com. We're happy to answer questions, walk through the options together, or simply talk — with no obligation. Whatever you're able to give, we're deeply grateful for your generosity and support."], style: "teal-mist" },
+      { id: "privacy", title: "Your privacy and receipt", body: ["Payments are processed directly through PayPal or Zelle. The church receives only the information needed to record the gift and provide a receipt.", "Do not send payment-card, bank, or Zelle information by email or through the general contact form."] }
     ]
   },
   {
@@ -603,7 +664,7 @@ export const pageDefinitions: PageDefinition[] = [
     pageType: "contact",
     actions: [{ label: "Call (303) 766-0620", href: "tel:+13037660620", variant: "primary" }, actions.directions],
     sections: [
-      { id: "contact-details", title: "First Church of Christ, Scientist, Aurora", body: ["15700 E. Quincy Avenue", "Aurora, Colorado 80015", "(303) 766-0620", "[DOMAIN EMAIL - CHURCH CONFIRMATION]"] }
+      { id: "contact-details", title: "First Church of Christ, Scientist, Aurora", body: ["15700 E. Quincy Avenue", "Aurora, Colorado 80015", "(303) 766-0620", "info@christianscienceaurora.com"] }
     ]
   },
   {
@@ -617,15 +678,17 @@ export const pageDefinitions: PageDefinition[] = [
   {
     path: "/privacy",
     eyebrow: "LEGAL",
-    title: "Privacy Policy — Draft Framework",
-    description: "This policy must be updated to match the website’s final forms, analytics, registration, commerce, giving, email, and embedded services.",
+    title: "Privacy Policy",
+    description: "How ChristianScienceAurora.com collects, uses, and protects your information.",
     pageType: "legal",
     sections: [
-      { id: "provided", title: "Information you provide", body: ["We may collect information submitted through contact forms, event registrations, newsletter forms, orders, donation forms, or other voluntary interactions."] },
-      { id: "automatic", title: "Information collected automatically", body: ["The website may collect limited device, browser, usage, cookie, and analytics information to operate, secure, and improve the site."] },
-      { id: "use", title: "How information is used", body: ["Information may be used to respond to inquiries, manage registrations, fulfill orders, process gifts, send requested communications, maintain records, prevent misuse, and improve performance."] },
-      { id: "children", title: "Children’s privacy", body: ["The public website is not designed to collect personal information directly from children. Youth forms and information should be submitted and managed by a parent or guardian."], style: "teal-mist" },
-      { id: "review", title: "Legal review required", body: ["Finalize this policy only after vendors, cookies, retention schedules, payment flows, forms, and email practices are known."], confirmationNote: "CMS / Church Confirmation and legal review required." }
+      { id: "intro", title: "Overview", body: ["First Church of Christ, Scientist, Aurora (\"the church,\" \"we,\" or \"us\") maintains ChristianScienceAurora.com. This policy explains what information the website collects, how it is used, and how it is protected. This policy applies only to this website and not to third-party sites we link to, such as ChristianScience.com, JSH-Online, or The Christian Science Monitor."] },
+      { id: "provided", title: "Information you provide", body: ["We collect the information you choose to submit through the contact form on this site — your name, email address, topic, and message. We use this only to respond to your inquiry.", "If you give online, PayPal or Zelle process your payment directly. We never see or store your card number, bank account, or payment credentials — we only receive confirmation that a gift was made, the amount, and information needed to send a receipt or thank-you."] },
+      { id: "automatic", title: "Information collected automatically", body: ["This website does not currently use analytics, tracking, or advertising cookies. Our hosting provider may automatically log basic technical information (such as IP address and browser type) for security and reliability, as is standard for any website."] },
+      { id: "use", title: "How information is used", body: ["Information submitted through this site is used only to respond to inquiries, process voluntary gifts, and maintain basic church records. We do not sell, rent, or share your information with third parties for marketing purposes."] },
+      { id: "children", title: "Children’s privacy", body: ["This website is not designed to collect personal information directly from children. Any Sunday School registration or related information should be submitted by a parent or guardian."], style: "teal-mist" },
+      { id: "retention", title: "Retention and your choices", body: ["We keep contact-form and giving records only as long as reasonably needed for church administration and recordkeeping. To ask what information we have about you, or to request it be corrected or deleted, contact us at info@christianscienceaurora.com."] },
+      { id: "changes", title: "Changes to this policy", body: ["We may update this policy as the website changes. Material changes will be reflected here with an updated date.", "Last updated: August 2026."] }
     ]
   },
   {
@@ -636,21 +699,23 @@ export const pageDefinitions: PageDefinition[] = [
     pageType: "legal",
     sections: [
       { id: "commitment", title: "WCAG 2.2 Level AA target", body: ["We aim to continually improve accessibility across pages, forms, calendars, media, documents, and online services.", "If you encounter a barrier or need information in another format, call (303) 766-0620 or use the contact form."], style: "teal-mist" },
-      { id: "review", title: "Statement details pending confirmation", body: ["Add the actual accessibility contact, response process, known limitations, and last review date before publication."], confirmationNote: "CMS / Church Confirmation: accessibility contact and response process." }
+      { id: "building", title: "Accessibility at the church building", body: ["The building has a step-free entrance — there are no steps to enter or move through the building. There is a curb between the parking lot and the walkway, with an accessibility ramp near the handicap parking spaces on the south-east side of the parking lot.", "Accessible restrooms are available inside the building. Assistive listening devices are available on request — just ask an usher.", "Braille materials are not kept on hand, but a Bible and Science and Health with Key to the Scriptures in braille can be ordered through the Reading Room upon request."] },
+      { id: "contact", title: "Requesting an accommodation", body: ["If you're at the church, ask any usher. Otherwise, call (303) 766-0620 to reach the church clerk, or use the contact form.", "Last reviewed: August 2, 2026."] }
     ]
   },
   {
     path: "/terms",
     eyebrow: "LEGAL",
-    title: "Terms of Use — Draft Framework",
-    description: "General website terms for lawful use, no guarantee of outcomes, permissions, external links, and availability.",
+    title: "Terms of Use",
+    description: "General terms for using ChristianScienceAurora.com.",
     pageType: "legal",
     sections: [
-      { id: "use", title: "Lawful and responsible use", body: ["Content is provided for general informational and spiritual purposes and may be changed without notice."] },
-      { id: "outcomes", title: "No guarantee of outcomes", body: ["The website does not promise or guarantee medical, financial, legal, or other outcomes. It is not a substitute for professional advice."], style: "teal-mist" },
-      { id: "content", title: "Content and permissions", body: ["Local text and design may be owned or used by Christian Science Aurora. Other trademarks, publications, quotations, recordings, and images belong to their respective owners and may require separate permission."] },
-      { id: "external", title: "External links", body: ["External links are provided for convenience and exploration. The church does not control those sites and is not responsible for their content, security, availability, or privacy practices."] },
-      { id: "review", title: "Legal review required", body: ["Obtain legal review after commerce, giving, refunds, registrations, analytics, and user-submission behavior are finalized."], confirmationNote: "Legal review required before launch." }
+      { id: "use", title: "Lawful and responsible use", body: ["By using this website, you agree to use it lawfully and respectfully. Content is provided for general informational and spiritual purposes and may be changed, updated, or removed at any time without notice."] },
+      { id: "outcomes", title: "No guarantee of outcomes", body: ["This website does not promise or guarantee medical, financial, legal, or other outcomes. It is not a substitute for professional medical, legal, or financial advice, and visitors are free to make their own informed decisions, including about health care."], style: "teal-mist" },
+      { id: "giving", title: "Giving", body: ["Contributions made through this site are voluntary and processed by PayPal or Zelle. We do our best to record and acknowledge gifts accurately; contact our treasurer at treasurer@christianscienceaurora.com with any questions or to request a correction."] },
+      { id: "content", title: "Content and permissions", body: ["Local text, photography, and design on this site belong to or are used with permission by Christian Science Aurora. The Bible, Science and Health with Key to the Scriptures, other Christian Science publications, trademarks, quotations, and recordings belong to their respective owners and may require separate permission to reuse. See our Content Permissions page for details."] },
+      { id: "external", title: "External links", body: ["This site links to official Christian Science resources and other third-party sites for convenience. We do not control those sites and are not responsible for their content, security, availability, or privacy practices."] },
+      { id: "availability", title: "Availability", body: ["We aim to keep this website available and accurate but do not guarantee uninterrupted access. We may update these terms from time to time; continued use of the site means you accept the current terms.", "Last updated: August 2026."] }
     ]
   },
   {

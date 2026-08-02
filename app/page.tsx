@@ -28,15 +28,16 @@ export default async function HomePage() {
     label: "Campaign or featured-event image",
     productionNote: "Administrator-controlled desktop/mobile crop. Use approved event photography or a local architectural image. No auto-rotating carousel.",
     altText: "Featured Christian Science Aurora event campaign image.",
-    aspectRatio: "16:9" as const
+    aspectRatio: "16:9" as const,
+    src: "/images/photography/campaign-public-talk.webp"
   };
   const heroImage = {
     id: "home-welcome",
     label: "Local church welcome",
     productionNote: "Wide, authentic photograph of the entrance or sanctuary in warm natural light. Show a genuine sense of welcome without staged corporate smiles.",
     altText: "Welcoming view of First Church of Christ, Scientist, Aurora.",
-    aspectRatio: "4:3" as const,
-    src: "/images/photography/exterior-west-entrance.webp"
+    aspectRatio: "16:9" as const,
+    src: "/images/photography/home-welcome.webp"
   };
   const campaignEvent = publicEvents.find((event) => event.category === "Talk" && event.featured);
   const latestSermon = publicSermons[0];
@@ -79,12 +80,24 @@ export default async function HomePage() {
 
       <section className="section section-stone">
         <div className="container section-split">
-          <PhotoPlaceholder image={{ id: "new-here", label: "Natural arrival and program handoff", productionNote: "Candid adult welcome near the entrance. Real participants with releases, natural body language, realistic contrast.", altText: "A visitor being welcomed at the church entrance.", aspectRatio: "4:3", src: "/images/photography/foyer-welcome-table.webp" }} />
+          <PhotoPlaceholder image={{ id: "new-here", label: "Natural arrival and program handoff", productionNote: "Candid adult welcome near the entrance. Real participants with releases, natural body language, realistic contrast.", altText: "A visitor being welcomed at the church entrance.", aspectRatio: "16:9", src: "/images/photography/new-here.webp" }} />
           <div>
             <div className="eyebrow">NEW HERE?</div>
             <h2>Your first visit can be simple.</h2>
             <p>You do not need to be a member, know the service format, or introduce yourself. Come in, choose any open seat, and participate as much or as little as you wish.</p>
             <ButtonRow actions={[{ label: "Know What to Expect", href: "/visit/what-to-expect", variant: "primary" }, { label: "Ask a Question", href: "/contact", variant: "secondary" }]} />
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-gold-accent">
+        <div className="container section-split">
+          <PhotoPlaceholder image={{ id: "special-events-banner", label: "Special events promotional banner", productionNote: "Administrator-controlled banner image for a current special event, guest lecture, or seasonal program. Swap out as needed; remove text overlays from the image itself so alt text stays accurate.", altText: "Banner promoting a current special event at Christian Science Aurora.", aspectRatio: "16:9" }} />
+          <div>
+            <div className="eyebrow">SPECIAL EVENTS</div>
+            <h2>Watch for special events in Aurora.</h2>
+            <p>From guest speakers to seasonal gatherings, keep an eye on this space for what&rsquo;s coming up next.</p>
+            <ButtonRow actions={[{ label: "View Full Calendar", href: "/events", variant: "secondary" }]} />
           </div>
         </div>
       </section>
@@ -114,16 +127,16 @@ export default async function HomePage() {
             <p>{latestSermon ? latestSermon.summary : "The site is ready for text, audio, or captioned video after each item completes content, permissions, and accessibility review."}</p>
             <ButtonRow actions={latestSermon ? [{ label: "Listen to Sermon", href: `/sermons/${latestSermon.slug}`, variant: "primary" }, { label: "Read Sermon", href: `/sermons/${latestSermon.slug}#transcript`, variant: "secondary" }] : [{ label: "Visit Sermon Library", href: "/sermons", variant: "primary" }]} />
           </div>
-          <PhotoPlaceholder image={{ id: "latest-sermon", label: "Sanctuary and sermon media", productionNote: "Permission-aware image of the sanctuary or Readers’ platform. No protected Bible Lesson content visible.", altText: "Sanctuary prepared for a Christian Science service.", aspectRatio: "16:9", src: "/images/photography/sanctuary-wide.webp" }} />
+          <PhotoPlaceholder image={{ id: "latest-sermon", label: "Sanctuary and sermon media", productionNote: "Permission-aware image of the sanctuary or Readers’ platform. No protected Bible Lesson content visible.", altText: "Sanctuary prepared for a Christian Science service.", aspectRatio: "16:9", src: "/images/photography/latest-sermon.webp" }} />
         </div>
       </section>
 
       <section className="section section-default">
         <div className="container">
           <CardGrid cards={[
-            { eyebrow: "READING ROOM", title: "A place to read, ask questions, and explore.", text: "Browse books and periodicals, study quietly, or talk with someone about Christian Science.", href: "/reading-room", action: "Visit the Reading Room", image: { id: "home-reading-room", label: "Reading Room shelves and quiet table", productionNote: "Wide interior in natural light. Covers only where authorized.", altText: "Reading Room shelves and a quiet reading table.", aspectRatio: "4:3", src: "/images/photography/reading-room-bookshelves.webp" } },
-            { eyebrow: "SUNDAY SCHOOL", title: "Big questions are welcome.", text: "A caring place for children to learn about God, the Bible, prayer, and everyday life.", href: "/sunday-school", action: "Explore Sunday School", image: { id: "home-sunday-school", label: "Hands-on children’s activity", productionNote: "Hands and materials; no identifiable children without guardian releases.", altText: "Children’s hands working on a Sunday School activity.", aspectRatio: "4:3", youthReleaseRequired: true } },
-            { eyebrow: "IDEAS FOR EVERYDAY LIFE", title: latestArticle?.title ?? "Articles for spiritual discovery", text: latestArticle?.summary ?? "Newcomer guides, local stories, and introductions to trusted Christian Science resources.", href: latestArticle ? `/articles/${latestArticle.slug}` : "/articles", action: latestArticle ? "Read the Article" : "View Articles", image: { id: "home-article", label: "Quiet Aurora reflection moment", productionNote: "Local, calm image of a person reading near a window or an Aurora landscape detail. Avoid wellness clichés.", altText: "A quiet reading and reflection moment in natural light.", aspectRatio: "4:3" } }
+            { eyebrow: "READING ROOM", title: "A place to read, ask questions, and explore.", text: "Browse books and periodicals, study quietly, or talk with someone about Christian Science.", href: "/reading-room", action: "Visit the Reading Room", image: { id: "home-reading-room", label: "Reading Room shelves and quiet table", productionNote: "Wide interior in natural light. Covers only where authorized.", altText: "Reading Room shelves and a quiet reading table.", aspectRatio: "4:3", src: "/images/photography/home-reading-room.webp" } },
+            { eyebrow: "SUNDAY SCHOOL", title: "Big questions are welcome.", text: "A caring place for children to learn about God, the Bible, prayer, and everyday life.", href: "/sunday-school", action: "Explore Sunday School", image: { id: "home-sunday-school", label: "Sunday School students", productionNote: "Guardian releases confirmed on file for this image.", altText: "Sunday School students at Christian Science Aurora.", aspectRatio: "4:3", youthReleaseRequired: true, src: "/images/photography/home-sunday-school.webp" } },
+            { eyebrow: "IDEAS FOR EVERYDAY LIFE", title: latestArticle?.title ?? "Articles for spiritual discovery", text: latestArticle?.summary ?? "Newcomer guides, local stories, and introductions to trusted Christian Science resources.", href: latestArticle ? `/articles/${latestArticle.slug}` : "/articles", action: latestArticle ? "Read the Article" : "View Articles", image: { id: "home-article", label: "Quiet Aurora reflection moment", productionNote: "Local, calm image of a person reading near a window or an Aurora landscape detail. Avoid wellness clichés.", altText: "A quiet reading and reflection moment in natural light.", aspectRatio: "4:3", src: "/images/photography/home-article.webp" } }
           ]} />
         </div>
       </section>
@@ -136,7 +149,7 @@ export default async function HomePage() {
             <p>For generations, this church has welcomed people from Aurora and surrounding communities to worship, learn, and explore the practical meaning of God’s love.</p>
             <ButtonRow actions={[{ label: "About Our Church", href: "/about", variant: "primary" }]} />
           </div>
-          <PhotoPlaceholder image={{ id: "local-community", label: "Wide local church and Aurora context", productionNote: "Wide exterior with local landscape and natural community activity. Avoid dramatic skies and staged group posing.", altText: "The Aurora church in its local community setting.", aspectRatio: "16:9", src: "/images/photography/exterior-signage-detail.webp" }} />
+          <PhotoPlaceholder image={{ id: "local-community", label: "Wide local church and Aurora context", productionNote: "Wide exterior with local landscape and natural community activity. Avoid dramatic skies and staged group posing.", altText: "The Aurora church in its local community setting.", aspectRatio: "16:9", src: "/images/photography/local-community.webp" }} />
         </div>
       </section>
 

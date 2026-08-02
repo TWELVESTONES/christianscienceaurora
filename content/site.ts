@@ -10,7 +10,7 @@ export const site = {
     country: "US"
   },
   phone: "(303) 766-0620",
-  email: "[DOMAIN EMAIL - CHURCH CONFIRMATION]",
+  email: "info@christianscienceaurora.com",
   serviceTimes: {
     sundayService: "Sunday at 10:00 a.m.",
     sundaySchool: "Sunday at 10:00 a.m.",
