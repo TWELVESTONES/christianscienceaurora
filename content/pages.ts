@@ -702,7 +702,7 @@ export const pageDefinitions: PageDefinition[] = [
     sections: []
   },
   {
-    path: "/lectures",
+    path: "/events/god-is-relevant-lecture-october-2026",
     eyebrow: "FREE PUBLIC LECTURE",
     title: "God is Relevant",
     seoTitle: "\"God is Relevant\" — Christian Science Lecture with Tim Myers, CS",
@@ -710,7 +710,10 @@ export const pageDefinitions: PageDefinition[] = [
     keywords: ["Tim Myers, CS", "Christian Science Lecture", "God is Relevant", "Christian Science Aurora", "free public lecture", "Christian Science Board of Lectureship"],
     directAnswer: "Thursday, October 8, 2026 at 7:00 PM. Location to be announced. Free and open to the public. This lecture will not be broadcast or recorded — attendance is in person only.",
     heroImage: photo("lecture-square-banner", "\"God is Relevant\" lecture banner (square)", "Custom-composed square banner built from the church-supplied promotional photo, for the hero image slot; event details are baked into the image itself.", "Free Public Lecture \"God is Relevant\" with Tim Myers, CS — Thursday, October 8, 2026, 7:00 PM, location to be announced.", "1:1", false, "/images/photography/lecture-square-banner.webp"),
-    actions: [{ label: "View Full Event Details", href: "/events/god-is-relevant-lecture-october-2026", variant: "primary" }, actions.contact],
+    actions: [
+      { label: "Add to Calendar", href: "data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0ABEGIN:VEVENT%0ASUMMARY:Free%20Public%20Lecture%3A%20%22God%20is%20Relevant%22%20with%20Tim%20Myers%2C%20CS%0ADTSTART:20261008T1900000600%0ADTEND:20261008T2000000600%0AEND:VEVENT%0AEND:VCALENDAR", variant: "primary", external: true },
+      { label: "Google Calendar", href: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Free%20Public%20Lecture%3A%20%22God%20is%20Relevant%22%20with%20Tim%20Myers%2C%20CS&dates=2026-10-08T19:00:00-06:00/2026-10-08T20:00:00-06:00&location=Location%20to%20be%20announced", variant: "secondary", external: true }
+    ],
     structuredData: {
       "@context": "https://schema.org",
       "@type": "Event",
@@ -794,7 +797,7 @@ export const pageDefinitions: PageDefinition[] = [
         id: "join-us",
         title: "We hope you'll join us in person.",
         body: ["Seating details and the exact venue will be posted here as soon as they're confirmed."],
-        actions: [{ label: "View Full Event Details", href: "/events/god-is-relevant-lecture-october-2026", variant: "primary" }, actions.contact]
+        actions: [actions.contact]
       }
     ]
   },
@@ -897,7 +900,6 @@ export const pageDefinitions: PageDefinition[] = [
         { title: "Articles", text: "Categories and article details.", href: "/articles", action: "Open Articles" },
         { title: "About", text: "Local church, Christian Science, history, Pastor, Mary Baker Eddy.", href: "/about", action: "Open About" },
         { title: "Resources", text: "Trusted external Christian Science resources.", href: "/resources", action: "Open Resources" },
-        { title: "Lectures", text: "Christian Science lectures hosted in the Aurora area.", href: "/lectures", action: "Open Lectures" },
         { title: "Give", text: "Ways to give online, by check, or in other ways.", href: "/give", action: "Open Give" },
         { title: "Contact", text: "Address, phone, and inquiry form.", href: "/contact", action: "Open Contact" }
       ] }

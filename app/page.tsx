@@ -24,12 +24,12 @@ export default async function HomePage() {
   const publicArticles = filterPublicArticles(articleRecords);
   const publicExternalResources = filterPublicExternalResources(externalResourceRecords);
   const campaignImage = {
-    id: "campaign-public-talk",
-    label: "Campaign or featured-event image",
-    productionNote: "Administrator-controlled desktop/mobile crop. Use approved event photography or a local architectural image. No auto-rotating carousel.",
-    altText: "Featured Christian Science Aurora event campaign image.",
-    aspectRatio: "16:9" as const,
-    src: "/images/photography/campaign-public-talk.webp"
+    id: "campaign-god-is-relevant",
+    label: "Featured event campaign image",
+    productionNote: "Administrator-controlled desktop/mobile crop. Currently the promotional banner for the \"God is Relevant\" lecture; event details are baked into the image itself. Swap when the featured event changes.",
+    altText: "Free Public Lecture: God is Relevant, with Tim Myers, CS. Thursday, October 8, 2026, 7:00 PM. Location TBD.",
+    aspectRatio: "1:1" as const,
+    src: "/images/photography/campaign-god-is-relevant.webp"
   };
   const heroImage = {
     id: "home-welcome",
@@ -86,16 +86,6 @@ export default async function HomePage() {
             <h2>Your first visit can be simple.</h2>
             <p>You do not need to be a member, know the service format, or introduce yourself. Come in, choose any open seat, and participate as much or as little as you wish.</p>
             <ButtonRow actions={[{ label: "Know What to Expect", href: "/visit/what-to-expect", variant: "primary" }, { label: "Ask a Question", href: "/contact", variant: "secondary" }]} />
-          </div>
-        </div>
-      </section>
-
-      <section className="section section-gold-accent">
-        <div className="container">
-          <div className="eyebrow special-event-title">SPECIAL EVENT</div>
-          <div className="special-event-banner">
-            <PhotoPlaceholder image={{ id: "special-events-banner", label: "Special events promotional banner", productionNote: "Administrator-controlled banner image for a current special event, guest lecture, or seasonal program. Swap out as needed; remove text overlays from the image itself so alt text stays accurate.", altText: "Free Public Lecture: God is Relevant, with Tim Myers, CS. Thursday, October 8, 2026, 7:00 PM. Location TBD.", aspectRatio: "1200:340", src: "/images/photography/special-events-banner.webp" }} />
-            <Link href="/events" className="btn btn-primary special-event-banner-cta">More Info</Link>
           </div>
         </div>
       </section>

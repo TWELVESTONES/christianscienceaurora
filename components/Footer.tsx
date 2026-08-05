@@ -6,7 +6,7 @@ import { isContentReviewMode } from "@/lib/review-mode";
 const groups = [
   { title: "Visit", links: [["Plan Your Visit", "/visit"], ["Directions", "/visit/directions-parking"], ["Accessibility", "/visit/accessibility"], ["Contact", "/contact"]] },
   { title: "Explore", links: [["Services", "/services"], ["Sermons", "/sermons"], ["Sunday School", "/sunday-school"], ["Reading Room", "/reading-room"], ["Events", "/events"], ["Articles", "/articles"]] },
-  { title: "Resources", links: [["All Resources", "/resources"], ["Lectures", "/lectures"], ["ChristianScience.com", "https://www.christianscience.com/"], ["JSH-Online", "https://jsh.christianscience.com/"], ["The Monitor", "https://www.csmonitor.com/"]] },
+  { title: "Resources", links: [["All Resources", "/resources"], ["Lectures", "/events/god-is-relevant-lecture-october-2026"], ["ChristianScience.com", "https://www.christianscience.com/"], ["JSH-Online", "https://jsh.christianscience.com/"], ["The Monitor", "https://www.csmonitor.com/"]] },
   { title: "Legal", links: [["Privacy", "/privacy"], ["Accessibility", "/accessibility"], ["Terms", "/terms"], ["Content Permissions", "/content-permissions"], ["Sitemap", "/sitemap"]] }
 ] as const;
 
