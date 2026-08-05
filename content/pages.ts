@@ -702,11 +702,83 @@ export const pageDefinitions: PageDefinition[] = [
   },
   {
     path: "/lectures",
-    eyebrow: "CHRISTIAN SCIENCE LECTURES",
-    title: "Coming soon.",
-    description: "Information about Christian Science lectures hosted in the Aurora area.",
+    eyebrow: "FREE PUBLIC LECTURE",
+    title: "God is Relevant",
+    description: "With Tim Myers, CS — a free public lecture from the Christian Science Board of Lectureship, hosted by First Church of Christ, Scientist, Aurora.",
+    directAnswer: "Thursday, October 8, 2026 at 7:00 PM. Location to be announced. Free and open to the public. This lecture will not be broadcast or recorded — attendance is in person only.",
+    heroImage: photo("special-events-banner", "\"God is Relevant\" lecture banner", "Church-supplied promotional banner for the Tim Myers, CS lecture; event details are baked into the image itself.", "Free Public Lecture: God is Relevant, with Tim Myers, CS. Thursday, October 8, 2026, 7:00 PM. Location TBD.", "1200:340", false, "/images/photography/special-events-banner.webp"),
+    actions: [{ label: "View Full Event Details", href: "/events/god-is-relevant-lecture-october-2026", variant: "primary" }, actions.contact],
     sections: [
-      { id: "status", title: "This page is coming soon", body: ["We're working on this page. Please check back soon, or contact us if you have a question about upcoming lectures in the meantime."], actions: [actions.contact], style: "teal-mist" }
+      {
+        id: "notice",
+        title: "This lecture will not be recorded",
+        body: [
+          "In keeping with directives from the Christian Science Board of Lectureship, this lecture will not be broadcast, livestreamed, or recorded in any format.",
+          "No video or audio version will be made available afterward. Everyone who wishes to hear this lecture is warmly invited to attend in person."
+        ],
+        style: "gold-accent"
+      },
+      {
+        id: "details",
+        title: "Lecture details",
+        cards: [
+          { title: "When", text: "Thursday, October 8, 2026 · 7:00 PM" },
+          { title: "Where", text: "Location to be announced. Check back here, or contact us closer to the date." },
+          { title: "Cost", text: "Free and open to the public. No signup or church membership required." },
+          { title: "Format", text: "In person only. Not broadcast, livestreamed, or recorded." }
+        ]
+      },
+      {
+        id: "about-topic",
+        title: "About this lecture",
+        body: [
+          "\"God is Relevant\" explores whether God remains relevant in our lives today. Drawing on Christ Jesus' teachings and contemporary accounts of healing — including injury, depression, and addiction — Tim Myers considers how understanding God as Love brings a practical, relevant impact into everyday life.",
+          "This lecture is sponsored by First Church of Christ, Scientist, Aurora."
+        ],
+        style: "teal-mist",
+        actions: [{ label: "Official Lecture Description", href: "https://www.christianscience.com/lectures/god-is-relevant", external: true, variant: "secondary" }]
+      },
+      {
+        id: "about-speaker",
+        eyebrow: "ABOUT THE SPEAKER",
+        title: "Tim Myers, CS",
+        body: [
+          "Tim Myers graduated from Occidental College with a degree in English, served as an officer in the United States Army, and built and led his own construction business, collaborating with award-winning architects on several notable structures in the Los Angeles area.",
+          "After closing his business, Tim devoted himself to community service — including helping build a local teen center, serving on its board, studying conflict resolution, and providing counseling for young people. He taught Sunday School at detention centers in Southern California and served on the chaplain's staff at his alma mater, where he took part in interfaith dialogues.",
+          "For more than thirty years, Tim has served as a Christian Science practitioner, offering prayer-based treatment and witnessing healings among friends, family, and others who have sought his support. He now speaks to audiences across the United States — in prisons, homeless shelters, libraries, churches, and college campuses — as a member of the Christian Science Board of Lectureship."
+        ],
+        actions: [{ label: "Official Lecturer Profile", href: "https://www.christianscience.com/lecturers/tim-myers", external: true, variant: "secondary" }]
+      },
+      {
+        id: "watch",
+        eyebrow: "WATCH",
+        title: "\"Remove the Mask and See the Child of God\"",
+        intro: "A recorded Christian Science talk by Tim Myers, shared publicly on YouTube.",
+        body: [
+          "Tim Myers has also written on this same theme. His related essay, published under the same title in the Christian Science Monitor, is linked below — it's a companion piece by the same author on the same subject, not a verbatim transcript of this recorded talk."
+        ],
+        video: { youtubeId: "dTRPvVrlO90", title: "Remove the Mask and See the Child of God • Tim Myers Christian Science Talk" },
+        actions: [
+          { label: "Watch on YouTube", href: "https://www.youtube.com/watch?v=dTRPvVrlO90", external: true, variant: "secondary" },
+          { label: "Read the Related Essay", href: "https://www.csmonitor.com/Commentary/A-Christian-Science-Perspective/2015/1027/Remove-the-mask-and-see-the-child-of-God", external: true, variant: "secondary" }
+        ]
+      },
+      {
+        id: "hear-more",
+        title: "Read and listen: more from Tim Myers, CS",
+        intro: "Published articles and audio talks by Tim Myers in the Christian Science Sentinel, ahead of the lecture.",
+        cards: [
+          { title: "Living in an Age of Anxiety?", text: "A Christian Science Sentinel article by Tim Myers on finding calm and quiet through prayer.", href: "https://sentinel.christianscience.com/issues/2007/11/109-46/living-in-an-age-of-anxiety", action: "Read article" },
+          { title: "Looking for Love in the Right Place", text: "A Christian Science Sentinel Watch audio talk in which Tim Myers shares how understanding God as Love brought healing and renewal to his own life.", href: "https://sentinel.christianscience.com/sentinel-audio/sentinel-watch/looking-for-love-in-the-right-place", action: "Listen" },
+          { title: "How God's Law of Love Can Heal You", text: "A Christian Science Sentinel audio chat led by Tim Myers on self-worth, bullying, and healing through God's law of love.", href: "https://sentinel.christianscience.com/sentinel-audio/audio-chats/how-god-s-law-of-love-can-heal-you", action: "Listen" }
+        ]
+      },
+      {
+        id: "join-us",
+        title: "We hope you'll join us in person.",
+        body: ["Seating details and the exact venue will be posted here as soon as they're confirmed."],
+        actions: [{ label: "View Full Event Details", href: "/events/god-is-relevant-lecture-october-2026", variant: "primary" }, actions.contact]
+      }
     ]
   },
   {

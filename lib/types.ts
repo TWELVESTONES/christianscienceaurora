@@ -49,6 +49,8 @@ export type PageSection = {
   image?: ImagePlaceholder;
   confirmationNote?: string;
   faq?: Array<{ question: string; answer: string }>;
+  /** Embedded video player (currently YouTube only, via the privacy-enhanced youtube-nocookie.com domain). Rendered as a responsive 16:9 iframe. */
+  video?: { youtubeId: string; title: string };
 };
 
 export type PageDefinition = {
@@ -99,6 +101,8 @@ export type EventItem = {
   accessibility?: string;
   parking?: string;
   familySuitable?: boolean;
+  /** Attendance-format notice (e.g. "not broadcast or recorded" per Board of Lectureship directive). Rendered as a highlighted callout on the event detail page when set. */
+  broadcastNotice?: string;
 };
 
 export type SermonItem = {

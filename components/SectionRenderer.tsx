@@ -10,7 +10,7 @@ export function SectionRenderer({ section }: { section: PageSection }) {
   return (
     <section id={section.id} className={`section section-${style}`}>
       <div className="container">
-        <div className={section.image ? "section-split" : ""}>
+        <div className={section.image || section.video ? "section-split" : ""}>
           <div>
             {(section.eyebrow || section.title || section.intro) ? (
               <header className="section-heading">
@@ -41,6 +41,18 @@ export function SectionRenderer({ section }: { section: PageSection }) {
             ) : null}
           </div>
           {section.image ? <PhotoPlaceholder image={section.image} /> : null}
+          {section.video ? (
+            <div className="video-embed">
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${section.video.youtubeId}`}
+                title={section.video.title}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allow="accelerometer; encrypted-media; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          ) : null}
         </div>
       </div>
     </section>

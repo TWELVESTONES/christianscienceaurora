@@ -48,7 +48,8 @@ export function deriveDynamicPage(path: string, sources: DynamicContentSources =
             { title: "Parking", text: publicSafeText(event.parking) }
           ]
         },
-        { id: "expect", title: "What to expect", body: [event.summary, event.recurring ? `Recurrence: ${event.recurring}` : "This is a one-time event."], style: "teal-mist" }
+        { id: "expect", title: "What to expect", body: [event.summary, event.recurring ? `Recurrence: ${event.recurring}` : "This is a one-time event."], style: "teal-mist" },
+        ...(event.broadcastNotice ? [{ id: "attendance-notice", title: "Attendance notice", body: [event.broadcastNotice], style: "gold-accent" as const }] : [])
       ]
     };
   }

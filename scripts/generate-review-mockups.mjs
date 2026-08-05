@@ -5,7 +5,6 @@ import path from "node:path";
 const baseUrl = process.env.MOCKUP_BASE_URL || "http://127.0.0.1:3004";
 const routes = [
   "/sermons/peace-through-prayer-placeholder",
-  "/events/public-talk-placeholder",
   "/reading-room/shop/science-and-health-placeholder",
   "/reading-room/cart",
   "/reading-room/checkout",

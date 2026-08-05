@@ -43,20 +43,21 @@ export const events: EventItem[] = [
     familySuitable: true
   },
   {
-    slug: "public-talk-placeholder",
-    title: "Public Talk — Church Confirmation Required",
-    summary: "Campaign-ready event placeholder. Replace with an approved title, speaker, date, and permissions record.",
+    slug: "god-is-relevant-lecture-october-2026",
+    title: "Free Public Lecture: \"God is Relevant\" with Tim Myers, CS",
+    summary: "A free public lecture exploring whether God remains relevant today, through Christ Jesus' healing works and contemporary accounts of healing involving injury, depression, and addiction. Presented by Tim Myers, CS, a Christian Science practitioner and member of the Christian Science Board of Lectureship.",
     category: "Talk",
-    start: "2026-09-20T14:00:00-06:00",
-    end: "2026-09-20T15:00:00-06:00",
+    start: "2026-10-08T19:00:00-06:00",
+    end: "2026-10-08T20:00:00-06:00",
     timezone: "America/Denver",
-    location: "Location pending church confirmation",
+    location: "Location to be announced",
     status: "scheduled",
     featured: true,
-    cost: "To be confirmed",
-    accessibility: "To be confirmed before publication.",
-    parking: "To be confirmed before publication.",
-    familySuitable: true
+    cost: "Free",
+    accessibility: "To be announced once the venue is confirmed.",
+    parking: "To be announced once the venue is confirmed.",
+    familySuitable: true,
+    broadcastNotice: "In keeping with Christian Science Board of Lectureship directives, this lecture will not be broadcast or recorded in any format. Attendance is in person only."
   }
 ];
 
