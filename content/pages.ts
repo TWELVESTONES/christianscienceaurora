@@ -1,4 +1,5 @@
 import type { ImagePlaceholder, PageDefinition } from "@/lib/types";
+import { site } from "@/content/site";
 
 const photo = (
   id: string,
@@ -704,10 +705,26 @@ export const pageDefinitions: PageDefinition[] = [
     path: "/lectures",
     eyebrow: "FREE PUBLIC LECTURE",
     title: "God is Relevant",
-    description: "With Tim Myers, CS — a free public lecture from the Christian Science Board of Lectureship, hosted by First Church of Christ, Scientist, Aurora.",
+    seoTitle: "\"God is Relevant\" — Christian Science Lecture with Tim Myers, CS",
+    description: "\"God is Relevant\" is a free Christian Science lecture with Tim Myers, CS, hosted by First Church of Christ, Scientist, Aurora, CO.",
+    keywords: ["Tim Myers, CS", "Christian Science Lecture", "God is Relevant", "Christian Science Aurora", "free public lecture", "Christian Science Board of Lectureship"],
     directAnswer: "Thursday, October 8, 2026 at 7:00 PM. Location to be announced. Free and open to the public. This lecture will not be broadcast or recorded — attendance is in person only.",
-    heroImage: photo("special-events-banner", "\"God is Relevant\" lecture banner", "Church-supplied promotional banner for the Tim Myers, CS lecture; event details are baked into the image itself.", "Free Public Lecture: God is Relevant, with Tim Myers, CS. Thursday, October 8, 2026, 7:00 PM. Location TBD.", "1200:340", false, "/images/photography/special-events-banner.webp"),
+    heroImage: photo("lecture-square-banner", "\"God is Relevant\" lecture banner (square)", "Custom-composed square banner built from the church-supplied promotional photo, for the hero image slot; event details are baked into the image itself.", "Free Public Lecture \"God is Relevant\" with Tim Myers, CS — Thursday, October 8, 2026, 7:00 PM, location to be announced.", "1:1", false, "/images/photography/lecture-square-banner.webp"),
     actions: [{ label: "View Full Event Details", href: "/events/god-is-relevant-lecture-october-2026", variant: "primary" }, actions.contact],
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      name: "God is Relevant",
+      description: "A free Christian Science lecture exploring whether God remains relevant today, through Christ Jesus' healing works and contemporary accounts of healing involving injury, depression, and addiction.",
+      startDate: "2026-10-08T19:00:00-06:00",
+      endDate: "2026-10-08T20:00:00-06:00",
+      eventStatus: "https://schema.org/EventScheduled",
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      isAccessibleForFree: true,
+      location: { "@type": "Place", name: "First Church of Christ, Scientist, Aurora, Colorado", address: "15700 E. Quincy Avenue, Aurora, Colorado 80015" },
+      organizer: { "@type": "Organization", name: site.name, url: site.domain },
+      performer: { "@type": "Person", name: "Tim Myers, CS", jobTitle: "Christian Science Practitioner and Lecturer", url: "https://www.christianscience.com/lecturers/tim-myers" }
+    },
     sections: [
       {
         id: "notice",
@@ -733,7 +750,7 @@ export const pageDefinitions: PageDefinition[] = [
         title: "About this lecture",
         body: [
           "\"God is Relevant\" explores whether God remains relevant in our lives today. Drawing on Christ Jesus' teachings and contemporary accounts of healing — including injury, depression, and addiction — Tim Myers considers how understanding God as Love brings a practical, relevant impact into everyday life.",
-          "This lecture is sponsored by First Church of Christ, Scientist, Aurora."
+          "This lecture is sponsored by First Church of Christ, Scientist, Aurora, CO."
         ],
         style: "teal-mist",
         actions: [{ label: "Official Lecture Description", href: "https://www.christianscience.com/lectures/god-is-relevant", external: true, variant: "secondary" }]

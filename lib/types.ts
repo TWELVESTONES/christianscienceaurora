@@ -83,6 +83,10 @@ export type PageDefinition = {
   status?: PublicationStatus;
   churchConfirmation?: string[];
   seoTitle?: string;
+  /** Explicit meta keywords for pages targeting specific named entities/topics (e.g. a guest speaker's name). Most pages should leave this unset and rely on title/description. */
+  keywords?: string[];
+  /** Additional schema.org JSON-LD object(s) rendered alongside the default WebPage schema — e.g. an Event schema with a performer, for a page that is fundamentally about one event. */
+  structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
 };
 
 export type EventItem = {

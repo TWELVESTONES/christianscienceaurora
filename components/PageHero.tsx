@@ -13,7 +13,7 @@ export function PageHero({ page }: { page: PageDefinition }) {
             {page.eyebrow ? <div className="eyebrow">{page.eyebrow}</div> : null}
             <h1>{page.title}</h1>
             <p className="description">{page.description}</p>
-            {page.directAnswer ? <div className="direct-answer"><strong>Direct answer:</strong> {page.directAnswer}</div> : null}
+            {page.directAnswer ? <div className="direct-answer"><strong>Info:</strong> {page.directAnswer}</div> : null}
             <ButtonRow actions={page.actions} />
           </div>
           {page.heroImage ? <PhotoPlaceholder image={page.heroImage} /> : null}

@@ -31,6 +31,19 @@ export function deriveDynamicPage(path: string, sources: DynamicContentSources =
       title: event.title,
       description: event.summary,
       pageType: "standard",
+      structuredData: {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        name: event.title,
+        description: event.summary,
+        startDate: event.start,
+        endDate: event.end,
+        eventStatus: `https://schema.org/Event${event.status[0].toUpperCase()}${event.status.slice(1)}`,
+        eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+        isAccessibleForFree: event.cost === "Free",
+        location: { "@type": "Place", name: "First Church of Christ, Scientist, Aurora, Colorado", address: event.location },
+        organizer: { "@type": "Organization", name: "First Church of Christ, Scientist, Aurora, Colorado", url: "https://christianscienceaurora.com" }
+      },
       actions: [
         { label: "Add to Calendar", href: `data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0ABEGIN:VEVENT%0ASUMMARY:${encodeURIComponent(event.title)}%0ADTSTART:${event.start.replace(/[-:]/g, "").replace(".000", "")}%0ADTEND:${event.end.replace(/[-:]/g, "").replace(".000", "")}%0AEND:VEVENT%0AEND:VCALENDAR`, variant: "primary", external: true },
         { label: "Google Calendar", href: `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(event.title)}&dates=${event.start}/${event.end}&location=${encodeURIComponent(event.location)}`, variant: "secondary", external: true }

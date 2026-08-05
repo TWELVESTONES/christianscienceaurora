@@ -29,7 +29,13 @@ export function OrganizationSchema() {
 }
 
 export function PageSchema({ page }: { page: PageDefinition }) {
-  return <JsonLd data={{ "@context": "https://schema.org", "@type": "WebPage", name: page.title, description: page.description, url: `${site.domain}${page.path}` }} />;
+  const extra = page.structuredData ? (Array.isArray(page.structuredData) ? page.structuredData : [page.structuredData]) : [];
+  return (
+    <>
+      <JsonLd data={{ "@context": "https://schema.org", "@type": "WebPage", name: page.title, description: page.description, url: `${site.domain}${page.path}` }} />
+      {extra.map((data, index) => <JsonLd key={index} data={data} />)}
+    </>
+  );
 }
 
 export function EventSchema({ event }: { event: EventItem }) {
