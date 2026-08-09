@@ -122,7 +122,7 @@ export const pageDefinitionSchema = z.object({
   title: z.string().min(1),
   eyebrow: z.string().optional(),
   description: z.string().min(1),
-  directAnswer: z.string().optional(),
+  directAnswer: z.union([z.string(), z.array(z.string())]).optional(),
   heroImage: imagePlaceholderSchema.optional(),
   actions: z.array(linkItemSchema).optional(),
   sections: z.array(pageSectionSchema),

@@ -58,7 +58,8 @@ export type PageDefinition = {
   title: string;
   eyebrow?: string;
   description: string;
-  directAnswer?: string;
+  /** Single paragraph, or an array to render each fact on its own line. */
+  directAnswer?: string | string[];
   heroImage?: ImagePlaceholder;
   actions?: LinkItem[];
   sections: PageSection[];

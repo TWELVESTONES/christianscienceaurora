@@ -23,7 +23,11 @@ export const pageDefinitions: PageDefinition[] = [
     eyebrow: "PLAN YOUR VISIT",
     title: "Your first visit, made simple.",
     description: "Everything you need to know before joining a Sunday service, Sunday School, or Wednesday testimony meeting.",
-    directAnswer: "Sunday Service and Sunday School meet at 10:00 a.m. Wednesday testimony meetings begin at 7:30 p.m. The church is at 15700 E. Quincy Avenue in Aurora.",
+    directAnswer: [
+      "Sunday Service and Sunday School meet at 10:00 a.m.",
+      "Wednesday Testimony Meeting begins at 7:30 p.m.",
+      "The church is at 15700 E. Quincy Avenue, Aurora, Colorado 80015."
+    ],
     heroImage: photo("visit-entrance", "Church entrance and arrival", "Photograph the main visitor approach in soft morning light. Show the door, walkway, sign, and a clear sense of arrival without staged posing.", "Main entrance and walkway at First Church of Christ, Scientist, Aurora.", "4:3", false, "/images/photography/visit-entrance.webp"),
     actions: [actions.directions, actions.contact],
     sections: [
@@ -141,7 +145,7 @@ export const pageDefinitions: PageDefinition[] = [
     sections: [
       { id: "service-cards", cards: [
         { eyebrow: "SUNDAYS · 10:00 A.M.", title: "Sunday Service", text: "A Bible-centered service with hymns, prayer, and a weekly Bible Lesson sermon.", href: "/services/sunday", action: "Explore Sunday Service" },
-        { eyebrow: "WEDNESDAYS · 7:30 P.M.", title: "Testimony Meeting", text: "A midweek pause with readings, prayer, gratitude, and voluntary sharing.", href: "/services/wednesday", action: "Wednesday Meetings" },
+        { eyebrow: "WEDNESDAYS · 7:30 P.M.", title: "Testimony Meeting", text: "Mid-week pause with readings, prayer, and sharing of gratitude and inspiration.", href: "/services/wednesday", action: "Wednesday Meetings" },
         { eyebrow: "OFFICIAL RESOURCE", title: "Weekly Bible Lesson", text: "Find official information and access options for the lesson studied during the week.", href: "/services/weekly-bible-lesson", action: "Find Lesson Information" },
         { eyebrow: "REMOTE ATTENDANCE", title: "Attend Online", text: "Remote attendance is not currently available. See this page for updates.", href: "/services/attend-online", action: "View Attendance Status" }
       ] }
@@ -286,7 +290,7 @@ export const pageDefinitions: PageDefinition[] = [
   {
     path: "/sunday-school/stories",
     eyebrow: "CHILDREN’S STORIES",
-    title: "Meet brave choices and helpful ideas.",
+    title: "Explore brave choices and helpful ideas.",
     description: "Short, original stories that connect Bible ideas with school, friendships, family, and everyday decisions.",
     pageType: "children-library",
     heroImage: photo("story-illustration", "Original children’s story illustration", "Commission an original, contemporary editorial illustration with simple shapes, warm white space, teal/periwinkle palette, and restrained gold. No separate Sunday School logo.", "Original illustration of children reading and discussing a Bible story together.", "4:3", false, "/images/photography/story-illustration.webp"),
@@ -670,7 +674,7 @@ export const pageDefinitions: PageDefinition[] = [
     heroImage: photo("pastor-books", "Bible and Science and Health", "Photograph approved editions resting naturally on a simple reading surface. Keep text pages unreadable and ensure any cover use is permitted for this informational context.", "The Bible and Science and Health with Key to the Scriptures displayed together.", "3:2", false, "/images/photography/pastor-books.webp"),
     actions: [{ label: "Learn About Sunday Services", href: "/services/sunday", variant: "primary" }, { label: "Explore Weekly Bible Lesson", href: "/services/weekly-bible-lesson", variant: "secondary" }],
     sections: [
-      { id: "role", title: "How the Pastor serves", body: ["Readings from the Bible and Science and Health form the sermon at Sunday services and provide a foundation for study and prayer."] }
+      { id: "role", title: "How the Pastor serves", body: ["Readings from the Bible and Science and Health form the sermon at Sunday services and are also read at Wednesday testimony meetings, providing a foundation for study and prayer."] }
     ]
   },
   {
