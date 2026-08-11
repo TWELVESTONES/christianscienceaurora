@@ -659,12 +659,97 @@ export const pageDefinitions: PageDefinition[] = [
     path: "/about/history",
     eyebrow: "OUR HISTORY",
     title: "More than 70 years of worship and community in Aurora.",
-    description: "A holding page for verified milestones, photographs, programs, and stories from the congregation’s history.",
-    heroImage: photo("history-archive", "Approved historical materials", "Digitize verified photographs, programs, or building records with high resolution and neutral lighting. Record date, source, rights owner, caption, and approval status.", "Selected archival materials from the history of First Church of Christ, Scientist, Aurora.", "2:3", false, "/images/photography/history-archive.webp"),
+    description: "From a small congregation on Jamaica Street to the church home on East Quincy Avenue — more than 70 years of worship, healing, and service to the Aurora community.",
+    heroImage: photo("history-old-church-jamaica-st", "First Church of Christ, Scientist, Aurora — original building, 1300 Jamaica St.", "Church-supplied archival photograph of the congregation's original building at 1300 Jamaica Street, Aurora, CO. Real photo, not a production placeholder.", "First Church of Christ, Scientist, Aurora, in its original building at 1300 Jamaica Street, Aurora, Colorado.", "3:2", false, "/images/photography/history-old-church-jamaica-st.webp"),
     actions: [{ label: "Contact Us About Church History", href: "/contact", variant: "primary" }],
     sections: [
-      { id: "timeline", title: "Our history in Aurora", body: ["First Church of Christ, Scientist, Aurora has served the community for more than 70 years. A full illustrated timeline is in progress — check back soon, or contact us if you have historical photographs or records to share."] }
-    ]
+      {
+        id: "beginnings",
+        title: "Organized in 1954",
+        body: [
+          "First Church of Christ, Scientist, Aurora was organized on December 28, 1954, growing out of the Christian Science Society, Aurora, Colorado — a group of local Christian Scientists who had already been meeting together for study and worship before the church was formally organized.",
+          "For much of the more than 70 years since, the congregation gathered in a modest building at 1300 Jamaica Street — pictured above — where Sunday services and Wednesday testimony meetings were held for generations of members and visitors.",
+          "As Aurora grew, so did the congregation's vision for a church home that could serve the eastern edge of the metro area for decades to come."
+        ]
+      },
+      {
+        id: "word-on-building",
+        title: "Built on a sure foundation",
+        style: "stone",
+        cards: [
+          { eyebrow: "PSALM 127:1", title: "Except the Lord build the house", text: "“Except the LORD build the house, they labour in vain that build it: except the LORD keep the city, the watchman waketh but in vain.”" },
+          { eyebrow: "MATTHEW 7:24–25", title: "Founded upon a rock", text: "“...I will liken him unto a wise man, which built his house upon a rock: And the rain descended, and the floods came, and the winds blew, and beat upon that house; and it fell not: for it was founded upon a rock.”" }
+        ]
+      },
+      {
+        id: "groundbreaking",
+        title: "Breaking ground on East Quincy Avenue",
+        style: "teal-mist",
+        image: photo("history-groundbreaking-quincy-ave", "Groundbreaking ceremony, 15700 E. Quincy Ave.", "Church-supplied archival photograph of the groundbreaking ceremony for the current church building. Real photo, not a production placeholder. Per church confirmation, only 2 of the 5 people pictured are among the 10 named founders/builders and 2 are construction workers (identity of the 5th unconfirmed) — church has directed that no names be attached to this specific photo.", "Members of the congregation and the construction crew breaking ground with shovels at the site of the new church building on East Quincy Avenue.", "3:2", false, "/images/photography/history-groundbreaking-quincy-ave.webp"),
+        body: [
+          "The congregation made the decision to build a new church home at 15700 E. Quincy Avenue — the church's current location, and today the easternmost Christian Science church in Colorado. Members and the construction crew broke ground on the project together, marking the start of a new chapter for the church's presence in Aurora."
+        ]
+      },
+      {
+        id: "living-stones",
+        title: "Living stones, growing together",
+        cards: [
+          { eyebrow: "1 PETER 2:5", title: "A spiritual house", text: "“Ye also, as lively stones, are built up a spiritual house, an holy priesthood, to offer up spiritual sacrifices, acceptable to God by Jesus Christ.”" },
+          { eyebrow: "1 CORINTHIANS 3:9, 11", title: "Labourers together with God", text: "“For we are labourers together with God: ye are God's husbandry, ye are God's building. ... For other foundation can no man lay than that is laid, which is Jesus Christ.”" }
+        ]
+      },
+      {
+        id: "builders",
+        title: "The people who built it",
+        image: photo("history-founders-builders-group", "Founders and builders of the current church", "Church-supplied archival photograph of the congregation members who founded and helped build the current church. Names per church records: Mal, Claire, Joy, Wally, Dan, Robert, Helen, Tom, and Rob. Real photo, not a production placeholder.", "A group of founding and building-committee members gathered on the church grounds.", "3:2", false, "/images/photography/history-founders-builders-group.webp"),
+        body: [
+          "The new building was made possible by the dedication of members who gave their time, skill, and support to see it through — among them Cindy, Tom, Rob, Mal, Claire, Joy, Wally, Dan, Robert, and Helen. Their work, grounded in gratitude and service, is part of the foundation the congregation still stands on today."
+        ]
+      },
+      {
+        id: "first-service",
+        title: "A new sanctuary opens",
+        style: "periwinkle-mist",
+        body: [
+          "The first service in the new church home was held on August 26, 2001, with Donna Rae Scarth serving as First Reader. It was the first of what has since become thousands of Sunday services and Wednesday testimony meetings held on East Quincy Avenue, continuing the congregation's long history of worship in Aurora."
+        ]
+      },
+      {
+        id: "community",
+        title: "A steady presence for Aurora",
+        body: [
+          "Beyond its regular services, First Church of Christ, Scientist, Aurora has sought to be a source of comfort and prayer for the wider community in difficult moments. In the aftermath of the 2012 Aurora theater shooting, the church opened its doors and held a prayer service to which the entire community was invited — an expression of the congregation's belief that prayer and healing are for everyone, not members alone.",
+          "That same spirit — a welcome extended to all of Aurora, in ordinary weeks and hard ones — continues to guide the congregation today."
+        ]
+      },
+      {
+        id: "what-is-a-church",
+        title: "What is a church?",
+        style: "gold-accent",
+        cards: [
+          { eyebrow: "EPHESIANS 2:20–21", title: "Fitly framed together", text: "“...built upon the foundation of the apostles and prophets, Jesus Christ himself being the chief corner stone; in whom all the building fitly framed together groweth unto an holy temple in the Lord.”" },
+          { eyebrow: "MARY BAKER EDDY, SCIENCE AND HEALTH, P. 583", title: "The structure of Truth and Love", text: "“Church. The structure of Truth and Love; whatever rests upon and proceeds from divine Principle.”" }
+        ]
+      },
+      {
+        id: "gratitude",
+        title: "With eternal gratitude",
+        style: "periwinkle-mist",
+        body: [
+          "We are eternally grateful for the founders, builders, Readers, and workers this congregation has been blessed with throughout its decades in Aurora — and for divine Love, whose blessings on this church we hold in gratitude, past, present, and future."
+        ]
+      },
+      {
+        id: "more-to-come",
+        title: "Help us tell the fuller story",
+        style: "stone",
+        body: [
+          "This history is still being gathered. If you have photographs, programs, dates, or memories from the congregation's past, we would be glad to include them here — this page will continue to grow as more of that history comes to light."
+        ],
+        actions: [{ label: "Share Church History With Us", href: "/contact", variant: "primary" }]
+      }
+    ],
+    churchConfirmation: ["Full names (last names) of the founders and builders pictured", "Additional historical milestones and dates"]
   },
   {
     path: "/about/pastor",
