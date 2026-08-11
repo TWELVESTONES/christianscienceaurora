@@ -660,7 +660,7 @@ export const pageDefinitions: PageDefinition[] = [
     eyebrow: "OUR HISTORY",
     title: "More than 70 years of worship and community in Aurora.",
     description: "From a small congregation on Jamaica Street to the church home on East Quincy Avenue — more than 70 years of worship, healing, and service to the Aurora community.",
-    heroImage: photo("history-old-church-jamaica-st", "First Church of Christ, Scientist, Aurora — original building, 1300 Jamaica St.", "Church-supplied archival photograph of the congregation's original building at 1300 Jamaica Street, Aurora, CO. Real photo, not a production placeholder.", "First Church of Christ, Scientist, Aurora, in its original building at 1300 Jamaica Street, Aurora, Colorado.", "3:2", false, "/images/photography/history-old-church-jamaica-st.webp"),
+    heroImage: photo("history-old-church-jamaica-st", "First Church of Christ, Scientist, Aurora — original building, 1300 Jamaica St.", "Church-supplied archival photograph of the congregation's original building at 1300 Jamaica Street, Aurora, CO. Real photo, not a production placeholder. Higher-resolution version supplied 2026-08-11, re-cropped to trim overhead tree canopy for a tighter, better-balanced composition at 16:9.", "First Church of Christ, Scientist, Aurora, in its original building at 1300 Jamaica Street, Aurora, Colorado.", "16:9", false, "/images/photography/history-old-church-jamaica-st.webp"),
     actions: [{ label: "Contact Us About Church History", href: "/contact", variant: "primary" }],
     sections: [
       {
@@ -685,7 +685,7 @@ export const pageDefinitions: PageDefinition[] = [
         id: "groundbreaking",
         title: "Breaking ground on East Quincy Avenue",
         style: "teal-mist",
-        image: photo("history-groundbreaking-quincy-ave", "Groundbreaking ceremony, 15700 E. Quincy Ave.", "Church-supplied archival photograph of the groundbreaking ceremony for the current church building. Real photo, not a production placeholder. Per church confirmation, only 2 of the 5 people pictured are among the 10 named founders/builders and 2 are construction workers (identity of the 5th unconfirmed) — church has directed that no names be attached to this specific photo.", "Members of the congregation and the construction crew breaking ground with shovels at the site of the new church building on East Quincy Avenue.", "3:2", false, "/images/photography/history-groundbreaking-quincy-ave.webp"),
+        image: photo("history-groundbreaking-quincy-ave", "Groundbreaking ceremony, 15700 E. Quincy Ave.", "Church-supplied archival photograph of the groundbreaking ceremony for the current church building. Real photo, not a production placeholder. Per church confirmation, only 2 of the 5 people pictured are among the 10 named founders/builders and 2 are construction workers (identity of the 5th unconfirmed) — church has directed that no names be attached to this specific photo. Higher-resolution version supplied 2026-08-11, already full-bleed (no border to crop).", "Members of the congregation and the construction crew breaking ground with shovels at the site of the new church building on East Quincy Avenue.", "3:2", false, "/images/photography/history-groundbreaking-quincy-ave.webp"),
         body: [
           "The congregation made the decision to build a new church home at 15700 E. Quincy Avenue — the church's current location, and today the easternmost Christian Science church in Colorado. Members and the construction crew broke ground on the project together, marking the start of a new chapter for the church's presence in Aurora."
         ]
@@ -701,7 +701,7 @@ export const pageDefinitions: PageDefinition[] = [
       {
         id: "builders",
         title: "The people who built it",
-        image: photo("history-founders-builders-group", "Founders and builders of the current church", "Church-supplied archival photograph of the congregation members who founded and helped build the current church. Names per church records: Mal, Claire, Joy, Wally, Dan, Robert, Helen, Tom, and Rob. Real photo, not a production placeholder.", "A group of founding and building-committee members gathered on the church grounds.", "3:2", false, "/images/photography/history-founders-builders-group.webp"),
+        image: photo("history-founders-builders-group", "Founders and builders of the current church", "Church-supplied archival photograph of the congregation members who founded and helped build the current church. Names per church records: Mal, Claire, Joy, Wally, Dan, Robert, Helen, Tom, and Rob. Real photo, not a production placeholder. Higher-resolution version supplied 2026-08-11; rounded-corner postcard border cropped out.", "A group of founding and building-committee members gathered on the church grounds.", "16:9", false, "/images/photography/history-founders-builders-group.webp"),
         body: [
           "The new building was made possible by the dedication of members who gave their time, skill, and support to see it through — among them Cindy, Tom, Rob, Mal, Claire, Joy, Wally, Dan, Robert, and Helen. Their work, grounded in gratitude and service, is part of the foundation the congregation still stands on today."
         ]
@@ -710,6 +710,7 @@ export const pageDefinitions: PageDefinition[] = [
         id: "first-service",
         title: "A new sanctuary opens",
         style: "periwinkle-mist",
+        image: photo("history-new-church-quincy-ave", "First Church of Christ, Scientist, Aurora — current building, 15700 E. Quincy Ave.", "Church-supplied photograph of the current church building at 15700 E. Quincy Avenue, Aurora, CO. Real photo, not a production placeholder. Supplied 2026-08-11, already full-bleed at ~16:9, no crop needed.", "First Church of Christ, Scientist, Aurora, at its current location on East Quincy Avenue.", "16:9", false, "/images/photography/history-new-church-quincy-ave.webp"),
         body: [
           "The first service in the new church home was held on August 26, 2001, with Donna Rae Scarth serving as First Reader. It was the first of what has since become thousands of Sunday services and Wednesday testimony meetings held on East Quincy Avenue, continuing the congregation's long history of worship in Aurora."
         ]
@@ -720,6 +721,9 @@ export const pageDefinitions: PageDefinition[] = [
         body: [
           "Beyond its regular services, First Church of Christ, Scientist, Aurora has sought to be a source of comfort and prayer for the wider community in difficult moments. In the aftermath of the 2012 Aurora theater shooting, the church opened its doors and held a prayer service to which the entire community was invited — an expression of the congregation's belief that prayer and healing are for everyone, not members alone.",
           "That same spirit — a welcome extended to all of Aurora, in ordinary weeks and hard ones — continues to guide the congregation today."
+        ],
+        cards: [
+          { eyebrow: "JOHN 4:35", title: "White already to harvest", text: "“...Lift up your eyes, and look on the fields; for they are white already to harvest.”" }
         ]
       },
       {
