@@ -68,6 +68,7 @@ main { flex: 1; }
 .wordmark-stack { display: flex; flex-direction: column; line-height: 1; }
 .wordmark-stack strong { font-family: "Inter Display", Inter, sans-serif; font-size: .83rem; letter-spacing: .02em; font-weight: 600; }
 .wordmark-stack span { font-family: "Inter Display", Inter, sans-serif; font-size: 1.08rem; letter-spacing: .12em; font-weight: 800; color: var(--aurora-teal); margin-top: .25rem; }
+.wordmark-logo-img { height: 58px; width: auto; display: block; }
 .desktop-nav { display: flex; align-items: center; gap: .82rem; }
 .desktop-nav a { text-decoration: none; font-size: .88rem; font-weight: 650; color: var(--deep-charcoal); white-space: nowrap; }
 .desktop-nav a:hover { color: var(--aurora-teal); }
@@ -266,6 +267,7 @@ textarea.form-control { min-height: 180px; resize: vertical; }
   body { font-size: 17px; }
   .topline { display: none; }
   .header-main { min-height: 74px; }
+  .wordmark-logo-img { height: 46px; }
   .wordmark-csa { font-size: 1.75rem; }
   .header-actions .btn-secondary { display: none; }
   .service-strip-inner { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-inline: 1rem; }
