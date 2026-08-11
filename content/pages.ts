@@ -687,7 +687,7 @@ export const pageDefinitions: PageDefinition[] = [
         style: "teal-mist",
         image: photo("history-groundbreaking-quincy-ave", "Groundbreaking ceremony, 15700 E. Quincy Ave.", "Church-supplied archival photograph of the groundbreaking ceremony for the current church building. Real photo, not a production placeholder. Per church confirmation, only 2 of the 5 people pictured are among the 10 named founders/builders and 2 are construction workers (identity of the 5th unconfirmed) — church has directed that no names be attached to this specific photo. Higher-resolution version supplied 2026-08-11, already full-bleed (no border to crop).", "Members of the congregation and the construction crew breaking ground with shovels at the site of the new church building on East Quincy Avenue.", "3:2", false, "/images/photography/history-groundbreaking-quincy-ave.webp"),
         body: [
-          "The congregation made the decision to build a new church home at 15700 E. Quincy Avenue — the church's current location, and today the easternmost Christian Science church in Colorado. Members and the construction crew broke ground on the project together, marking the start of a new chapter for the church's presence in Aurora."
+          "The congregation made the decision to build a new church home at 15700 E. Quincy Avenue — the church's current location, and today the easternmost Christian Science church in Colorado. Ground was broken on September 27, 2000, as members and the construction crew gathered together to mark the start of a new chapter for the church's presence in Aurora."
         ]
       },
       {
@@ -723,7 +723,9 @@ export const pageDefinitions: PageDefinition[] = [
           "That same spirit — a welcome extended to all of Aurora, in ordinary weeks and hard ones — continues to guide the congregation today."
         ],
         cards: [
-          { eyebrow: "JOHN 4:35", title: "White already to harvest", text: "“...Lift up your eyes, and look on the fields; for they are white already to harvest.”" }
+          { eyebrow: "JOHN 4:35", title: "White already to harvest", text: "“...Lift up your eyes, and look on the fields; for they are white already to harvest.”" },
+          { eyebrow: "PSALM 147:3", title: "He healeth the broken in heart", text: "“He healeth the broken in heart, and bindeth up their wounds.”" },
+          { eyebrow: "MARY BAKER EDDY, SCIENCE AND HEALTH, P. 494", title: "Every human need", text: "“Divine Love always has met and always will meet every human need.”" }
         ]
       },
       {
