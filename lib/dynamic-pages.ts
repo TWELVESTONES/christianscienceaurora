@@ -88,6 +88,11 @@ export function deriveDynamicPage(path: string, sources: DynamicContentSources =
     const slug = path.split("/").at(-1) ?? "";
     const article = articles.find((item) => item.slug === slug);
     if (!article) return undefined;
+    // Articles whose canonical content lives off-site (externalHref set) never get an internal
+    // detail page — the card links straight to the source, and generating a thin placeholder
+    // page at this internal path would be an unlinked, unsitemapped duplicate with no real
+    // content, which is bad for SEO. Let this fall through to a normal 404.
+    if (article.externalHref) return undefined;
     return {
       path,
       eyebrow: article.category.toUpperCase(),

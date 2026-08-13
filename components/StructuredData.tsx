@@ -49,7 +49,17 @@ export function EventSchema({ event }: { event: EventItem }) {
 }
 
 export function ArticleSchema({ article }: { article: ArticleItem }) {
-  return <JsonLd data={{ "@context": "https://schema.org", "@type": "Article", headline: article.title, description: article.summary, author: { "@type": "Organization", name: article.author }, datePublished: article.publishedAt, dateModified: article.updatedAt, publisher: { "@type": "Organization", name: site.name } }} />;
+  return <JsonLd data={{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.summary,
+    author: { "@type": article.authorType ?? "Organization", name: article.author },
+    datePublished: article.publishedAt,
+    dateModified: article.updatedAt,
+    publisher: { "@type": "Organization", name: site.name },
+    ...(article.externalHref ? { url: article.externalHref, isAccessibleForFree: false } : {})
+  }} />;
 }
 
 export function ProductSchema({ product }: { product: ProductItem }) {

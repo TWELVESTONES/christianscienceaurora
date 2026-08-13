@@ -3,14 +3,45 @@ import { ArticleSchema, ProductSchema } from "@/components/StructuredData";
 import { isContentReviewMode } from "@/lib/review-mode";
 import type { ArticleItem, ExternalResource, ProductItem, SundaySchoolResource } from "@/lib/types";
 
-export function ArticleLibrary({ familyOnly = false, articles = [] }: { familyOnly?: boolean; articles?: ArticleItem[] }) {
-  const list = familyOnly ? articles.filter((article) => article.category === "Families") : articles;
+const externalLinkNote = <span className="visually-hidden"> (opens in a new tab)</span>;
+
+export function ArticleLibrary({ pagePath, articles = [] }: { pagePath: string; articles?: ArticleItem[] }) {
+  const list = articles.filter((article) => (article.showOnPaths ?? ["/articles"]).includes(pagePath));
   return (
     <>
       <div className="filter-bar"><label htmlFor="article-search">Search</label><input id="article-search" placeholder="Search articles and questions" /><label htmlFor="article-category">Category</label><select id="article-category"><option>All categories</option><option>New Here</option><option>Prayer and Healing</option><option>Bible Study</option><option>Families</option><option>Reading Room</option><option>Community</option></select></div>
       {list.length ? (
         <div className="card-grid">
-          {list.map((article) => <article className="card" key={article.slug}><div className="eyebrow">{article.category}</div><h3><Link href={`/articles/${article.slug}`}>{article.title}</Link></h3><p>{article.summary}</p><p className="card-meta">By {article.author} · {article.publishedAt} · {article.readingTime}</p><p className="card-action"><Link href={`/articles/${article.slug}`}>Read the article →</Link></p><ArticleSchema article={article} /></article>)}
+          {list.map((article) => {
+            const primaryHref = article.externalHref ?? `/articles/${article.slug}`;
+            return (
+              <article className="card" key={article.slug}>
+                <div className="eyebrow">{article.category}</div>
+                <h3>
+                  {article.externalHref ? (
+                    <a href={primaryHref} target="_blank" rel="noopener noreferrer">{article.title}{externalLinkNote}</a>
+                  ) : (
+                    <Link href={primaryHref}>{article.title}</Link>
+                  )}
+                </h3>
+                <p>{article.summary}</p>
+                <p className="card-meta">By {article.author} · {article.publishedAt} · {article.readingTime}</p>
+                <p className="card-action">
+                  {article.externalHref ? (
+                    <a href={primaryHref} target="_blank" rel="noopener noreferrer">Read the article ↗{externalLinkNote}</a>
+                  ) : (
+                    <Link href={primaryHref}>Read the article →</Link>
+                  )}
+                </p>
+                {article.translations?.map((translation) => (
+                  <p className="card-action" key={translation.href}>
+                    <a href={translation.href} target="_blank" rel="noopener noreferrer">Also available in: {translation.label} ↗{externalLinkNote}</a>
+                  </p>
+                ))}
+                <ArticleSchema article={article} />
+              </article>
+            );
+          })}
         </div>
       ) : (
         <div className="empty-state"><div className="eyebrow">EDITORIAL COLLECTION</div><h2>Family articles are being prepared.</h2><p>Approved articles and trusted external resources will appear here as they complete editorial review.</p></div>

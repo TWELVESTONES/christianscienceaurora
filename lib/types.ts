@@ -132,6 +132,14 @@ export type ArticleItem = {
   publishedAt: string;
   updatedAt: string;
   readingTime: string;
+  /** When set, this article's canonical content lives off-site (e.g. Christian Science Sentinel/Herald). The card links out to this URL instead of the internal /articles/{slug} route, and no internal article-detail page is generated for the slug (see lib/dynamic-pages.ts). */
+  externalHref?: string;
+  /** Additional off-site editions (e.g. translations), rendered as secondary links under the primary one. Only meaningful alongside externalHref. */
+  translations?: { label: string; href: string }[];
+  /** Page paths (matching content/pages.ts) this article should be listed on. Defaults to ["/articles"] when omitted, preserving prior behavior. */
+  showOnPaths?: string[];
+  /** JSON-LD author @type for ArticleSchema. Defaults to "Organization" (prior behavior, e.g. "Christian Science Aurora editorial team"). Set "Person" for individually bylined work. */
+  authorType?: "Person" | "Organization";
 };
 
 export type ProductItem = {

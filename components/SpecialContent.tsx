@@ -32,7 +32,7 @@ export async function SpecialContent({ page }: { page: PageDefinition }) {
     }
     case "article-library": {
       const articles = filterPublicArticles(await cmsAdapter.listArticles());
-      return <ArticleLibrary familyOnly={page.path.includes("family-articles")} articles={articles} />;
+      return <ArticleLibrary pagePath={page.path} articles={articles} />;
     }
     case "product-library": {
       const products = filterPublicProducts(await cmsAdapter.listProducts());

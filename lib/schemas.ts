@@ -46,7 +46,11 @@ export const articleSchema = z.object({
   author: z.string().min(2),
   publishedAt: z.iso.date(),
   updatedAt: z.iso.date(),
-  readingTime: z.string().min(2)
+  readingTime: z.string().min(2),
+  externalHref: z.string().url().optional(),
+  translations: z.array(z.object({ label: z.string().min(1), href: z.string().url() })).optional(),
+  showOnPaths: z.array(z.string()).optional(),
+  authorType: z.enum(["Person", "Organization"]).optional()
 });
 
 export const productSchema = z.object({

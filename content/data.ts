@@ -123,6 +123,48 @@ export const articles: ArticleItem[] = [
     publishedAt: "2026-06-25",
     updatedAt: "2026-06-25",
     readingTime: "4 min read"
+  },
+  {
+    slug: "who-me-perfect",
+    title: "Who, me . . . ‘perfect’?",
+    category: "Prayer and Healing",
+    summary: "A Sunday School student wrestles with body image and self-doubt in her teenage years — until a friend's blunt honesty, and a truth she'd heard since childhood, changes how she sees the mirror.",
+    author: "Ashley Woodley",
+    publishedAt: "2011-10-24",
+    updatedAt: "2011-10-24",
+    readingTime: "3 min read",
+    externalHref: "https://sentinel.christianscience.com/issues/2011/10/113-43/who-me-.-.-.-perfect",
+    translations: [
+      { label: "Greek", href: "https://gr.herald.christianscience.com/more-languages/ellenikha/archehio/2012/poios-egho-theleia" }
+    ],
+    showOnPaths: ["/sunday-school/family-articles"],
+    authorType: "Person"
+  },
+  {
+    slug: "lost-in-los-angeles",
+    title: "Lost in Los Angeles and humbled by God’s angels",
+    category: "Bible Study",
+    summary: "A summer internship far from home becomes a lesson in letting go of self-will, as one of our students learns to trust God's leading one unfamiliar street at a time.",
+    author: "Hannah Rackham",
+    publishedAt: "2018-03-26",
+    updatedAt: "2018-03-26",
+    readingTime: "2 min read",
+    externalHref: "https://sentinel.christianscience.com/issues/2018/3/120-13/lost-in-los-angeles-and-humbled-by-god-s-angels",
+    showOnPaths: ["/sunday-school/family-articles"],
+    authorType: "Person"
+  },
+  {
+    slug: "a-scary-thing",
+    title: "A scary thing",
+    category: "Families",
+    summary: "For children. A paper route, a big black dog, and the fear that came with both — a young writer's account of facing something frightening and finding it wasn't too big for prayer to handle.",
+    author: "Lauren Rae Scarth",
+    publishedAt: "1988-04-25",
+    updatedAt: "1988-04-25",
+    readingTime: "2 min read",
+    externalHref: "https://sentinel.christianscience.com/issues/1988/4/90-17/a-scary-thing",
+    showOnPaths: ["/sunday-school/family-articles"],
+    authorType: "Person"
   }
 ];
 
