@@ -1,5 +1,6 @@
 import type { ImagePlaceholder, PageDefinition } from "@/lib/types";
 import { site } from "@/content/site";
+import { cluster2PageDefinitions } from "@/content/cluster2";
 
 const photo = (
   id: string,
@@ -18,6 +19,7 @@ const actions = {
 };
 
 export const pageDefinitions: PageDefinition[] = [
+  ...cluster2PageDefinitions,
   {
     path: "/visit",
     eyebrow: "PLAN YOUR VISIT",
@@ -628,32 +630,18 @@ export const pageDefinitions: PageDefinition[] = [
     sections: [
       { id: "local", title: "Our local church", body: ["The congregation has served the community for more than 70 years. People from every background are welcome to attend services, ask questions, study, and explore the practical meaning of God’s love.", "While we are located in Aurora, Colorado, we are the easternmost Christian Science church in Colorado, and we serve the cities of Parker, Centennial, Bennett, Elizabeth, Byers, and all the towns of the eastern Colorado plains."] },
       { id: "relationship", title: "Our relationship to The Mother Church", body: ["We are a local branch of The First Church of Christ, Scientist, in Boston, Massachusetts.", "The Aurora church is independently administered by its local membership. ChristianScienceAurora.com is maintained by the Aurora branch and is not operated by The Mother Church."], style: "teal-mist" },
-      { id: "tenets", title: "The Tenets of Christian Science", intro: "The Christian Science Church does not have a formal creed, but its core beliefs are summarized in six tenets found in Science and Health with Key to the Scriptures by Mary Baker Eddy (pages 496–497). These tenets are considered the foundation of Christian Science.", cards: [
-        { title: "1. The Bible as our guide", text: "As adherents of Truth, we take the inspired Word of the Bible as our sufficient guide to eternal Life." },
-        { title: "2. One supreme and infinite God", text: "We acknowledge and adore one supreme and infinite God. We acknowledge His Son, one Christ; the Holy Ghost or divine Comforter; and man in God’s image and likeness." },
-        { title: "3. The forgiveness of sin", text: "We acknowledge God’s forgiveness of sin in the destruction of sin and the spiritual understanding that casts out evil as unreal. But the belief in sin is punished so long as the belief lasts." },
-        { title: "4. Jesus’ atonement and love", text: "We acknowledge Jesus’ atonement as the evidence of divine, efficacious Love, unfolding man’s unity with God through Christ Jesus the Way-shower; and we acknowledge that man is saved through Christ, through Truth, Life, and Love as demonstrated by the Galilean Prophet in healing the sick and overcoming sin and death." },
-        { title: "5. The crucifixion and resurrection", text: "We acknowledge that the crucifixion of Jesus and his resurrection served to uplift faith to understand eternal Life, even the allness of Soul, Spirit, and the nothingness of matter." },
-        { title: "6. Our moral and spiritual commitment", text: "And we solemnly promise to watch, and pray for that Mind to be in us which was also in Christ Jesus; to do unto others as we would have them do unto us; and to be merciful, just, and pure." }
+      { id: "tenets", title: "Explore Christian Science beliefs", intro: "For a clear introduction to Christian Science and a source-based explanation of Mary Baker Eddy’s six religious tenets, use the dedicated Christian Science pages.", cards: [
+        { title: "What is Christian Science?", text: "A newcomer-friendly introduction to the Bible, God, Christ Jesus, prayer, spiritual identity, healing, and Christian practice.", href: "/christian-science/", action: "Explore Christian Science" },
+        { title: "The six religious tenets", text: "A closer explanation of the six tenets in Science and Health with Key to the Scriptures, with source references for fuller study.", href: "/christian-science/beliefs/", action: "Read the Six Tenets" }
       ] },
       { id: "explore", title: "Explore", cards: [
-        { title: "What is Christian Science?", text: "A local introduction with links to official sources.", href: "/about/christian-science", action: "Explore Christian Science" },
+        { title: "What is Christian Science?", text: "A clear introduction to Christian Science beliefs and practice.", href: "/christian-science/", action: "Explore Christian Science" },
         { title: "Our history", text: "More than 70 years of worship and community in Aurora.", href: "/about/history", action: "View History" },
         { title: "The Pastor", text: "Learn how the Bible and Science and Health serve as Pastor.", href: "/about/pastor", action: "Meet the Pastor" },
         { title: "Mary Baker Eddy", text: "Official biographical and historical resources.", href: "/about/mary-baker-eddy", action: "Explore Resources" }
       ] }
     ],
     churchConfirmation: ["Founding date", "Historical milestones", "Mission wording", "Approved archival images"]
-  },
-  {
-    path: "/about/christian-science",
-    eyebrow: "WHAT IS CHRISTIAN SCIENCE?",
-    title: "A Christian way of life centered on God’s love and the healing example of Jesus.",
-    description: "Christian Science is based on the Bible and emphasizes prayer, spiritual understanding, and the practical power of God’s goodness and love.",
-    actions: [{ label: "Official Christian Science Introduction", href: "https://www.christianscience.com/what-is-christian-science", external: true, variant: "primary" }, { label: "Explore Local Services", href: "/services", variant: "secondary" }],
-    sections: [
-      { id: "intro", title: "A local introduction", body: ["Mary Baker Eddy discovered and founded Christian Science and wrote Science and Health with Key to the Scriptures, the Christian Science textbook.", "For a complete official introduction to beliefs, teachings, healing, and church resources, visit ChristianScience.com."], style: "teal-mist" }
-    ]
   },
   {
     path: "/about/history",

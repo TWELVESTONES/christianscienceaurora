@@ -12,7 +12,7 @@ const index = [
   ["Reading Room", "/reading-room", "Books, study, questions, shop, events"],
   ["Events", "/events", "Month calendar, annual list, public talks"],
   ["Articles", "/articles", "Newcomer guides, local stories, spiritual resources"],
-  ["What is Christian Science?", "/about/christian-science", "Bible, prayer, healing, official resources"],
+  ["What is Christian Science?", "/christian-science/", "Bible, God, Jesus, prayer, healing, the six tenets"],
   ["Resources", "/resources", "Official Christian Science links"],
   ["Give", "/give", "Voluntary giving information"],
   ["Contact", "/contact", "Address, phone, questions"]

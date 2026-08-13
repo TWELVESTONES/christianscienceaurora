@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   compress: true,
   reactStrictMode: true,
+  // Targeted Cluster 2 canonical migration: Edge middleware preserves the two approved
+  // trailing-slash canonicals while re-creating the baseline slash-removal behavior elsewhere.
+  skipTrailingSlashRedirect: true,
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: []

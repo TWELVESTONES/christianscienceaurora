@@ -7,6 +7,6 @@ describe("page inventory", () => {
     for (const page of pageDefinitions) expect(pageMap.get(page.path)?.title).toBe(page.title);
   });
   it("includes critical required routes", () => {
-    for (const path of ["/visit", "/services/sunday", "/sermons", "/sunday-school", "/reading-room/shop", "/events", "/articles", "/about/christian-science", "/resources", "/give", "/privacy", "/content-permissions"]) expect(pageMap.has(path)).toBe(true);
+    for (const path of ["/visit", "/services/sunday", "/sermons", "/sunday-school", "/reading-room/shop", "/events", "/articles", "/christian-science", "/christian-science/beliefs", "/resources", "/give", "/privacy", "/content-permissions"]) expect(pageMap.has(path)).toBe(true);
   });
 });

@@ -55,6 +55,8 @@ export type PageSection = {
 
 export type PageDefinition = {
   path: string;
+  /** Optional canonical URL path when it intentionally differs from the route-registry path. */
+  canonicalPath?: string;
   title: string;
   eyebrow?: string;
   description: string;

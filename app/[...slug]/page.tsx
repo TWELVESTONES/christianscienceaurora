@@ -18,12 +18,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const page = await resolvePublicPage(path);
   if (!page) return {};
   const ogImage = page.heroImage?.src ? [{ url: `${site.domain}${page.heroImage.src}`, alt: page.heroImage.altText }] : undefined;
+  const canonicalPath = page.canonicalPath ?? page.path;
   return {
     title: page.seoTitle ?? page.title,
     description: page.description,
     keywords: page.keywords,
-    alternates: { canonical: page.path },
-    openGraph: { title: page.seoTitle ?? page.title, description: page.description, url: `${site.domain}${page.path}`, images: ogImage },
+    alternates: { canonical: canonicalPath },
+    openGraph: { title: page.seoTitle ?? page.title, description: page.description, url: `${site.domain}${canonicalPath}`, images: ogImage },
     twitter: ogImage ? { card: "summary_large_image", title: page.seoTitle ?? page.title, description: page.description, images: ogImage.map((i) => i.url) } : undefined
   };
 }

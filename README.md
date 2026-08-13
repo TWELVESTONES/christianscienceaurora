@@ -5,7 +5,7 @@ Production-oriented Next.js App Router public website for First Church of Christ
 ## Included
 
 - Complete required public information architecture and responsive page templates
-- Approved text-only CSA / CHRISTIAN SCIENCE / AURORA wordmark treatment
+- Approved production church identity in the shared header/footer shell, using the supplied architectural logo assets with accessible live text
 - Inter Display / Inter CSS typography stack without distributing font files
 - Warm white, Aurora teal, periwinkle, restrained Morning Gold design tokens
 - Accessible navigation, skip links, visible focus, 17-18px body copy, reduced motion, semantic sections, forms, calendar, media patterns, and print styles
