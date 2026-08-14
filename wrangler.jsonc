@@ -16,6 +16,12 @@
       "service": "christianscienceaurora"
     }
   ],
+  // Workers Cache: responses that are marked cacheable (all prerendered pages) are served
+  // from Cloudflare's cache without invoking the Worker at all. Cache entries are keyed by
+  // Worker version, so a deploy automatically serves fresh content.
+  "cache": {
+    "enabled": true
+  },
   "observability": {
     "enabled": true
   }
