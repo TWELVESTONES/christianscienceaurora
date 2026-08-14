@@ -15,9 +15,13 @@ describe("public content safeguards", () => {
     if (publicMode) expect(isPublicPagePath("/events/public-talk-placeholder")).toBe(false);
   });
 
-  it("filters unapproved sermons and products in public mode", () => {
+  it("filters unapproved sermons and products in public mode, while publishing approved ones", () => {
     if (publicMode) {
-      expect(filterPublicSermons(sermons)).toHaveLength(0);
+      const publicSermonSlugs = filterPublicSermons(sermons).map((sermon) => sermon.slug);
+      expect(publicSermonSlugs).toEqual(["a-grateful-heart"]);
+      expect(publicSermonSlugs).not.toContain("peace-through-prayer-placeholder");
+      expect(publicSermonSlugs).not.toContain("discovering-hope-placeholder");
+      expect(publicSermonSlugs).not.toContain("god-love-placeholder");
       expect(filterPublicProducts(products)).toHaveLength(0);
     }
   });

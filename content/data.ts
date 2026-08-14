@@ -63,6 +63,15 @@ export const events: EventItem[] = [
 
 export const sermons: SermonItem[] = [
   {
+    slug: "a-grateful-heart",
+    title: "A Grateful Heart",
+    serviceDate: "2026-08-05",
+    topic: "Gratitude",
+    summary: "Bible and Science and Health readings on gratitude, prepared and read by Lauren McFall for the Wednesday Testimony Meeting.",
+    formats: ["text"],
+    rightsStatus: "approved"
+  },
+  {
     slug: "peace-through-prayer-placeholder",
     title: "Peace Through Prayer — Approved Media Placeholder",
     serviceDate: "2026-07-12",
