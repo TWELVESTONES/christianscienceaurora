@@ -1,6 +1,7 @@
 import type { ImagePlaceholder, PageDefinition } from "@/lib/types";
 import { site } from "@/content/site";
 import { cluster2PageDefinitions } from "@/content/cluster2";
+import { cluster3PageDefinitions } from "@/content/cluster3";
 
 const photo = (
   id: string,
@@ -20,6 +21,7 @@ const actions = {
 
 export const pageDefinitions: PageDefinition[] = [
   ...cluster2PageDefinitions,
+  ...cluster3PageDefinitions,
   {
     path: "/visit",
     eyebrow: "PLAN YOUR VISIT",

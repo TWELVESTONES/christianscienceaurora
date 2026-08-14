@@ -113,6 +113,9 @@ export const cluster2PageDefinitions: PageDefinition[] = [
           { title: "Truth", text: "God understood as Truth, the divine reality that corrects error and supports spiritual freedom." },
           { title: "Love", text: "God understood as Love, impartial and ever-present, and the basis of Christian compassion." },
         ],
+        actions: [
+          { label: "Explore God in Christian Science", href: "/christian-science/god/", variant: "secondary" },
+        ],
       },
       {
         id: "jesus-and-christ",

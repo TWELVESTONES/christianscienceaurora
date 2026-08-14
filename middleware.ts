@@ -1,10 +1,13 @@
 import type { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
-const CLUSTER2_CANONICALS = new Map<string, string>([
+const TRAILING_SLASH_CANONICALS = new Map<string, string>([
   ["/christian-science", "/christian-science/"],
   ["/christian-science/beliefs", "/christian-science/beliefs/"],
+  ["/christian-science/god", "/christian-science/god/"],
 ]);
+
+const DIRECT_TRAILING_SLASH_PATHS = new Set(TRAILING_SLASH_CANONICALS.values());
 
 function redirectTo(request: NextRequest, pathname: string) {
   const destination = new URL(request.url);
@@ -15,13 +18,13 @@ function redirectTo(request: NextRequest, pathname: string) {
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  const canonical = CLUSTER2_CANONICALS.get(pathname);
+  const canonical = TRAILING_SLASH_CANONICALS.get(pathname);
   if (canonical) {
     return redirectTo(request, canonical);
   }
 
-  // Preserve the two approved Cluster 2 trailing-slash URLs as direct routes.
-  if (pathname === "/christian-science/" || pathname === "/christian-science/beliefs/") {
+  // Preserve approved trailing-slash canonical authority URLs as direct routes.
+  if (DIRECT_TRAILING_SLASH_PATHS.has(pathname)) {
     return NextResponse.next();
   }
 
