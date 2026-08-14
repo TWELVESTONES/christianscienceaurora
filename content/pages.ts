@@ -355,15 +355,7 @@ export const pageDefinitions: PageDefinition[] = [
           "God is not moved by the breath of praise to do more than He has already done, nor can the infinite do less than bestow all good, since He is unchanging wisdom and Love.",
           "***Source: Science and Health, 2:8–11.***",
           "If a man, though apparently fervent and prayerful, is impure and therefore insincere, what must be the comment upon him? If he reached the loftiness of his prayer, there would be no occasion for comment. If we feel the aspiration, humility, gratitude, and love which our words express, — this God accepts; and it is wise not to try to deceive ourselves or others, for “there is nothing covered that shall not be revealed.”",
-          "***Source: Science and Health, 8:10–18.***"
-        ]
-      },
-      {
-        id: "fruitage",
-        eyebrow: "FROM SCIENCE AND HEALTH WITH KEY TO THE SCRIPTURES",
-        title: "Fruitage — By Mary Baker Eddy",
-        style: "teal-mist",
-        body: [
+          "***Source: Science and Health, 8:10–18.***",
           "There is no doubt that by far the greater number come to Christian Science by the way of physical healing, but there are those to whom this does not particularly appeal. In the hope that it may be of benefit to some such, and in gratitude for help received, I submit my own experience.",
           "Three years ago I knew nothing of Christian Science, aside from the knowledge gathered from the daily papers and current literature. When I thought of the subject at all, it was to class Christian Science with various human theories with which I could not be in sympathy, for they seemed to rely upon both good and evil. I had never known of a case of healing, had never read the textbook or heard of the Journal or Sentinel, but I would sometimes see people going into the Christian Science church. I was tired of trying to find anything satisfactory in religious belief, for it seemed as if God either could not or would not bring into harmony the terrible conditions existing in human society. I had quit using any form of prayer except the Lord’s Prayer, and even then omitted the words “lead us not into temptation.” How I longed to know just a little of the “why?” and “wherefore?” of it all.",
           "Here is where Christian Science found me. I was thrown in contact with a dear friend of whom I had seen very little for a year or more, a thoroughly educated woman and a thinker. She told me she had taken some treatments in Christian Science for a physical trouble, and had become very much interested in the study of “Science and Health with Key to the Scriptures” by Mrs. Eddy. She asked me if I would like to look at the book, and I said I would be glad to do so. The first chapter, “Prayer,” appealed to me from the first, and when I came to Mrs. Eddy’s spiritual sense of the Lord’s Prayer (Science and Health, p. 17), my interest was fully aroused. I knew that in a dim way I was learning what it means to “pray without ceasing.” Very soon I bought a book of my own, and with the help of our Lesson-Sermons, as given in the Quarterly, I began in earnest the study of Science and Health, in connection with the Bible.",
