@@ -5,6 +5,7 @@ const TRAILING_SLASH_CANONICALS = new Map<string, string>([
   ["/christian-science", "/christian-science/"],
   ["/christian-science/beliefs", "/christian-science/beliefs/"],
   ["/christian-science/god", "/christian-science/god/"],
+  ["/christian-science/jesus-christ", "/christian-science/jesus-christ/"],
 ]);
 
 const DIRECT_TRAILING_SLASH_PATHS = new Set(TRAILING_SLASH_CANONICALS.values());
@@ -23,18 +24,18 @@ export function middleware(request: NextRequest) {
     return redirectTo(request, canonical);
   }
 
-  // Preserve approved trailing-slash canonical authority URLs as direct routes.
+  // Preserve approved Cluster 2, 3, and 4 trailing-slash authority URLs as direct routes.
   if (DIRECT_TRAILING_SLASH_PATHS.has(pathname)) {
     return NextResponse.next();
   }
 
-  // The removed competitor must always resolve in one hop to the approved pillar.
+  // The removed Cluster 2 competitor always resolves in one hop to the approved pillar.
   if (pathname === "/about/christian-science" || pathname === "/about/christian-science/") {
     return redirectTo(request, "/christian-science/");
   }
 
-  // skipTrailingSlashRedirect disables Next.js's automatic slash removal globally.
-  // Re-create the production baseline behavior for every unrelated non-root URL.
+  // skipTrailingSlashRedirect disables Next.js automatic slash removal globally.
+  // Re-create the established production behavior for every unrelated non-root URL.
   if (pathname.length > 1 && pathname.endsWith("/")) {
     return redirectTo(request, pathname.slice(0, -1));
   }

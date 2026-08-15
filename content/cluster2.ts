@@ -128,7 +128,8 @@ export const cluster2PageDefinitions: PageDefinition[] = [
           "Source: Science and Health, pp. 26, 29–30, 332, 473.",
         ],
         actions: [
-          { label: "Attend a Sunday Service", href: "/services/sunday", variant: "primary" },
+          { label: "Explore Jesus Christ in Christian Science", href: "/christian-science/jesus-christ/", variant: "primary" },
+          { label: "Attend a Sunday Service", href: "/services/sunday", variant: "secondary" },
         ],
       },
       {
