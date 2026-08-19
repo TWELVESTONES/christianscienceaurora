@@ -954,11 +954,12 @@ export const pageDefinitions: PageDefinition[] = [
     seoTitle: "\"God is Relevant\" — Christian Science Lecture with Tim Myers, CS",
     description: "\"God is Relevant\" is a free Christian Science lecture with Tim Myers, CS, hosted by First Church of Christ, Scientist, Aurora, CO.",
     keywords: ["Tim Myers, CS", "Christian Science Lecture", "God is Relevant", "Christian Science Aurora", "free public lecture", "Christian Science Board of Lectureship"],
-    directAnswer: "Thursday, October 8, 2026 at 7:00 PM. Location to be announced. Free and open to the public. This lecture will not be broadcast or recorded — attendance is in person only.",
-    heroImage: photo("campaign-god-is-relevant", "\"God is Relevant\" lecture banner (square)", "Church-supplied promotional banner for the hero image slot; event details are baked into the image itself. Same asset used for the homepage Featured Event banner.", "Free Public Lecture \"God is Relevant\" with Tim Myers, CS — Thursday, October 8, 2026, 7:00 PM, location to be announced.", "1:1", false, "/images/photography/campaign-god-is-relevant.webp"),
+    directAnswer: "Thursday, October 8, 2026 at 7:00 PM at PACE Center, 20000 Pikes Peak Ave., Parker, CO 80138. Free and open to the public. This lecture will not be broadcast or recorded — attendance is in person only.",
+    heroImage: photo("campaign-god-is-relevant", "\"God is Relevant\" lecture banner (square)", "Church-supplied promotional banner for the hero image slot; event details are baked into the image itself. Same asset used for the homepage Featured Event banner.", "Free Public Lecture \"God is Relevant\" with Tim Myers, CS — Thursday, October 8, 2026, 7:00 PM, at PACE Center, 20000 Pikes Peak Ave., Parker, CO 80138.", "1:1", false, "/images/photography/campaign-god-is-relevant.webp"),
     actions: [
-      { label: "Add to Calendar", href: "data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0ABEGIN:VEVENT%0ASUMMARY:Free%20Public%20Lecture%3A%20%22God%20is%20Relevant%22%20with%20Tim%20Myers%2C%20CS%0ADTSTART:20261008T1900000600%0ADTEND:20261008T2000000600%0AEND:VEVENT%0AEND:VCALENDAR", variant: "primary", external: true },
-      { label: "Google Calendar", href: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Free%20Public%20Lecture%3A%20%22God%20is%20Relevant%22%20with%20Tim%20Myers%2C%20CS&dates=2026-10-08T19:00:00-06:00/2026-10-08T20:00:00-06:00&location=Location%20to%20be%20announced", variant: "secondary", external: true }
+      { label: "Add to Calendar", href: "data:text/calendar;charset=utf-8,BEGIN:VCALENDAR%0ABEGIN:VEVENT%0ASUMMARY:Free%20Public%20Lecture%3A%20%22God%20is%20Relevant%22%20with%20Tim%20Myers%2C%20CS%0ADTSTART:20261008T1900000600%0ADTEND:20261008T2000000600%0ALOCATION:PACE%20Center%5C%2C%2020000%20Pikes%20Peak%20Ave.%5C%2C%20Parker%5C%2C%20CO%2080138%0AEND:VEVENT%0AEND:VCALENDAR", variant: "primary", external: true },
+      { label: "Google Calendar", href: "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Free%20Public%20Lecture%3A%20%22God%20is%20Relevant%22%20with%20Tim%20Myers%2C%20CS&dates=2026-10-08T19:00:00-06:00/2026-10-08T20:00:00-06:00&location=PACE%20Center%2C%2020000%20Pikes%20Peak%20Ave.%2C%20Parker%2C%20CO%2080138", variant: "secondary", external: true },
+      { label: "Get Directions", href: "https://www.google.com/maps/search/?api=1&query=PACE+Center+20000+Pikes+Peak+Ave+Parker+CO+80138", variant: "secondary", external: true }
     ],
     structuredData: {
       "@context": "https://schema.org",
@@ -970,7 +971,7 @@ export const pageDefinitions: PageDefinition[] = [
       eventStatus: "https://schema.org/EventScheduled",
       eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
       isAccessibleForFree: true,
-      location: { "@type": "Place", name: "First Church of Christ, Scientist, Aurora, Colorado", address: "15700 E. Quincy Avenue, Aurora, Colorado 80015" },
+      location: { "@type": "Place", name: "PACE Center", address: "20000 Pikes Peak Ave., Parker, Colorado 80138" },
       organizer: { "@type": "Organization", name: site.name, url: site.domain },
       performer: { "@type": "Person", name: "Tim Myers, CS", jobTitle: "Christian Science Practitioner and Lecturer", url: "https://www.christianscience.com/lecturers/tim-myers" }
     },
@@ -989,9 +990,11 @@ export const pageDefinitions: PageDefinition[] = [
         title: "Lecture details",
         cards: [
           { title: "When", text: "Thursday, October 8, 2026 · 7:00 PM" },
-          { title: "Where", text: "Location to be announced. Check back here, or contact us closer to the date." },
+          { title: "Where", text: "PACE Center, 20000 Pikes Peak Ave., Parker, CO 80138" },
           { title: "Cost", text: "Free and open to the public. No signup or church membership required." },
-          { title: "Format", text: "In person only. Not broadcast, livestreamed, or recorded." }
+          { title: "Format", text: "In person only. Not broadcast, livestreamed, or recorded." },
+          { title: "Parking", text: "Free on-site parking, accessible from Mainstreet, Pikes Peak Avenue, or Pine Drive." },
+          { title: "Accessibility", text: "Accessible parking and pathways on-site. Hearing-assistance devices and ASL interpreters available on request via the PACE Center box office at (303) 805-6800." }
         ]
       },
       {
@@ -1042,7 +1045,7 @@ export const pageDefinitions: PageDefinition[] = [
       {
         id: "join-us",
         title: "We hope you'll join us in person.",
-        body: ["Seating details and the exact venue will be posted here as soon as they're confirmed."],
+        body: ["Join us at PACE Center, 20000 Pikes Peak Ave., Parker, CO 80138. Seating is first-come, first-served."],
         actions: [actions.contact]
       }
     ]

@@ -27,7 +27,7 @@ export default async function HomePage() {
     id: "campaign-god-is-relevant",
     label: "Featured event campaign image",
     productionNote: "Administrator-controlled desktop/mobile crop. Currently the promotional banner for the \"God is Relevant\" lecture; event details are baked into the image itself. Swap when the featured event changes.",
-    altText: "Free Public Lecture: God is Relevant, with Tim Myers, CS. Thursday, October 8, 2026, 7:00 PM. Location TBD.",
+    altText: "Free Public Lecture: God is Relevant, with Tim Myers, CS. Thursday, October 8, 2026, 7:00 PM. PACE Center, 20000 Pikes Peak Ave., Parker, CO 80138.",
     aspectRatio: "1:1" as const,
     src: "/images/photography/campaign-god-is-relevant.webp"
   };

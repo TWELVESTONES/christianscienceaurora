@@ -50,12 +50,12 @@ export const events: EventItem[] = [
     start: "2026-10-08T19:00:00-06:00",
     end: "2026-10-08T20:00:00-06:00",
     timezone: "America/Denver",
-    location: "Location to be announced",
+    location: "PACE Center, 20000 Pikes Peak Ave., Parker, CO 80138",
     status: "scheduled",
     featured: true,
     cost: "Free",
-    accessibility: "To be announced once the venue is confirmed.",
-    parking: "To be announced once the venue is confirmed.",
+    accessibility: "Accessible parking spaces and pathways are available at PACE Center. Hearing-assistance devices and ASL interpreters can be arranged in advance through the box office at (303) 805-6800.",
+    parking: "Free on-site parking, accessible from Mainstreet, Pikes Peak Avenue, or Pine Drive.",
     familySuitable: true,
     broadcastNotice: "In keeping with Christian Science Board of Lectureship directives, this lecture will not be broadcast or recorded in any format. Attendance is in person only."
   }
