@@ -380,6 +380,204 @@ export const pageDefinitions: PageDefinition[] = [
     ]
   },
   {
+    path: "/sermons/god-will-supply",
+    eyebrow: "WEDNESDAY TESTIMONY MEETING · AUGUST 19, 2026",
+    title: "God Will Supply",
+    description: "Bible and Science and Health readings on God's abundant supply, prepared and read by Cheryl Palmer, with three hymns, for the August 19, 2026 Wednesday Testimony Meeting at Christian Science Aurora.",
+    actions: [
+      { label: "About Wednesday Testimony Meeting", href: "/services/wednesday", variant: "primary" },
+      { label: "All Services", href: "/services", variant: "secondary" }
+    ],
+    structuredData: {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      name: "God Will Supply",
+      about: "Bible and Science and Health with Key to the Scriptures readings on God's abundant supply",
+      contributor: { "@type": "Person", name: "Cheryl Palmer" },
+      datePublished: "2026-08-19",
+      publisher: { "@type": "Organization", name: site.name }
+    },
+    sections: [
+      {
+        id: "about",
+        body: ["These readings on God's abundant supply were prepared and read by Cheryl Palmer for the Wednesday Testimony Meeting on August 19, 2026, and are shared here in the order they were read, with the three hymns included."]
+      },
+      {
+        id: "hymn-1",
+        eyebrow: "FIRST HYMN",
+        title: "Hymn 342, verse 2",
+        style: "periwinkle-mist",
+        body: [
+          "The Lord will hear before we call,",
+          "And every need supply;",
+          "Good things are freely given to all",
+          "Who on His word rely.",
+          "We come today to bring Him praise",
+          "Not for such gifts alone,",
+          "But for the higher, deeper ways",
+          "In which His love is shown.",
+          "**Words:** Laura Lee Randall. **Music:** F. Mendelssohn, arr. by E. J. Hopkins."
+        ],
+        actions: [
+          { label: "Free Sheet Music (PDF)", href: "https://media.csps.com/gp/2020_branch_services/hymns_pdf/hymn_342-christian_science_hymnal.pdf?download=true", variant: "secondary" },
+          { label: "Free Congregational Audio", href: "https://media.csps.com/gp/2020_branch_services/1932_hymns_vocal/2022_branch_resource_hymn_342.mp3?download=true", variant: "secondary" }
+        ]
+      },
+      {
+        id: "bible-readings",
+        eyebrow: "FROM THE BIBLE",
+        title: "Bible readings",
+        style: "stone",
+        body: [
+          "**Second Corinthians**",
+          "For we know that if our earthly house of this tabernacle were dissolved, we have a building of God, an house not made with hands, eternal in the heavens.",
+          "We are confident, I say, and willing rather to be absent from the body, and to be present with the Lord.",
+          "***Source: Second Corinthians 5:1, 8.***",
+          "And such trust have we through Christ to God-ward:",
+          "Not that we are sufficient of ourselves to think any thing as of ourselves; but our sufficiency is of God;",
+          "***Source: Second Corinthians 3:4, 5.***",
+          "… He which soweth sparingly shall reap also sparingly; and he which soweth bountifully shall reap also bountifully.",
+          "Every man according as he purposeth in his heart, so let him give; not grudgingly, or of necessity: for God loveth a cheerful giver.",
+          "And God is able to make all grace abound toward you; that ye, always having all sufficiency in all things, may abound to every good work:",
+          "***Source: Second Corinthians 9:6–8.***",
+          "**Joel**",
+          "And ye shall eat in plenty, and be satisfied, and praise the name of the Lord your God, that hath dealt wondrously with you: and my people shall never be ashamed.",
+          "***Source: Joel 2:26.***",
+          "**First Kings**",
+          "And Elijah the Tishbite, who was of the inhabitants of Gilead, said unto Ahab, As the Lord God of Israel liveth, before whom I stand, there shall not be dew nor rain these years, but according to my word.",
+          "And the word of the Lord came unto him, saying,",
+          "Get thee hence, and turn thee eastward, and hide thyself by the brook Cherith, that is before Jordan.",
+          "And it shall be, that thou shalt drink of the brook; and I have commanded the ravens to feed thee there.",
+          "So he went and did according unto the word of the Lord: for he went and dwelt by the brook Cherith, that is before Jordan.",
+          "And the ravens brought him bread and flesh in the morning, and bread and flesh in the evening; and he drank of the brook.",
+          "So he arose and went to Zarephath. And when he came to the gate of the city, behold, the widow woman was there gathering of sticks: and he called to her, and said, Fetch me, I pray thee, a little water in a vessel, that I may drink.",
+          "And as she was going to fetch it, he called to her, and said, Bring me, I pray thee, a morsel of bread in thine hand.",
+          "And she said, As the Lord thy God liveth, I have not a cake, but an handful of meal in a barrel, and a little oil in a cruse: and, behold, I am gathering two sticks, that I may go in and dress it for me and my son, that we may eat it, and die.",
+          "And Elijah said unto her, Fear not; go and do as thou hast said: but make me thereof a little cake first, and bring it unto me, and after make for thee and for thy son.",
+          "For thus saith the Lord God of Israel, The barrel of meal shall not waste, neither shall the cruse of oil fail, until the day that the Lord sendeth rain upon the earth.",
+          "And she went and did according to the saying of Elijah: and she, and he, and her house, did eat many days.",
+          "***Source: First Kings 17:1–6, 10–15.***",
+          "**Proverbs**",
+          "Happy is the man that findeth wisdom, and the man that getteth understanding.",
+          "For the merchandise of it is better than the merchandise of silver, and the gain thereof than fine gold.",
+          "She is more precious than rubies: and all the things thou canst desire are not to be compared unto her.",
+          "Length of days is in her right hand; and in her left hand riches and honour.",
+          "Her ways are ways of pleasantness, and all her paths are peace.",
+          "She is a tree of life to them that lay hold upon her: and happy is every one that retaineth her.",
+          "***Source: Proverbs 3:13–18.***",
+          "**Matthew**",
+          "And when thou prayest, thou shalt not be as the hypocrites are: for they love to pray standing in the synagogues and in the corners of the streets, that they may be seen of men. Verily I say unto you, They have their reward.",
+          "But thou, when thou prayest, enter into thy closet, and when thou hast shut thy door, pray to thy Father which is in secret; and thy Father which seeth in secret shall reward thee openly.",
+          "But when ye pray, use not vain repetitions, as the heathen do: for they think that they shall be heard for their much speaking.",
+          "Be not ye therefore like unto them: for your Father knoweth what things ye have need of, before ye ask him.",
+          "After this manner therefore pray ye: Our Father which art in heaven, Hallowed be thy name.",
+          "Thy kingdom come. Thy will be done in earth, as it is in heaven.",
+          "Give us this day our daily bread.",
+          "And forgive us our debts, as we forgive our debtors.",
+          "And lead us not into temptation, but deliver us from evil: For thine is the kingdom, and the power, and the glory, for ever. Amen.",
+          "***Source: Matthew 6:5–13.***",
+          "… thy Father, which seeth in secret, shall reward thee openly.",
+          "Lay not up for yourselves treasures upon earth, where moth and rust doth corrupt, and where thieves break through and steal:",
+          "But lay up for yourselves treasures in heaven, where neither moth nor rust doth corrupt, and where thieves do not break through nor steal:",
+          "For where your treasure is, there will your heart be also.",
+          "***Source: Matthew 6:18–21.***",
+          "**Philippians**",
+          "But my God shall supply all your need according to his riches in glory by Christ Jesus.",
+          "Now unto God and our Father be glory for ever and ever. Amen.",
+          "***Source: Philippians 4:19, 20.***",
+          "**Second Kings**",
+          "Now there cried a certain woman of the wives of the sons of the prophets unto Elisha, saying, Thy servant my husband is dead; and thou knowest that thy servant did fear the Lord: and the creditor is come to take unto him my two sons to be bondmen.",
+          "And Elisha said unto her, What shall I do for thee? tell me, what hast thou in the house? And she said, Thine handmaid hath not any thing in the house, save a pot of oil.",
+          "Then he said, Go, borrow thee vessels abroad of all thy neighbours, even empty vessels; borrow not a few.",
+          "And when thou art come in, thou shalt shut the door upon thee and upon thy sons, and shalt pour out into all those vessels, and thou shalt set aside that which is full.",
+          "So she went from him, and shut the door upon her and upon her sons, who brought the vessels to her; and she poured out.",
+          "And it came to pass, when the vessels were full, that she said unto her son, Bring me yet a vessel. And he said unto her, There is not a vessel more. And the oil stayed.",
+          "Then she came and told the man of God. And he said, Go, sell the oil, and pay thy debt, and live thou and thy children of the rest.",
+          "***Source: Second Kings 4:1–7.***"
+        ]
+      },
+      {
+        id: "hymn-2",
+        eyebrow: "SECOND HYMN",
+        title: "Hymn 469, verse 2",
+        style: "periwinkle-mist",
+        body: [
+          "Dear God of love, eternal Father-Mother,",
+          "Supply our need, our every need each day;",
+          "Teach us to love the way You love Your children,",
+          "Purge us from sin and self, with trust we pray:",
+          "“Thy kingdom come,” in all earth as in heaven,",
+          "You are our light, our guide, our hope, our stay.",
+          "**Words:** Oak E. Davis, adapt. **Music:** Jean Sibelius; transc. CSPS.",
+          "Free downloadable sheet music and audio for this specific hymn are not offered on the Church's official branch-services resource page (hymn 469 is one of the titles listed there as unavailable for download, likely due to the underlying Sibelius music rights)."
+        ],
+        actions: [
+          { label: "Hymnal No. 469 on Hymnary.org", href: "https://hymnary.org/hymn/CSH2017/469", variant: "secondary" }
+        ]
+      },
+      {
+        id: "science-and-health",
+        eyebrow: "FROM SCIENCE AND HEALTH WITH KEY TO THE SCRIPTURES",
+        title: "By Mary Baker Eddy",
+        style: "teal-mist",
+        body: [
+          "Christians rejoice in secret beauty and bounty, hidden from the world, but known to God. Self-forgetfulness, purity, and affection are constant prayers. Practice not profession, understanding not belief, gain the ear and right hand of omnipotence and they assuredly call down infinite blessings. Trustworthiness is the foundation of enlightened faith. Without a fitness for holiness, we cannot receive holiness. A great sacrifice of material things must precede this advanced spiritual understanding. The highest prayer is not one of faith merely; it is demonstration. Such prayer heals sickness, and must destroy sin and death. It distinguishes between Truth that is sinless and the falsity of sinful sense. Our Master taught his disciples one brief prayer, which we name after him the Lord's Prayer.",
+          "***Source: Science and Health, 15:25–16:8.***",
+          "THE prayer that reforms the sinner and heals the sick is an absolute faith that all things are possible to God, — a spiritual understanding of Him, an unselfed love. Regardless of what another may say or think on this subject, I speak from experience.",
+          "Prayer, watching, and working, combined with self-immolation, are God's gracious means for accomplishing whatever has been successfully done for the Christianization and health of mankind.",
+          "Desire is prayer; and no loss can occur from trusting God with our desires, that they may be moulded and exalted before they take form in words and in deeds.",
+          "***Source: Science and Health, 1:1, 11.***",
+          "Do we pray to make ourselves better or to benefit those who hear us, to enlighten the infinite or to be heard of men? Are we benefited by praying? Yes, the desire which goes forth hungering after righteousness is blessed of our Father, and it does not return unto us void.",
+          "God is not moved by the breath of praise to do more than He has already done, nor can the infinite do less than bestow all good, since He is unchanging wisdom and Love. We can do more for ourselves by humble fervent petitions, but the All-loving does not grant them simply on the ground of lip-service, for He already knows all.",
+          "Prayer cannot change the Science of being, but it tends to bring us into harmony with it. Goodness attains the demonstration of Truth.",
+          "***Source: Science and Health, 2:1–17 (“Do…”), 18–32 (to “Truth.”).***",
+          "The understanding that the Ego is Mind, and that there is but one Mind or intelligence, begins at once to destroy the errors of mortal sense and to supply the truth of immortal sense. This understanding makes the body harmonious; it makes the nerves, bones, brain, etc., servants, instead of masters. If man is governed by the law of divine Mind, his body is in submission to everlasting Life and Truth and Love.",
+          "***Source: Science and Health, 216:11–18.***",
+          "In the scientific relation of God to man, we find that whatever blesses one blesses all, as Jesus showed with the loaves and the fishes, — Spirit, not matter, being the source of supply.",
+          "***Source: Science and Health, 206:15–18.***",
+          "Hence the great fact that Mind alone enlarges and empowers man through its mandate, — by reason of its demand for and supply of power.",
+          "***Source: Science and Health, 199:9–12.***",
+          "Who hath found finite life or love sufficient to meet the demands of human want and woe, — to still the desires, to satisfy the aspirations? Infinite Mind cannot be limited to a finite form, or Mind would lose its infinite character as inexhaustible Love, eternal Life, omnipotent Truth.",
+          "Hence the unsatisfied human craving for something better, higher, holier, than is afforded by a material belief in a physical God and man. The insufficiency of this belief to supply the true idea proves the falsity of material belief.",
+          "Man reflects infinity, and this reflection is the true idea of God. God expresses in man the infinite idea forever developing itself, broadening and rising higher and higher from a boundless basis. Mind manifests all that exists in the infinitude of Truth.",
+          "***Source: Science and Health, 257:24; 258:3, 11–16.***",
+          "In order to apprehend more, we must put into practice what we already know. We must recollect that Truth is demonstrable when understood, and that good is not understood until demonstrated. If “faithful over a few things,” we shall be made rulers over many;",
+          "The true idea of God gives the true understanding of Life and Love, robs the grave of victory, takes away all sin and the delusion that there are other minds, and destroys mortality. The effects of Christian Science are not so much seen as felt. It is the “still, small voice” of Truth uttering itself.",
+          "***Source: Science and Health, 323:13–18 (to “;”), 24–30.***",
+          "It requires the spirit of our blessed Master to tell a man his faults, and so risk human displeasure for the sake of doing right and benefiting our race.",
+          "At all times and under all circumstances, overcome evil with good. Know thyself, and God will supply the wisdom and the occasion for a victory over evil. Clad in the panoply of Love, human hatred cannot reach you.",
+          "***Source: Science and Health, 571:7–10, 15–19.***"
+        ]
+      },
+      {
+        id: "hymn-3",
+        eyebrow: "THIRD HYMN",
+        title: "Hymn 519, verse 1",
+        style: "periwinkle-mist",
+        body: [
+          "Lean on the sustaining infinite",
+          "And blessings will be yours.",
+          "Lean not on person, place, or thing,",
+          "Or economic laws;",
+          "But lean upon all-blessing God",
+          "Who will all needs supply",
+          "And give to all abundant good",
+          "That money cannot buy.",
+          "**Words:** Jill Gooding, alt. **Music:** Andrew D. Brewis."
+        ],
+        actions: [
+          { label: "Free Sheet Music (PDF)", href: "https://media.csps.com/gp/2020_branch_services/hymns_pdf/hymn_519-christian_science_hymnal.pdf?download=true", variant: "secondary" },
+          { label: "Free Audio", href: "https://media.csps.com/gp/2020_branch_services/hymns/hymn_519.mp3?download=true", variant: "secondary" }
+        ]
+      },
+      {
+        id: "sources",
+        body: ["Bible citations are King James Version. Science and Health citations refer to Science and Health with Key to the Scriptures, by Mary Baker Eddy. Hymn sheet music and recordings are provided free of charge by the Christian Science Publishing Society's official branch-church resource pages."],
+        style: "stone"
+      }
+    ]
+  },
+  {
     path: "/sermons/peace-through-prayer-placeholder",
     eyebrow: "JULY 12, 2026 · PEACE",
     title: "Peace Through Prayer — Approved Media Placeholder",

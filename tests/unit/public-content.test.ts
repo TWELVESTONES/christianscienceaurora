@@ -18,7 +18,7 @@ describe("public content safeguards", () => {
   it("filters unapproved sermons and products in public mode, while publishing approved ones", () => {
     if (publicMode) {
       const publicSermonSlugs = filterPublicSermons(sermons).map((sermon) => sermon.slug);
-      expect(publicSermonSlugs).toEqual(["a-grateful-heart"]);
+      expect(publicSermonSlugs).toEqual(["a-grateful-heart", "god-will-supply"]);
       expect(publicSermonSlugs).not.toContain("peace-through-prayer-placeholder");
       expect(publicSermonSlugs).not.toContain("discovering-hope-placeholder");
       expect(publicSermonSlugs).not.toContain("god-love-placeholder");

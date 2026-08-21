@@ -72,6 +72,15 @@ export const sermons: SermonItem[] = [
     rightsStatus: "approved"
   },
   {
+    slug: "god-will-supply",
+    title: "God Will Supply",
+    serviceDate: "2026-08-19",
+    topic: "Supply",
+    summary: "Bible and Science and Health readings on God's abundant supply, with three hymns, prepared and read by Cheryl Palmer for the Wednesday Testimony Meeting.",
+    formats: ["text"],
+    rightsStatus: "approved"
+  },
+  {
     slug: "peace-through-prayer-placeholder",
     title: "Peace Through Prayer — Approved Media Placeholder",
     serviceDate: "2026-07-12",
