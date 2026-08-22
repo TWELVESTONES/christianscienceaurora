@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { pageDefinitions } from "@/content/pages";
 import { GenericPage } from "@/components/GenericPage";
 import { site } from "@/content/site";
-import { isPublicPagePath } from "@/lib/public-page";
+import { listAllPublicPaths } from "@/lib/all-paths";
 import { resolvePublicPage } from "@/lib/resolve-page";
 
-export function generateStaticParams() {
-  return pageDefinitions
-    .filter((page) => isPublicPagePath(page.path))
-    .map((page) => ({ slug: page.path.split("/").filter(Boolean) }));
+export async function generateStaticParams() {
+  const paths = await listAllPublicPaths();
+  return paths.map((path) => ({ slug: path.split("/").filter(Boolean) }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string[] }> }): Promise<Metadata> {

@@ -1,3 +1,5 @@
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import { pageDefinitions } from "@/content/pages";
 import { articles, events, externalResources, products, sermons, sundaySchoolResources } from "@/content/data";
 import type {
@@ -9,19 +11,13 @@ import type {
   SermonItem,
   SundaySchoolResource,
 } from "@/lib/types";
-import {
-  articleSchema,
-  eventSchema,
-  externalResourceSchema,
-  pageDefinitionSchema,
-  productSchema,
-  sermonSchema,
-  sundaySchoolResourceSchema,
-} from "@/lib/schemas";
-import type { z } from "zod";
 
 export interface CmsAdapter {
   getPage(path: string): Promise<PageDefinition | null>;
+  /** Every public page path this adapter knows about — the CMS-driven route
+   * inventory used by generateStaticParams/sitemap so every route is
+   * prerendered at build time (see app/[...slug]/page.tsx and app/sitemap.ts). */
+  listPages(): Promise<PageDefinition[]>;
   listEvents(): Promise<EventItem[]>;
   getEvent(slug: string): Promise<EventItem | null>;
   listSermons(): Promise<SermonItem[]>;
@@ -35,8 +31,11 @@ export interface CmsAdapter {
   listExternalResources(): Promise<ExternalResource[]>;
 }
 
+// The original local/TypeScript-content adapter. Kept fully working — this is
+// also the CMS_PROVIDER=local revert path (see createCmsAdapter below).
 class LocalCmsAdapter implements CmsAdapter {
   async getPage(path: string) { return pageDefinitions.find((page) => page.path === path) ?? null; }
+  async listPages() { return pageDefinitions; }
   async listEvents() { return events; }
   async getEvent(slug: string) { return events.find((item) => item.slug === slug) ?? null; }
   async listSermons() { return sermons; }
@@ -50,71 +49,73 @@ class LocalCmsAdapter implements CmsAdapter {
   async listExternalResources() { return externalResources; }
 }
 
-type SchemaLike<T> = z.ZodType<T>;
+// Reads the static JSON that scripts/fetch-cms-content.mjs writes to
+// content/generated/*.json as the "prebuild" step (see package.json) — never
+// a live `fetch` at request or build-render time. This keeps the whole site
+// 100% prerendered: by the time any of these methods run (during `next
+// build`'s Node.js static-generation pass — never at Cloudflare Workers
+// runtime, since every route is covered by generateStaticParams), the CMS
+// has already been read once, up front, and everything after that is a
+// local file read.
+//
+// Deliberately NOT a static `import … from "@/content/generated/x.json"`:
+// content/generated/ does not exist on a fresh checkout until prebuild has
+// run, and a static/dynamic import of a JSON path is resolved by TypeScript
+// at type-check time (resolveJsonModule) regardless of whether the method
+// that uses it is ever called — that would break `tsc --noEmit` and
+// `vitest run` on a checkout that has not run the CMS fetch yet, which must
+// stay possible (typecheck/lint/test do not require network access). A
+// plain `node:fs` read is invisible to TypeScript's module resolution and
+// only touches disk when a method actually runs.
+const GENERATED_DIR = path.join(process.cwd(), "content", "generated");
+const fileCache = new Map<string, unknown>();
 
-type CollectionPayload = { docs?: unknown[]; data?: unknown[] } | unknown[];
-
-class PayloadRestCmsAdapter implements CmsAdapter {
-  private readonly baseUrl: string;
-  private readonly token?: string;
-
-  constructor(baseUrl: string, token?: string) {
-    this.baseUrl = baseUrl.replace(/\/$/, "");
-    this.token = token;
+function readGenerated<T>(name: string): T {
+  const cached = fileCache.get(name);
+  if (cached !== undefined) return cached as T;
+  const filePath = path.join(GENERATED_DIR, name);
+  let raw: string;
+  try {
+    raw = readFileSync(filePath, "utf-8");
+  } catch {
+    throw new Error(
+      `CMS_PROVIDER=generated but content/generated/${name} does not exist. Run "node scripts/fetch-cms-content.mjs" ` +
+        `(wired as the "prebuild" npm script, so "npm run build" runs it automatically) before building, or set ` +
+        `CMS_PROVIDER=local to build from the static TypeScript content instead.`,
+    );
   }
+  const parsed = JSON.parse(raw) as T;
+  fileCache.set(name, parsed);
+  return parsed;
+}
 
-  private async request(path: string, tag: string): Promise<unknown> {
-    const response = await fetch(`${this.baseUrl}${path}`, {
-      headers: this.token ? { Authorization: `Bearer ${this.token}` } : undefined,
-      next: { revalidate: 300, tags: [`cms:${tag}`] },
-    });
-    if (!response.ok) throw new Error(`CMS request failed (${response.status}) for ${tag}.`);
-    return response.json();
+class GeneratedCmsAdapter implements CmsAdapter {
+  async getPage(pagePath: string) {
+    const pages = readGenerated<PageDefinition[]>("pages.json");
+    return pages.find((page) => page.path === pagePath) ?? null;
   }
-
-  private unpack(payload: CollectionPayload): unknown[] {
-    if (Array.isArray(payload)) return payload;
-    if (payload && typeof payload === "object") {
-      const record = payload as { docs?: unknown[]; data?: unknown[] };
-      if (Array.isArray(record.docs)) return record.docs;
-      if (Array.isArray(record.data)) return record.data;
-    }
-    return [];
+  async listPages() { return readGenerated<PageDefinition[]>("pages.json"); }
+  async listEvents() { return readGenerated<EventItem[]>("events.json"); }
+  async getEvent(slug: string) { return (await this.listEvents()).find((item) => item.slug === slug) ?? null; }
+  async listSermons() { return readGenerated<SermonItem[]>("sermons.json"); }
+  async getSermon(slug: string) { return (await this.listSermons()).find((item) => item.slug === slug) ?? null; }
+  async listArticles() { return readGenerated<ArticleItem[]>("articles.json"); }
+  async getArticle(slug: string) { return (await this.listArticles()).find((item) => item.slug === slug) ?? null; }
+  async listProducts() { return readGenerated<ProductItem[]>("products.json"); }
+  async getProduct(slug: string) { return (await this.listProducts()).find((item) => item.slug === slug) ?? null; }
+  async listSundaySchoolResources() { return readGenerated<SundaySchoolResource[]>("sunday-school-resources.json"); }
+  async getSundaySchoolResource(slug: string) {
+    return (await this.listSundaySchoolResources()).find((item) => item.slug === slug) ?? null;
   }
-
-  private async list<T>(collection: string, schema: SchemaLike<T>): Promise<T[]> {
-    const payload = await this.request(`/api/${collection}?limit=100&depth=2`, collection) as CollectionPayload;
-    return this.unpack(payload).map((item) => schema.parse(item));
-  }
-
-  private async one<T>(collection: string, field: string, value: string, schema: SchemaLike<T>): Promise<T | null> {
-    const query = encodeURIComponent(value);
-    const payload = await this.request(`/api/${collection}?where[${field}][equals]=${query}&limit=1&depth=2`, `${collection}:${value}`) as CollectionPayload;
-    const first = this.unpack(payload)[0];
-    return first ? schema.parse(first) : null;
-  }
-
-  async getPage(path: string) { return this.one("pages", "path", path, pageDefinitionSchema); }
-  async listEvents() { return this.list("events", eventSchema); }
-  async getEvent(slug: string) { return this.one("events", "slug", slug, eventSchema); }
-  async listSermons() { return this.list("sermons", sermonSchema); }
-  async getSermon(slug: string) { return this.one("sermons", "slug", slug, sermonSchema); }
-  async listArticles() { return this.list("articles", articleSchema); }
-  async getArticle(slug: string) { return this.one("articles", "slug", slug, articleSchema); }
-  async listProducts() { return this.list("products", productSchema); }
-  async getProduct(slug: string) { return this.one("products", "slug", slug, productSchema); }
-  async listSundaySchoolResources() { return this.list("sunday-school-resources", sundaySchoolResourceSchema); }
-  async getSundaySchoolResource(slug: string) { return this.one("sunday-school-resources", "slug", slug, sundaySchoolResourceSchema); }
-  async listExternalResources() { return this.list("external-resources", externalResourceSchema); }
+  async listExternalResources() { return readGenerated<ExternalResource[]>("external-resources.json"); }
 }
 
 function createCmsAdapter(): CmsAdapter {
-  const provider = process.env.CMS_PROVIDER ?? "local";
-  if (provider === "payload") {
-    const url = process.env.CMS_API_URL;
-    if (!url) throw new Error("CMS_API_URL is required when CMS_PROVIDER=payload.");
-    return new PayloadRestCmsAdapter(url, process.env.CMS_API_TOKEN);
-  }
+  // REVERT: change this default back to "local" (one line) to build entirely
+  // from the static TypeScript content again, or set the CMS_PROVIDER=local
+  // environment variable in the build environment without touching code.
+  const provider = process.env.CMS_PROVIDER ?? "generated";
+  if (provider === "generated") return new GeneratedCmsAdapter();
   return new LocalCmsAdapter();
 }
 

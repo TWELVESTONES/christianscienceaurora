@@ -8,3 +8,9 @@ playwright-report
 test-results
 coverage
 .DS_Store
+
+# Phase 3 CMS migration: generated at prebuild time by
+# scripts/fetch-cms-content.mjs, fetched fresh from the live CMS on every
+# build (including CI) — never committed.
+content/generated
+public/media-cms
