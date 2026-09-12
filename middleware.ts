@@ -25,15 +25,8 @@ export function middleware(request: NextRequest) {
   }
 
   // Preserve approved Cluster 2, 3, and 4 trailing-slash authority URLs as direct routes.
-  // The catch-all route prerenders these pages under their slash-less path
-  // (generateStaticParams strips empty segments), and app/[...slug]/page.tsx sets
-  // dynamicParams = false, so the trailing-slash URL has no prerendered entry of its
-  // own and would 404. Rewrite — not redirect — so the canonical trailing-slash URL
-  // stays in the address bar and in the sitemap while serving the prerendered page.
   if (DIRECT_TRAILING_SLASH_PATHS.has(pathname)) {
-    const target = request.nextUrl.clone();
-    target.pathname = pathname.slice(0, -1);
-    return NextResponse.rewrite(target);
+    return NextResponse.next();
   }
 
   // The removed Cluster 2 competitor always resolves in one hop to the approved pillar.
