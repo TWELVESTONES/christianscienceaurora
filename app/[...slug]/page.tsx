@@ -5,12 +5,6 @@ import { site } from "@/content/site";
 import { listAllPublicPaths } from "@/lib/all-paths";
 import { resolvePublicPage } from "@/lib/resolve-page";
 
-// Every public path is enumerated by generateStaticParams at build time, and the site is
-// fully prerendered onto Workers static assets (read-only incremental cache). Without this,
-// an unknown URL would be treated as an on-demand render at request time and fail with a
-// plain 500 instead of serving the static 404 page.
-export const dynamicParams = false;
-
 export async function generateStaticParams() {
   const paths = await listAllPublicPaths();
   return paths.map((path) => ({ slug: path.split("/").filter(Boolean) }));
