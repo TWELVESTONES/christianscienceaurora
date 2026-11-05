@@ -24,12 +24,12 @@ export default async function HomePage() {
   const publicArticles = filterPublicArticles(articleRecords);
   const publicExternalResources = filterPublicExternalResources(externalResourceRecords);
   const campaignImage = {
-    id: "campaign-god-is-relevant",
+    id: "campaign-thanksgiving-2026",
     label: "Featured event campaign image",
-    productionNote: "Administrator-controlled desktop/mobile crop. Currently the promotional banner for the \"God is Relevant\" lecture; event details are baked into the image itself. Swap when the featured event changes.",
-    altText: "Free Public Lecture: God is Relevant, with Tim Myers, CS. Thursday, October 8, 2026, 7:00 PM. PACE Center, 20000 Pikes Peak Ave., Parker, CO 80138.",
-    aspectRatio: "1:1" as const,
-    src: "/images/photography/campaign-god-is-relevant.webp"
+    productionNote: "Administrator-controlled desktop/mobile crop. Currently the promotional banner for the Thanksgiving 2026 service; event details are baked into the image itself. Swap when the featured event changes.",
+    altText: "Join us for Gratitude Sharing. Thanksgiving Day, Thursday, November 26, 2026, 10:00 AM. All are invited for an hour of Song, Sermon, Gratitude and Praise. First Church of Christ, Scientist, 15700 E. Quincy Ave, Aurora, CO.",
+    aspectRatio: "4:3" as const,
+    src: "/images/photography/campaign-thanksgiving-2026.webp"
   };
   const heroImage = {
     id: "home-welcome",
@@ -39,7 +39,13 @@ export default async function HomePage() {
     aspectRatio: "16:9" as const,
     src: "/images/photography/home-welcome.webp"
   };
-  const campaignEvent = publicEvents.find((event) => event.category === "Talk" && event.featured);
+  // The featured-event banner shows the next one-off (non-recurring) featured event.
+  // Previously this was pinned to category === "Talk", which only ever matched the
+  // October 2026 lecture; the weekly Sunday/Wednesday services are also featured, so
+  // they are excluded by requiring no recurrence. The CMS public API already drops
+  // events the maintenance cron has flipped to "completed", so this banner retires
+  // itself after the event passes and the next rebuild runs.
+  const campaignEvent = publicEvents.find((event) => event.featured && !event.recurring && event.status === "scheduled");
   const latestSermon = publicSermons[0];
   const latestArticle = publicArticles[0];
 
